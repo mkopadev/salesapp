@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TableRow
+        android:id="@+id/table_header"
+        android:background="@color/green"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="0dp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            local:MvxBind="Text Columns[0]; Visible Columns[0]" />
+        <TextView
+            android:layout_width="0dp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            local:MvxBind="Text Columns[1]; Visible Columns[1]" />
+        <TextView
+            android:layout_width="0dp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            local:MvxBind="Text Columns[2]; Visible Columns[2]"/>
+        <TextView
+            android:layout_width="0dp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            local:MvxBind="Text Columns[3]; Visible Columns[3]"/>
+    </TableRow>
+</TableLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_custom_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px">
+    <!-- android:defaultMinSizeSet="true"-->
+    <!-- This is for the info image -->
+    <!-- Title -->
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:src="@android:drawable/ic_menu_info_details" />
+        <TextView
+            android:id="@+id/tvmessagedialogtitle"
+            android:layout_width="184dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="4dip"
+            android:layout_weight="0.01"
+            android:padding="8dp"
+            android:text="Message"
+            android:textColor="#343434"
+            android:textSize="16dip"
+            android:textStyle="bold"
+            android:typeface="normal"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
+<!-- Underline with this bluish color -->
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:visibility="gone"
+        android:background="#09adb9" />
+<!-- The message -->
+    <TextView
+        android:id="@+id/tvmessagedialogtext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="4dip"
+        android:gravity="center_horizontal"
+        android:padding="8dp"
+        android:text="Message"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:textStyle="normal"
+        android:typeface="normal" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px">
+    <!-- Yes button -->
+    <!-- No Button -->
+        <Button
+            android:id="@+id/bmessageDialogYes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dip"
+            style="@style/GreenButton"
+            android:text="Yes"
+            android:layout_marginLeft="90dp"
+            android:layout_marginRight="90dp" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/bmessageDialogNo"
+        style="@style/GreyButton"
+        android:padding="8dp"
+        android:text="No"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
+        android:layout_marginRight="90dp" />
+</LinearLayout>

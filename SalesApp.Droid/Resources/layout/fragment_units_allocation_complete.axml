@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/textViewUnitsAllocated"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/grey_dark"
+        local:MvxBind="Text ApiStatusMessage; Visible ApiStatusMessage"
+        style="@style/DefaultTextView_Bold"
+        android:layout_alignParentTop="true"
+        android:text="@string/units_have_been_allocated" />
+    <MvxImageView
+        android:id="@+id/imgInfo"
+        android:layout_width="82dp"
+        android:layout_height="82dp"
+        android:src="@drawable/checkmark"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/textViewUnitsAllocated"
+        local:MvxBind="DrawableId StatusIcon"/>
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgInfo"
+        android:layout_centerInParent="true"
+        android:id="@+id/tvConnection"
+        android:visibility="gone"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        style="@style/DefaultTextView"
+        local:MvxBind="Text ApiStatusDescription; Visible ApiStatusDescription" /> 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/negative_button"
+        android:id="@+id/positive_button"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        local:MvxBind="Text PositiveButtonText; Click PositiveButtonCommand"
+        android:text="@string/manage_stock"
+        style="@style/GreenButton" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textStyle="bold"
+        android:id="@+id/negative_button"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        local:MvxBind="Text NegativeButtonText; Click NegativeButtonCommand"
+        android:text="@string/home"
+        style="@style/GreyButton" />
+</RelativeLayout>

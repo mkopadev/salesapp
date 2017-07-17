@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/margin_default"
+    android:gravity="top"
+    android:background="#3b7622">
+    <TextView
+        android:id="@+id/registration_type_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        style="@style/DefaultTextView_Caps"
+        android:text="@string/registration_type"
+        android:layout_marginRight="@dimen/margin_default"
+        android:layout_marginLeft="@dimen/margin_default"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center" />
+    <TextView
+        android:id="@+id/tvPersonName"
+        android:layout_below="@id/registration_type_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        style="@style/DefaultTextView_Title"
+        android:text="[Person Name]"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_gravity="left" />
+    <LinearLayout
+        android:id="@+id/phone"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/tvPersonName"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="@dimen/margin_default"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/white_phone" />
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            style="@style/DefaultTextView_Title"
+            android:text="[Phone Number]"
+            android:textAllCaps="true"
+            android:layout_marginRight="@dimen/screen_margin"
+            android:layout_marginLeft="@dimen/screen_margin"
+            android:layout_gravity="left" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linFirstTimeProduct"
+        android:layout_below="@id/phone"
+        android:layout_marginBottom="@dimen/margin_default"
+        android:orientation="vertical"
+        style="@style/LayoutAsRoundedButtonGreen">
+        <TextView
+            android:id="@+id/txt_first_time_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            style="@style/DefaultTextView_Caps"
+            android:text="@string/normal_registration_title" />
+        <TextView
+            android:id="@+id/txt_additional_product_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            style="@style/DefaultTextView_Smaller"
+            android:text="@string/normal_registration_story" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linAddProduct"
+        android:layout_below="@id/linFirstTimeProduct"
+        android:layout_marginBottom="@dimen/margin_default"
+        android:orientation="vertical"
+        style="@style/LayoutAsRoundedButtonGreen">
+        <TextView
+            android:id="@+id/txt_additional_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            style="@style/DefaultTextView_Caps"
+            android:text="@string/unified_add_additional_product_title" />
+        <TextView
+            android:id="@+id/txt_additional_product_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            style="@style/DefaultTextView_Smaller"
+            android:text="@string/unified_add_additional_product_story" />
+    </LinearLayout>
+</RelativeLayout>

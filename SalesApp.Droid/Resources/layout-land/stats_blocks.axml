@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/aggregated_report_header"
+        android:padding="5dp">
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/levelUpButton"
+            android:background="@drawable/up_arrow"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentTop="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_large"
+            android:text=""
+            android:textColor="@color/gray2"
+            android:visibility="invisible"
+            android:id="@+id/levelLabel"
+            android:layout_toEndOf="@+id/levelUpButton"
+            android:layout_marginStart="50dp"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+<!-- The blocks -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center">
+    <!-- Block 1 -->
+        <LinearLayout
+            android:id="@+id/block1"
+            android:orientation="vertical"
+            android:layout_width="88dp"
+            android:layout_height="81dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border_rounded_small">
+            <TextView
+                android:id="@+id/block1_score"
+                android:text=""
+                android:textSize="@dimen/text_size_large"
+                android:color="@color/gray4"
+                android:layout_margin="@dimen/thin_line"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="#ebebeb" />
+            <TextView
+                android:id="@+id/block1_caption"
+                android:text=""
+                android:textSize="@dimen/text_size_small"
+                android:color="@color/gray4"
+                android:layout_margin="@dimen/thin_line"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+        </LinearLayout>
+    <!-- Block 2 -->
+        <LinearLayout
+            android:id="@+id/block2"
+            android:orientation="vertical"
+            android:layout_width="88dp"
+            android:layout_height="81dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border_rounded_small">
+            <TextView
+                android:id="@+id/block2_score"
+                android:text=""
+                android:textSize="@dimen/text_size_large"
+                android:color="@color/black"
+                android:layout_margin="@dimen/thin_line"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="#ebebeb" />
+            <TextView
+                android:id="@+id/block2_caption"
+                android:text=""
+                android:textSize="@dimen/text_size_small"
+                android:color="@color/gray4"
+                android:layout_margin="@dimen/thin_line"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+        </LinearLayout>
+    <!-- Block 3 -->
+        <LinearLayout
+            android:id="@+id/block3"
+            android:orientation="vertical"
+            android:layout_width="88dp"
+            android:layout_height="81dp"
+            android:background="@drawable/border_rounded_small">
+            <TextView
+                android:id="@+id/block3_score"
+                android:text=""
+                android:textSize="@dimen/text_size_large"
+                android:color="@color/black"
+                android:layout_margin="@dimen/thin_line"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="#ebebeb" />
+            <TextView
+                android:id="@+id/block3_caption"
+                android:text=""
+                android:textSize="@dimen/text_size_small"
+                android:color="@color/gray4"
+                android:layout_margin="@dimen/thin_line"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/last_updated"
+        android:text=""
+        android:textStyle="italic"
+        android:textSize="@dimen/text_size_small"
+        android:color="@color/gray4"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp" />
+</LinearLayout>

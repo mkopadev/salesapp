@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <include
+        layout="@layout/commissions_month_info" />
+    <View
+        android:layout_height="@dimen/thick_line"
+        android:layout_width="match_parent"
+        android:background="@color/green3" />
+    <TableLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_default_small"
+        android:layout_marginBottom="@dimen/margin_default_small">
+        <TableRow
+            android:padding="5dp">
+            <TextView
+                android:text="Total earnings"
+                style="@style/DefaultTextView"
+                android:textStyle="bold"
+                android:paddingLeft="10dp" />
+            <TextView
+                android:layout_marginLeft="40dp"
+                android:id="@+id/tvName"
+                local:MvxBind="Text TotalEarnings"
+                style="@style/DefaultTextView"
+                android:gravity="left" />
+        </TableRow>
+        <TableRow
+            android:padding="5dp">
+            <TextView
+                android:text="Tax (5%)"
+                style="@style/DefaultTextView"
+                android:textStyle="bold"
+                android:paddingLeft="10dp" />
+            <TextView
+                android:layout_marginLeft="40dp"
+                android:id="@+id/tvPhone"
+                local:MvxBind="Text Tax"
+                style="@style/DefaultTextView"
+                android:gravity="left" />
+        </TableRow>
+    </TableLayout>
+    <View
+        android:layout_height="@dimen/thick_line"
+        android:layout_width="match_parent"
+        android:background="@color/green3" />
+</LinearLayout>

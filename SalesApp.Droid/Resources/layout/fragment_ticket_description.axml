@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rLayoutDescription"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_alignParentTop="true"
+    android:padding="@dimen/screen_margin">
+    <TextView
+        style="@style/DefaultTextView_Caps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tViewQuestionTitle"
+        android:text="@string/describe_problem"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp" />
+    <TextView
+        style="@style/DefaultTextView"
+        android:text="@string/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:layout_below="@+id/tViewQuestionTitle"
+        android:id="@+id/textViewDescription"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="8dp" />
+    <EditText
+        android:textColor="@color/grey_dark"
+        android:padding="5dp"
+        android:textSize="@dimen/text_size_normal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewDescription"
+        android:id="@+id/editTextDescription"
+        android:layout_marginBottom="20dp"
+        android:lines="8"
+        android:minLines="6"
+        android:maxLines="10"
+        android:background="@drawable/edit_text_default"
+        android:gravity="top|left"
+        android:inputType="textMultiLine" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutNavButtons"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonPrevious"
+            android:text="@string/previous"
+            style="@style/GreyButton"
+            android:onClick="onPreviousButtonClicked"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_width="@dimen/screen_margin"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonNext"
+            style="@style/GreenButton"
+            android:text="@string/next"
+            android:onClick="onNextButtonClicked"
+            android:enabled="false" />
+    </LinearLayout>
+</RelativeLayout>

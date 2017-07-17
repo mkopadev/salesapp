@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:id="@+id/loginRoot">
+    <include
+        android:id="@+id/android_toolbar"
+        layout="@layout/android_toolbar" />
+    <ImageView
+        android:id="@+id/imgLoginBanner"
+        android:src="@drawable/login_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitStart"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="12dp"
+        android:adjustViewBounds="true" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_margin="@dimen/screen_margin"
+        android:id="@+id/relLoginContent">
+        <TextView
+            android:id="@+id/txtEnterPin"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:text="@string/enter_pin_long"
+            android:textAppearance="@style/DefaultTextView_Faint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/txtForgotPin"
+            android:layout_below="@id/imgLoginBanner"
+            android:layout_alignParentRight="true"
+            android:text="@string/forgot_pin"
+            android:textAppearance="@style/DefaultTextView"
+            android:textColor="#4AA2F9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:id="@+id/linLayoutPinTxt"
+            android:layout_below="@id/txtForgotPin"
+            android:layout_alignParentLeft="true"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="@dimen/margin_default"
+            android:orientation="horizontal">
+          
+          <include
+            android:id="@+id/pin_layout"
+            layout="@layout/pin_layout"/>
+          
+        </LinearLayout>
+        <TextView
+            android:id="@+id/txtLoginMessage"
+            android:visibility="gone"
+            android:layout_below="@id/linLayoutPinTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:paddingBottom="10dp"
+            android:minHeight="26dp"
+            android:background="@drawable/list_box_error"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="Lorum ipsum dolor sit amet"
+            style="@style/DefaultTextView_Smaller" />
+        <Button
+            android:id="@+id/btnLogIn"
+            android:text="@string/log_in_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/GreenButton"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

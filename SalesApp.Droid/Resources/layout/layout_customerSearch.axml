@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="5dp">
+<!--TODO put all strings in resource file i.e. strings.xml-->
+    <TextView
+        android:id="@+id/instructionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Please input the phone number used during registration to check for a customer's registration status"
+        android:layout_centerVertical="true"
+        android:textColor="@color/black" />
+    <EditText
+        android:id="@+id/customerSearchPhoneNumber"
+        android:layout_below="@id/instructionLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:hint="phone number"
+        android:background="@color/gray1"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:textColor="@color/black" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <Button
+            android:id="@+id/btnSearchProspect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:layout_below="@id/customerSearchPhoneNumber"
+            android:background="@color/green" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/resetPinSuccess"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="264.6dp"
+        android:id="@+id/relativeLayout1"
+        android:layout_marginBottom="121.6dp">
+      <TextView
+          android:text="@string/pin_reset_done"
+            android:layout_width="match_parent"
+            android:layout_height="83.8dp"
+            android:id="@+id/textView1" />
+        <TextView
+            android:text="@string/pin_reset_success_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView1"
+            android:id="@+id/textView2"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <Button
+        android:text="@string/back_to_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnBackToLogin" />
+</LinearLayout>

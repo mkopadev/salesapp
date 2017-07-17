@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:orientation="vertical"
+    android:layout_height="fill_parent"
+    android:padding="@dimen/screen_margin">
+    <TextView
+        style="@style/DefaultTextView_Caps"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tViewQuestionTitle"
+        android:text="WIZARD QUESTION HERE"
+        android:textColor="@color/grey_dark"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnPrevious"
+        android:text="@string/previous"
+        style="@style/GreyButton"
+        android:layout_alignParentBottom="true" />
+    <RelativeLayout
+        android:id="@+id/scrollTextRelativeLayout"
+        android:layout_marginBottom="6dp"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_above="@id/btnPrevious"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/DefaultTextView_Caps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey_dark"
+            android:text="@string/scroll_more"
+            android:id="@+id/tvScrollMessage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="6dp" />
+        <ImageView
+            android:id="@+id/imgArrow"
+            android:layout_below="@id/tvScrollMessage"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_down_scroll" />
+    </RelativeLayout>
+    <ScrollView
+        android:id="@+id/scrollViewAnswers"
+        android:layout_below="@id/tViewQuestionTitle"
+        android:layout_above="@id/scrollTextRelativeLayout"
+        android:layout_marginBottom="6dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:isScrollContainer="false">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/ticketLinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+</RelativeLayout>

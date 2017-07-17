@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/select_unit"
+      android:id="@+id/textView2"
+      local:MvxBind="Visible ScmHasStock"
+      android:layout_alignParentTop="true"
+      android:layout_margin="15dp"
+      style="@style/DefaultTextView_MediumBold" />
+   <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/no_units_in_stock"
+      local:MvxBind="Visibility InvertedVisibility(ScmHasStock)"
+      android:layout_centerInParent="true"
+      android:layout_marginLeft="@dimen/margin_default"
+      android:layout_marginRight="@dimen/margin_default"
+      style="@style/DefaultTextView_Bold"/>
+      
+    <MvxListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:id="@+id/scm_stock_list"
+        android:divider="#ffffff"
+        android:dividerHeight="10dp"
+        android:layout_marginLeft="@dimen/margin_default"
+        android:layout_marginRight="@dimen/margin_default"
+        local:MvxBind="ItemsSource ScmUnitsInStock"
+        local:MvxItemTemplate="@layout/scm_products_stock_list_item" />
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        local:MvxBind="Visible IsBusy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

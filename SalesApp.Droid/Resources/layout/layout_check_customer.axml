@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_transparent"
+        android:clickable="true" />
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/checkCustomerLayout"
+        style="@style/WrapHeight"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="164dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+            <TextView
+                style="@style/TextView.Light"
+                android:layout_marginTop="22dp"
+                android:text="@string/registration_confirmation_dialog_title" />
+            <TextView
+                android:id="@+id/textCustomerName"
+                style="@style/TextView.Light"
+                android:layout_above="@+id/textCustomerPhone"
+                android:textSize="24sp"
+                android:text="Name Last Name" />
+            <TextView
+                android:id="@+id/textCustomerPhone"
+                style="@style/TextView.Light"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="38dp"
+                android:textSize="24sp"
+                android:text="+123 456 7890" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/btnYes"
+            style="@style/RegistrationConfirmationListItem"
+            android:background="@color/green">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/horizontal_margin">
+                <TextView
+                    style="@style/TextView.Light"
+                    android:textAllCaps="true"
+                    android:text="@string/yes" />
+                <TextView
+                    android:id="@+id/btnYesText"
+                    style="@style/TextView.Light"
+                    android:text="@string/go_to_customer_registration" />
+            </LinearLayout>
+            <ImageView
+                style="@style/ListItemNextButton" />
+            <include
+                layout="@layout/component_selector" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/btnNo"
+            style="@style/RegistrationConfirmationListItem"
+            android:background="@color/red">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/horizontal_margin">
+                <TextView
+                    android:id="@+id/btnNoHeadingText"
+                    style="@style/TextView.Light"
+                    android:textAllCaps="true"
+                    android:text="@string/no" />
+                <TextView
+                    android:id="@+id/btnNoText"
+                    style="@style/TextView.Light"
+                    android:text="@string/existing_prospect_return_home" />
+            </LinearLayout>
+            <ImageView
+                style="@style/ListItemNextButton" />
+            <include
+                layout="@layout/component_selector" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

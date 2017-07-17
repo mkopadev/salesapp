@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:background="@drawable/circle_edge_alert">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alert_message"
+        android:textSize="15dp"
+        android:textStyle="bold|normal"
+        android:id="@+id/txtAlertMessage"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="50dp"
+        android:paddingTop="50dp" />
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:id="@+id/btnContinue"
+        android:background="@drawable/circle_edge_button_green"
+        android:textColor="#FFF"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:layout_below="@+id/txtAlertMessage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="5dp" />
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:id="@+id/btnCancel"
+        android:background="@drawable/circle_edge_button_gray"
+        android:capitalize="sentences"
+        android:textColor="#FFF"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:layout_below="@+id/txtAlertMessage"
+        android:layout_alignRight="@+id/txtAlertMessage"
+        android:layout_alignEnd="@+id/txtAlertMessage"
+        android:layout_marginRight="5dp" />
+</RelativeLayout>

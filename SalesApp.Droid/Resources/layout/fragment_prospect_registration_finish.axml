@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:id="@+id/prospectReminder">
+    <LinearLayout
+        android:id="@+id/header"
+        style="@style/WrapHeight"
+        android:orientation="vertical"
+        android:background="@color/gray4">
+        <LinearLayout
+            style="@style/WrapContent"
+            android:layout_marginTop="28dp"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:orientation="horizontal">
+            <ImageView
+                style="@style/Indicator.Next" />
+            <ImageView
+                style="@style/Indicator.Next" />
+            <ImageView
+                style="@style/Indicator.Next" />
+            <ImageView
+                style="@style/Indicator.Current" />
+        </LinearLayout>
+        <TextView
+            style="@style/TextView"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:text="@string/prospect_registered_title" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/header"
+        android:id="@+id/saveProspectInfo">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:textSize="@dimen/text_size_large"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:text="@string/prospect_followup_reminder_set" />
+        <ImageView
+            android:src="@drawable/registered2"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:id="@+id/imageView1" />
+        <TextView
+            android:textSize="@dimen/text_size_large"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/prospect_set_reminder_green"
+            android:layout_gravity="left"
+            android:id="@+id/tvExistingStory"
+            android:gravity="left"
+            android:layout_width="wrap_content"
+            android:text="@string/prospect_followup_register_another_question"
+            android:singleLine="false"
+            android:layout_height="0px"
+            android:layout_weight="1" />
+    </LinearLayout>
+</RelativeLayout>

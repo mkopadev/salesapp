@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registrationProductLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green">
+    <LinearLayout
+        android:id="@+id/header"
+        style="@style/WrapHeight"
+        android:orientation="vertical"
+        android:background="@color/gray4">
+        <LinearLayout
+            style="@style/WrapContent"
+            android:layout_marginTop="28dp"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:orientation="horizontal">
+            <ImageView
+                style="@style/Indicator.Previous" />
+            <ImageView
+                style="@style/Indicator.Current" />
+            <ImageView
+                style="@style/Indicator.Next" />
+            <ImageView
+                style="@style/Indicator.Next" />
+        </LinearLayout>
+        <TextView
+            style="@style/TextView.Light"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:text="@string/select_product" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/form"
+        android:layout_below="@+id/header"
+        style="@style/WrapHeight"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <RelativeLayout
+            android:id="@+id/layoutProduct"
+            style="@style/BasicRegistrationListItem">
+            <Spinner
+                style="@style/BasicRegistrationEditText"
+                android:id="@+id/spinnerProduct"
+                android:text="@string/you_must_select_a_product"
+                tools:listitem="@layout/component_spinner_item" />
+            <TextView
+                style="@style/FieldVerificationText"
+                android:id="@+id/textProductError"
+                android:layout_below="@+id/spinnerProduct"
+                android:text="@string/you_must_select_a_product" />
+            <ImageView
+                style="@style/ListItemNextButton"
+                android:id="@+id/imageDeviceCode"
+                android:src="@drawable/arrow_down_orange" />
+            <include
+                layout="@layout/component_divider" />
+        </RelativeLayout>
+        <RelativeLayout
+            style="@style/WrapHeight"
+            android:id="@+id/layoutSerialNumberHolder">
+            <RelativeLayout
+                android:id="@+id/layoutSerialNumber"
+                android:layout_width="match_parent"
+                android:paddingRight="40dp"
+                android:layout_height="54dp"
+                android:background="@color/white"
+                android:layout_marginBottom="1dp">
+                <Spinner
+                    style="@style/BasicRegistrationEditText"
+                    android:id="@+id/spinnerSerialNumber"
+                    tools:listitem="@layout/component_spinner_item" />
+                <TextView
+                    style="@style/FieldVerificationText"
+                    android:id="@+id/textSerialNumberError"
+                    android:layout_below="@+id/spinnerSerialNumber"
+                    android:text="@string/incomplete_number" />
+                <ImageView
+                    style="@style/ListItemNextButton"
+                    android:id="@+id/imageSerialNumber"
+                    android:src="@drawable/arrow_down_orange"
+                    android:layout_marginRight="40dp" />
+                <include
+                    layout="@layout/component_selector" />
+                <include
+                    layout="@layout/component_divider" />
+            </RelativeLayout>
+            <ImageView
+                android:src="@drawable/refresh_orange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:id="@+id/imageRefresh"
+                android:layout_marginRight="15dp" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/txtInformationSerial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/DefaultTextView"
+            android:layout_margin="@dimen/screen_margin"
+            android:visibility="gone"
+            android:text="@string/no_serial_found" />
+    </LinearLayout>
+    <include
+        layout="@layout/layout_nav_buttons" />
+</RelativeLayout>

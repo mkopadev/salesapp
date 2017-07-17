@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/rankingButtonContainer"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/small_table_padding"
+        android:paddingLeft="@dimen/small_table_padding"
+        android:paddingRight="@dimen/small_table_padding"
+        android:paddingBottom="@dimen/small_table_padding">
+        <Button
+            android:id="@+id/month_button"
+            style="@style/period_button_text_selected"
+            android:layout_weight="1"
+            android:background="@drawable/period_button_selected"
+            android:text="@string/stats_month_upper" />
+        <Button
+            android:id="@+id/quarter_button"
+            style="@style/period_button_text"
+            android:layout_weight="1"
+            android:background="@drawable/period_button"
+            android:text="@string/stats_quarter_upper" />
+        <Button
+            android:id="@+id/year_button"
+            style="@style/period_button_text"
+            android:layout_weight="1"
+            android:background="@drawable/period_button"
+            android:text="@string/stats_year_upper" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/spinner_text"
+    android:singleLine="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/small_table_padding"
+    android:paddingLeft="@dimen/margin_default"
+    android:paddingRight="@dimen/margin_default_large"
+    android:paddingBottom="@dimen/small_table_padding"
+    android:drawableRight="@drawable/dropdown_arrow" />

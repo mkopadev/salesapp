@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<!-- The blocks -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center">
+    <!-- Block 1 -->
+        <LinearLayout
+            android:id="@+id/block1"
+            android:orientation="vertical"
+            android:layout_width="88dp"
+            android:layout_height="81dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border_rounded_small">
+            <TextView
+                android:id="@+id/block1_score"
+                local:MvxBind="Text Summary[0].TopValue"
+                android:textSize="@dimen/text_size_large"
+                android:color="@color/gray4"
+                android:layout_margin="@dimen/thin_line"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="#ebebeb" />
+            <TextView
+                android:id="@+id/block1_caption"
+                local:MvxBind="Text Summary[0].Caption"
+                android:textSize="@dimen/text_size_small"
+                android:color="@color/gray4"
+                android:layout_margin="@dimen/thin_line"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+        </LinearLayout>
+    <!-- Block 2 -->
+        <LinearLayout
+            android:id="@+id/block2"
+            android:orientation="vertical"
+            android:layout_width="88dp"
+            android:layout_height="81dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border_rounded_small">
+            <TextView
+                android:id="@+id/block2_score"
+                local:MvxBind="Text Summary[1].TopValue"
+                android:textSize="@dimen/text_size_large"
+                android:color="@color/black"
+                android:layout_margin="@dimen/thin_line"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="#ebebeb" />
+            <TextView
+                android:id="@+id/block2_caption"
+                local:MvxBind="Text Summary[1].Caption"
+                android:textSize="@dimen/text_size_small"
+                android:color="@color/gray4"
+                android:layout_margin="@dimen/thin_line"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+        </LinearLayout>
+    <!-- Block 3 -->
+        <LinearLayout
+            android:id="@+id/block3"
+            android:orientation="vertical"
+            android:layout_width="88dp"
+            android:layout_height="81dp"
+            android:background="@drawable/border_rounded_small">
+            <TextView
+                android:id="@+id/block3_score"
+                local:MvxBind="Text Summary[2].TopValue"
+                android:textSize="@dimen/text_size_large"
+                android:color="@color/black"
+                android:layout_margin="@dimen/thin_line"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="#ebebeb" />
+            <TextView
+                android:id="@+id/block3_caption"
+                local:MvxBind="Text Summary[2].Caption"
+                android:textSize="@dimen/text_size_small"
+                android:color="@color/gray4"
+                android:layout_margin="@dimen/thin_line"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/last_updated"
+        local:MvxBind="Text LastUpdated(Summary[0].LastUpdateTime); Visible Summary[0].LastUpdateTime"
+        android:textStyle="italic"
+        android:textSize="@dimen/text_size_small"
+        android:color="@color/gray4"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp" />
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/component_item_background">
+  <ImageView
+      android:id="@+id/imageView_component"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBottom="@+id/layout_component_details"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentTop="true"
+      android:layout_alignTop="@+id/layout_component_details"
+      android:padding="8dp"
+      android:src="@drawable/ic_radio" />
+  <RelativeLayout
+      android:id="@+id/layout_component_details"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="16dp"
+      android:layout_toRightOf="@+id/imageView_component">
+    <TextView
+        android:id="@+id/textView_component_name"
+        style="@style/DefaultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="left"
+        android:padding="2dp"
+        android:textColor="@color/green"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <RelativeLayout
+        android:id="@+id/layout_warranty_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_component_name">
+      <TextView
+          android:id="@+id/textView_warranty"
+          style="@style/DefaultTextView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:gravity="center"
+          android:padding="2dp"
+          android:textColor="@color/grey_dark"
+          android:textSize="16sp"
+          android:textStyle="normal" />
+      <TextView
+          android:id="@+id/textView_warranty_date"
+          style="@style/DefaultTextView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/textView_warranty"
+          android:gravity="center"
+          android:padding="2dp"
+          android:text="31"
+          android:textColor="@color/grey_dark"
+          android:textSize="20sp"
+          android:textStyle="normal" />
+    </RelativeLayout>
+  </RelativeLayout>
+</RelativeLayout>

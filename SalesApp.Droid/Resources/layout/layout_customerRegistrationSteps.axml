@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="5dp"
+        android:rowCount="2"
+        android:columnCount="2">
+        <TextView
+            android:textSize="18sp"
+            android:text="Full Name:"
+            android:textColor="@color/black" />
+        <TextView
+            android:textSize="18sp"
+            android:textColor="@color/gray3"
+            android:layout_marginLeft="8dp"
+            android:text="John Wafula"
+            android:id="@+id/fullName" />
+        <TextView
+            android:textSize="18sp"
+            android:text="Phone Number:"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+            android:text="0722123456"
+            android:textColor="@color/gray3"
+            android:id="@+id/phoneNumber" />
+        <TextView
+            android:textSize="18sp"
+            android:text="Product Type:"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+            android:text="D20G"
+            android:textColor="@color/gray3"
+            android:id="@+id/productType" />
+    </GridLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/gray1">
+        <LinearLayout
+            android:id="@+id/stepsLayoutContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/statusInformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/green"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:text="" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

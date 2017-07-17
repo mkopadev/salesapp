@@ -1,0 +1,32 @@
+<div class="cost">
+    <script>
+        window.ga = window.ga || function() { (ga.q = ga.q || []).push(arguments) };
+        ga.l = +new Date;
+        ga('create', CSharp.GetTrackingId(), 'auto');
+        ga('send', 'Income From Product');
+    </script>
+    <div class="top panel-size panel panel-default">
+        <span class="pull-left">Cost Per Year</span> <span class="product-deposit pull-right">{{currentCostPerYear | number}}</span>
+    </div>
+    <div class="panel-size-large panel panel-default">
+        <span class="pull-left">Product Total cost<br />Per Year</span> <span class="product-deposit pull-right">{{costPerYear | number}}</span>
+    </div>
+
+    <h4 class="centre ">Estimated income per month</h4>
+    <form name="incomeForm">
+        <div class="form-group">
+            <span>Charging Phone</span>
+            <input type="number" class="form-control" id="batteries" ng-model="income.charging"
+                   name="income.charging" autocomplete="off"/>
+        </div>
+        <div id="cost-button">
+            <div class="back-button">
+                <button class="btn btn-block btn-inverse" ng-click="go('/cost-year')">BACK</button>
+            </div>
+            <div class="next-button">
+                <button class="btn btn-block btn-success" ng-click="calcIncome(income)">CALCULATE</button>
+            </div>
+        </div>
+    </form>
+</div>
+

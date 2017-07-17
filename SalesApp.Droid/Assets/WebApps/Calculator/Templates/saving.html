@@ -1,0 +1,26 @@
+<div class="cost">
+    <script>
+        window.ga = window.ga || function() { (ga.q = ga.q || []).push(arguments) };
+        ga.l = +new Date;
+        ga('create', CSharp.GetTrackingId(), 'auto');
+        ga('send', 'Saving when using product');
+    </script>
+    <div class="yearly-saving" ng-repeat="s in savings" ng-click="savingsDetails($index)">
+        <table class="table border-less">
+            <tr>
+                <td rowspan="4"><img src="img/{{s.Year}}.png" class="currency-icon"/></td>
+                <td>Year</td>
+                <td rowspan="3"><img src="img/icon_fading_arrows.png" class="pointer"/></td>
+                <td>Save</td>
+            </tr>
+            <tr>
+                <td>{{s.Year}}</td>
+                <td>{{s.Amount | number}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="button-small">
+        <button class="btn btn-block btn-inverse" ng-click="go('/income')">BACK</button>
+    </div>
+</div>
+

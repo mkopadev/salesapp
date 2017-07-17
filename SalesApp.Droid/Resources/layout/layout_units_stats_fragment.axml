@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SalesApp.Droid.UI.SwipableViews.SwipableScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollview_main"
+    android:tag="ScrollMainView"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/layoutScrollChild"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:id="@+id/units_stats_top">
+          <TextView
+              android:id="@+id/last_updated"
+              android:text="@string/last_updated"
+              android:textStyle="italic"
+              android:textSize="@dimen/text_size_small"
+              android:color="@color/black"
+              android:gravity="center"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:layout_marginBottom="10dp"
+              local:MvxBind="Text LastUpdated(LastUpdateTime); Visible LastUpdateTime"/>
+          <RelativeLayout
+              android:layout_width="fill_parent"
+              android:layout_height="40dp"
+              android:id="@+id/units_information"
+              android:background="@color/gray1"
+              android:layout_below="@+id/last_updated"
+              android:layout_alignParentLeft="true">
+              <TextView
+                  style="@style/DefaultTextView_Caps"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:textSize="@dimen/text_size_normal"
+                  android:text="@string/stats_units_allocated_now"
+                  android:layout_marginLeft="20dp" />
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="fill_parent"
+                  android:textSize="@dimen/text_size_larger"
+                  local:MvxBind="Text AllocatedUnits"
+                  android:textStyle="bold"
+                  android:layout_alignParentRight="true"
+                  android:layout_gravity="center"
+                  android:layout_marginRight="20dp"/>
+          </RelativeLayout>
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/units_table"
+              android:orientation="vertical"
+              android:layout_below="@+id/units_information" />
+        </RelativeLayout>
+        <LinearLayout
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+          <LinearLayout
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="35dp"
+              android:background="@color/green"
+              android:id="@+id/units_history_header"
+              android:weightSum="1">
+              <ImageView
+                  android:layout_width="18dp"
+                  android:layout_height="18dp"
+                  android:layout_gravity="center_vertical"
+                  android:id="@+id/imageView"
+                  android:src="@drawable/doc_icon"
+                  android:layout_weight="0.18" />
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="@dimen/text_size_small"
+                  android:textColor="@color/white"
+                  android:text="@string/stats_last_7_day_history"
+                  android:id="@+id/units_history_header_txt"
+                  android:layout_gravity="center_vertical"
+                  android:paddingRight="10dp" />
+          </LinearLayout>
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:layout_below="@+id/units_history_header"
+              android:background="@color/gray1" />
+          <LinearLayout
+                android:id="@+id/units_history_table"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical" />
+      </LinearLayout>
+    </LinearLayout>
+</SalesApp.Droid.UI.SwipableViews.SwipableScrollView>

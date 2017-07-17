@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:id="@+id/popup"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+  <RelativeLayout
+      android:id="@+id/widget46"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_centerVertical="true"
+      android:layout_alignParentLeft="true">
+    <ResponseTextView
+        android:id="@+id/tVAddCustomer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add New Customer"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:id="@+id/btnAddCustomer"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:src="@drawable/pop_up_add"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content" />
+  </RelativeLayout>
+  <RelativeLayout
+      android:id="@+id/widget46"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_centerVertical="true"
+      android:layout_alignParentLeft="true">
+    <ResponseTextView
+        android:id="@+id/tVAddProspect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create New Prospect"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:id="@+id/btnAddProspect"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pop_up_add"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true" />
+  </RelativeLayout>
+</LinearLayout>

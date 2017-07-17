@@ -1,0 +1,69 @@
+<div class="cost">
+    <script>
+        window.ga = window.ga || function() { (ga.q = ga.q || []).push(arguments) };
+        ga.l = +new Date;
+        ga('create', CSharp.GetTrackingId(), 'auto');
+        console.log(CSharp.GetTrackingId());
+        ga('send', 'Current Cost Per year');
+    </script>
+    <div class="top panel-size panel panel-default">
+        <div class="text panel-spacing">
+            <span> Cost Per Year </span><span class="pull-right product-deposit"> {{currentCostPerYear | number}}</span>
+        </div>
+    </div>
+    <h4 class="centre">Product X Cost</h4>
+    <span class="products-title">Select product</span>
+    <form>
+        <div ng-repeat="p in products">
+            <div ng-switch on="{{$index%2}}">
+                <div ng-switch-when="0">
+                    <div class="form-group panel panel-default left product-size">
+                        <div class="radio">
+                            <label>
+                                <label>
+                                    <input type="radio" name="product" ng-model="productIndex" ng-value="{{$index}}"
+                                           ng-change='checkProduct($index)'/>{{p.Name}}
+                                </label>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div ng-switch-default>
+                    <div class="form-group panel panel-default right product-size">
+                        <div class="radio">
+                            <label>
+                                <label>
+                                    <input type="radio" name="product" ng-model="productIndex" ng-value="{{$index}}"
+                                           ng-change="checkProduct($index)"/>{{p.Name}}
+                                </label>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cost">
+            <table class="table table-bordered">
+                <tr>
+                    <td>Deposit<span class="pull-right product-deposit">{{products[productIndex].Deposit | number}}</span></td>
+                </tr>
+                <tr>
+                    <td>Cost Per Day<span class="pull-right product-deposit">{{products[productIndex].CostPerDay | number}}</span></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="cost-peryear">
+            <div class="back-button">
+                <button class="btn btn-block btn-inverse" ng-click="go('/cost')">BACK</button>
+            </div>
+            <div class="next-button">
+                <button class="btn btn-block" ng-class="((productIndex === -1 ? 'btn-secondary' : 'btn-success'))"
+                        ng-click="calculatePrice(products[productIndex])" ng-disabled="(productIndex === -1)">
+                    NEXT
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

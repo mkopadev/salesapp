@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="69dp"
+    android:descendantFocusability="blocksDescendants">
+    <MvxImageView
+        android:layout_width="102dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="13dp"
+        local:MvxBind="ImageUrl FilePath" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center_vertical">
+          <MvxImageView
+             android:layout_width="25dp"
+             android:layout_height="25dp"
+             android:layout_marginRight="4dp"
+             local:MvxBind="DrawableId StatusIcon"
+             android:gravity="center_vertical"/>
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            local:MvxBind="Text StatusMessage"
+            android:gravity="center_vertical"/>
+      </LinearLayout>
+      <Button
+          android:id="@+id/resend_photo"
+          android:layout_width="wrap_content"
+          android:layout_height="27dp"
+          style="@style/GreenButton"
+          android:layout_alignParentBottom="true"
+          android:paddingRight="6dp"
+          android:paddingLeft="6dp"
+          local:MvxBind="Visible UploadFailed"
+          android:text="@string/resend_photo" />
+    </RelativeLayout>
+</LinearLayout>

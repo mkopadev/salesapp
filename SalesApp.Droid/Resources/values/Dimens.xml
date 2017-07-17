@@ -1,0 +1,49 @@
+﻿<resources>
+  <!-- Default screen margins, per the Android Design guidelines. -->
+  <dimen name="screen_margin">12dp</dimen>
+  <dimen name="padding_box_top">6dp</dimen>
+  <dimen name="padding_box_bottom">6dp</dimen>
+  <dimen name="padding_box_left">12dp</dimen>
+  <dimen name="padding_box_right">12dp</dimen>
+
+  <dimen name="margin_default">12dp</dimen>
+  <dimen name="margin_default_small">6dp</dimen>
+  <dimen name="margin_default_medium">10dp</dimen>
+  <dimen name="margin_default_tiny">3dp</dimen>
+  <dimen name="margin_default_large">18dp</dimen>
+
+  <dimen name="padding_boxsmall_top">2dp</dimen>
+  <dimen name="padding_boxsmall_bottom">2dp</dimen>
+  <dimen name="padding_boxsmall_left">12dp</dimen>
+  <dimen name="padding_boxsmall_right">12dp</dimen>
+  <dimen name="thick_line">2dp</dimen>
+  <dimen name="thin_line">1dp</dimen>
+  <dimen name="thinner_line">0.5dp</dimen>
+  <dimen name="tab_underline_line">2dp</dimen>
+
+
+  <dimen name="horizontal_margin">12dp</dimen>
+  <dimen name="vertical_margin">12dp</dimen>
+  <dimen name="divider_height">@dimen/thin_line</dimen>
+  <dimen name="list_item_height">70dp</dimen>
+
+  <dimen name="small_table_padding">7dp</dimen>
+  <dimen name="small_table_padding_vertical">3dp</dimen>
+
+  <dimen name="text_size_larger">30dp</dimen>
+  <dimen name="text_size_large">18dp</dimen>
+  <dimen name="text_size_medium">16dp</dimen>
+  <dimen name="text_size_normal">12dp</dimen>
+  <dimen name="text_size_small">10dp</dimen>
+  <dimen name="text_size_smaller">8dp</dimen>
+
+  <dimen name="actionbar_height">46dp</dimen>
+
+  <dimen name="alert_dialog">16dp</dimen>
+  <!--<dimen name="dropdown_height">45dp</dimen>
+  <dimen name="dropdown_arrow_margin">19dp</dimen>-->
+
+  <dimen name="listview_items_margin">8dp</dimen>
+  <dimen name="recycler_items_space">8dp</dimen>
+  
+</resources>

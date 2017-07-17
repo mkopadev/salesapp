@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <include
+        layout="@layout/commissions_month_info" />
+    <LinearLayout
+        android:id="@+id/list_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/margin_default_small">
+            <TextView
+                android:id="@+id/date_month"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                local:MvxBind="Text FirstColLabel"
+                android:textColor="@color/green3"
+                android:layout_marginLeft="20dp" />
+            <TextView
+                android:id="@+id/sales"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                local:MvxBind="Text SecondColLabel; Visible SecondColVisible"
+                android:textColor="@color/green3" />
+            <TextView
+                android:id="@+id/commission"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:text="Commission"
+                android:textColor="@color/green3" />
+        </LinearLayout>
+        <View
+            android:layout_height="@dimen/thick_line"
+            android:layout_width="match_parent"
+            android:background="@color/green3" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/list_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/list_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            local:MvxBind="Visible HasSales">
+            <View
+                android:layout_height="@dimen/thick_line"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/margin_default"
+                android:background="@color/green3" />
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/total_commission"
+                    android:layout_height="wrap_content"
+                    style="@style/DefaultTextView_Bold"
+                    android:layout_marginRight="@dimen/margin_default_large"
+                    local:MvxBind="Text SummaryLabel" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/DefaultTextView_Bold"
+                    local:MvxBind="Text Total" />
+            </LinearLayout>
+        </LinearLayout>
+        <MvxListView
+            android:id="@+id/daily_commission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/list_footer"
+            android:layout_marginBottom="@dimen/margin_default_tiny"
+            local:MvxBind="ItemsSource Commmissions; Visible HasSales"
+            local:MvxItemTemplate="@layout/daily_commission_row"
+            android:dividerHeight="0.5dp" />
+        <include
+            layout="@layout/commissions_no_sales" />
+        <include
+            layout="@layout/commissions_loading" />
+    </RelativeLayout>
+</LinearLayout>

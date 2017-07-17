@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/green"
+        android:textColor="@color/white"
+        android:gravity="center"
+        local:MvxBind="Text ClickedGroup.Description;" />
+    <LinearLayout
+      android:id="@+id/live_search"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      local:MvxBind="Visible ClickedGroup.Searchable">
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/thin_line"
+        android:background="@color/white" />
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/grey_transparent" />
+      <RelativeLayout 
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+          <EditText
+              android:id="@+id/autoComplete"
+              style="@style/DefaultEditText"
+              android:layout_width="match_parent"
+              android:layout_marginLeft="@dimen/margin_default"
+              android:drawableLeft="@drawable/chama_search"
+              android:drawablePadding="@dimen/margin_default_small"
+              android:background="@null"
+              android:layout_height="37dp"
+              local:MvxBind="Text FilterText"
+              android:textIsSelectable="false"
+              android:singleLine="true"
+              android:hint="Search" />
+          <View 
+              android:layout_height="8dp"
+              android:layout_width="8dp"
+              android:background="@drawable/chama_search_clear"
+              android:layout_marginRight="@dimen/margin_default"
+              android:layout_alignParentRight="true"
+              android:layout_centerVertical="true"
+              local:MvxBind="Visible FilterText; Click ClearFilter" />
+      </RelativeLayout>
+      <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/green" />
+    </LinearLayout>
+    <MvxListView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:divider="@null"
+      android:dividerHeight="0dp"
+      local:MvxBind="ItemsSource ClickedGroup.Options; ItemClick OptionItemClick"
+      local:MvxItemTemplate="@layout/chama_group_list_item" />
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="46dp"
+      android:background="@color/silvery"
+      android:textColor="@color/red"
+      android:gravity="center"
+      android:text="@string/no_search_results"
+      local:MvxBind="Visible NoSearchResults" />
+</LinearLayout>

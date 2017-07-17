@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/margin_default_large"
+    android:layout_marginRight="@dimen/margin_default_large">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewSelectReason"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginBottom="@dimen/margin_default"
+        style="@style/DefaultTextView_Bold"
+        android:text="@string/select_reason" />
+
+      <MvxListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewSelectReason"
+        android:id="@+id/reason_list"
+        android:divider="#ffffff"
+        android:dividerHeight="10dp"
+        local:MvxBind="ItemsSource Reasons"
+        local:MvxItemTemplate="@layout/reason_for_return_item" />
+  
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginRight="@dimen/margin_default"
+    android:layout_marginLeft="@dimen/margin_default"
+    android:gravity="center_horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dsr_phone_number"
+        android:layout_marginTop="@dimen/margin_default_large"
+        style="@style/DefaultTextView_MediumBold"
+        android:text="@string/dsr_phone_number" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/dsr_phone_number"
+        android:layout_marginLeft="5dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewPhoneNumber"
+        android:layout_marginTop="@dimen/margin_default_large"
+        android:layout_marginBottom="5dp"
+        style="@style/DefaultTextView_Faint"
+        android:text="@string/phone_number" />
+    <EditText
+        android:inputType="phone"
+        local:MvxBind="Text DsrPhoneNumber; Enabled NextButtonEnabled"
+        android:id="@+id/editTextPhoneNumber"
+        android:layout_below="@+id/textViewPhoneNumber"
+        android:maxLength="10"
+        style="@style/DefaultEditText"
+        android:layout_height="42dp"
+        android:layout_centerVertical="true" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextPhoneNumber"
+        local:MvxBind="Visible PhoneNumberErrorMessage">
+        <View
+            android:id="@+id/arrow"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/triangle_up_arrow"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/arrow"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_red_background"
+            android:paddingTop="@dimen/margin_default_small"
+            android:paddingBottom="@dimen/margin_default_small"
+            android:paddingLeft="@dimen/margin_default"
+            android:paddingRight="@dimen/margin_default"
+            local:MvxBind="Text PhoneNumberErrorMessage" />
+    </RelativeLayout>
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        local:MvxBind="Visible IsBusy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

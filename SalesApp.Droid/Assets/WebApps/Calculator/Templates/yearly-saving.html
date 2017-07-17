@@ -1,0 +1,27 @@
+<div class="cost">
+    <script>
+        window.ga = window.ga || function() { (ga.q = ga.q || []).push(arguments) };
+        ga.l = +new Date;
+        ga('create', CSharp.GetTrackingId(), 'auto');
+        ga('send', 'Saving Break down');
+    </script>
+    <h4 class="centre">Year {{year}}</h4>
+    <div class="panel-size panel panel-default">
+        <span class="pull-left">Cost Per Year</span><span class="currency pull-right">{{currentCostPerYear | number}}</span>
+    </div>
+    <div class="panel-size-large panel panel-default">
+        <span class="pull-left">Product Total<br />cost Per Year</span><span class="panel-spacing currency pull-right">{{costPerYear | number}}</span>
+    </div>
+    <div class="panel-size-large panel panel-default ">
+        <span class="pull-left">Estimated income<br />per year product</span><span class="currency pull-right">{{deviceIncome | number}}</span>
+    </div>
+
+    <div class="panel-size-large panel panel-default">
+        <span class="pull-left green">SAVE</span>  <span class="currency pull-right green">{{isNaN(yearlySaving) ? 0 : yearlySaving | number}}</span>
+    </div>
+    <div class="cost button-small">
+        <button class="btn btn-block btn-success" ng-click="go('/catalogue')">CATALOGUE</button>
+        <button class="btn btn-block btn-inverse" ng-click="go('/saving')">BACK</button>
+    </div>
+</div>
+

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="67dp"
+    android:minHeight="67dp"
+    android:orientation="horizontal"
+    android:layout_gravity="bottom"
+    android:gravity="center_vertical"
+    android:background="@color/green3"
+    local:MvxBind="Visible ToolBarVisible">
+    <TextView
+        android:id="@+id/raise_issue"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        style="@style/DefaultTextView_Caps"
+        android:textColor="@color/white"
+        android:text="@string/ticket_list_raise_issue" />
+    <View
+        android:layout_width="1dp"
+        android:layout_height="30dp"
+        android:background="@color/white" />
+    <TextView
+        android:id="@+id/add_prospect"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        style="@style/DefaultTextView_Caps"
+        android:textColor="@color/white"
+        android:text="@string/add_prospect" />
+    <View
+        android:layout_width="1dp"
+        android:layout_height="30dp"
+        android:background="@color/white" />
+    <TextView
+        android:id="@+id/add_customer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_weight="1"
+        style="@style/DefaultTextView_Caps"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="@string/add_customer" />
+</LinearLayout>

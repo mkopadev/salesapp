@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/assessProspectLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    android:theme="@style/AppTheme">
+    <LinearLayout
+        android:id="@+id/header"
+        style="@style/WrapHeight"
+        android:orientation="vertical"
+        android:background="@color/gray4">
+        <LinearLayout
+            style="@style/WrapContent"
+            android:layout_marginTop="28dp"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:orientation="horizontal">
+            <ImageView
+                style="@style/Indicator.Previous" />
+            <ImageView
+                style="@style/Indicator.Previous" />
+            <ImageView
+                style="@style/Indicator.Current" />
+            <ImageView
+                style="@style/Indicator.Next" />
+        </LinearLayout>
+        <TextView
+            style="@style/TextView.Light"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginBottom="20dp"
+            android:textSize="24sp"
+            android:text="@string/score_your_prospect" />
+        <RelativeLayout
+            style="@style/WrapHeight">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:id="@+id/imageProspectScore"
+                android:src="@drawable/score_1" />
+            <TextView
+                style="@style/TextView"
+                android:id="@+id/textScore"
+                android:layout_width="match_parent"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <TextView
+            style="@style/TextView"
+            android:layout_width="match_parent"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/gray3"
+            android:textAllCaps="true"
+            android:text="@string/score_generated" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/form"
+        android:layout_below="@+id/header"
+        style="@style/WrapHeight"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal">
+        <FrameLayout
+            style="@style/RegistrationScoreListItem"
+            android:layout_marginRight="2dp">
+            <TextView
+                style="@style/RegistrationScoreToggleLabel"
+                android:text="@string/need" />
+            <ToggleButton
+                style="@style/RegistrationScoreToggleButton"
+                android:id="@+id/toggleNeed"
+                android:layout_gravity="center" />
+        </FrameLayout>
+        <FrameLayout
+            style="@style/RegistrationScoreListItem"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp">
+            <TextView
+                style="@style/RegistrationScoreToggleLabel"
+                android:text="@string/authority" />
+            <ToggleButton
+                style="@style/RegistrationScoreToggleButton"
+                android:id="@+id/toggleAuthority"
+                android:layout_gravity="center" />
+        </FrameLayout>
+        <FrameLayout
+            style="@style/RegistrationScoreListItem"
+            android:layout_marginLeft="2dp">
+            <TextView
+                style="@style/RegistrationScoreToggleLabel"
+                android:text="@string/money" />
+            <ToggleButton
+                style="@style/RegistrationScoreToggleButton"
+                android:id="@+id/toggleMoney"
+                android:checked="false"
+                android:layout_gravity="center" />
+        </FrameLayout>
+    </LinearLayout>
+    <include
+        layout="@layout/layout_nav_buttons" />
+</RelativeLayout>

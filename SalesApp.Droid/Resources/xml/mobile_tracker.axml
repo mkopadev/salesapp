@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+ <resources>
+    <!--<string name="ga_sampleFrequency">100.0</string>
+    <integer name="ga_sessionTimeout">1800</integer>
+    <bool name="ga_autoActivityTracking">true</bool>-->
+    <bool name="ga_anonymizeIp">false</bool>
+    <bool name="ga_reportUncaughtExceptions">true</bool>
+
+    <screenName name="SalesApp.Droid.WelcomeActivity">Home Screen</screenName>
+    <screenName name="SalesApp.Droid.UI.Wizardry.WizardActivity">Wizard</screenName>
+
+    <!--Customer-->
+    <screenName name="SalesApp.Droid.People.Customers.CustomerDetailView">Customer Details Screen</screenName>
+    <screenName name="SalesApp.Droid.People.Customers.CustomerListView">Customer List Screen</screenName>
+    <screenName name="SalesApp.Droid.Views.Person.Customer.CustomerPhotoSyncView">Reporting Level Screen</screenName>
+
+    <!--Prospects-->
+    <screenName name="SalesApp.Droid.People.Prospects.ProspectDetailActivity">Prospect Details Screen</screenName>
+    <screenName name="SalesApp.Droid.People.Prospects.ProspectListView">Prospect List Screen</screenName>
+   
+    <!--Device registration-->
+    <screenName name="SalesApp.Droid.People.SalesRepresentatives.DeviceRegistration_Step_1">Device Registration Step1 Screen</screenName>
+    <screenName name="SalesApp.Droid.People.SalesRepresentatives.DeviceRegistration_Step_2">Device Registration Step2 Screen</screenName>
+    <screenName name="SalesApp.Droid.People.SalesRepresentatives.DeviceRegistration_Step_3">Device Registration Step3 Screen</screenName>
+   
+   
+    <screenName name="SalesApp.Droid.Tickets.RaiseTicketActivity">Raise Ticket Screen</screenName>
+    <screenName name="SalesApp.Droid.Tickets.TicketCustomerIdentityActivity">Customer Ticket Screen</screenName>
+    <screenName name="SalesApp.Droid.Tickets.TicketSubmissionActivity">Submit Ticket Screen</screenName>
+    <screenName name="SalesApp.Droid.Tickets.TicketStartActivity">Start Ticket Screen</screenName>
+    <screenName name="SalesApp.Droid.Tickets.ProcessFlowActivity">Ticket Process Screen</screenName>
+   
+    <!--Stats-->
+    <screenName name="SalesApp.DroidUI.Stats.Reporting.ReportingLevelStatsView">Reporting Level Screen</screenName>
+    <screenName name="SalesApp.Droid.UI.Stats.StatsView">Reporting Level Screen</screenName>
+ 
+    <!--Tickets-->
+    <screenName name="SalesApp.Droid.Views.TicketList.TicketDetailView">Ticket Details Screen</screenName>
+    <screenName name="SalesApp.Droid.Views.TicketList.TicketListView">Ticket List Screen</screenName>
+     
+   
+    <screenName name="SalesApp.Droid.BroadcastMessagesListActivity"></screenName>
+    <screenName name="SalesApp.Droid.CustomerSearchActivity">Customer Search</screenName>
+    <screenName name="SalesApp.Droid.LoginActivityView">Login Screen</screenName>
+    <screenName name="SalesApp.Droidr.MainActivity">Startup Screen</screenName>
+ </resources>

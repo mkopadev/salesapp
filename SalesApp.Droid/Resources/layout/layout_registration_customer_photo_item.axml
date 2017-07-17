@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_default">
+    <SalesApp.Droid.Components.UIComponents.Image.CircularImageView
+        android:id="@+id/imageView_photo"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/salesapp_logo" />
+    <TextView
+        android:id="@+id/textView_customer_photo_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_default"
+        android:layout_marginRight="@dimen/margin_default"
+        android:layout_toLeftOf="@+id/imageView_delete"
+        android:layout_toRightOf="@+id/imageView_photo"
+        android:text="@string/customer_photo_status_saved" />
+    <ImageView
+        android:id="@+id/imageView_delete"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_photo_delete" />
+</RelativeLayout>

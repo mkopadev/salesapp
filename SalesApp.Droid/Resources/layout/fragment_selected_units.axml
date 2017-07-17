@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mcontent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <MvxListView
+       android:id="@+id/dsr_details"
+       android:layout_alignParentTop="true"
+       android:background="@color/grey_transparent"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:divider="@null"
+       android:layout_margin="@dimen/margin_default_large"
+       android:padding="@dimen/margin_default_small"
+       local:MvxBind="ItemsSource DsrDetails"
+       local:MvxItemTemplate="@layout/stock_dsr_details_table_item" />
+  
+    <RelativeLayout
+        android:id="@+id/selected_units_title"
+        android:layout_below="@id/dsr_details"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/green_light"
+        android:layout_marginBottom="@dimen/margin_default">
+        <ImageView
+            android:id="@id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_default_large"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical" 
+            android:src="@drawable/selected"/>
+        <TextView
+            style="@style/TextView.Light"
+            android:textAllCaps="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/image"
+            android:layout_marginLeft="@dimen/margin_default"
+            android:layout_centerVertical="true"
+            android:text="@string/selected_units" />
+    </RelativeLayout>
+  <Linearlayout
+   android:id="@+id/reason"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:orientation="vertical"
+   android:layout_alignParentBottom="true">
+    <RelativeLayout
+        android:id="@+id/select_Units"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/green_light"
+        local:MvxBind="Visible ShowOnReceiveStockScreen">
+      <TextView
+            style="@style/TextView.Light"
+            android:textAllCaps="true"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/margin_default_large"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            local:MvxBind="Text SelectMoreOrReasonTitle" />
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_alignParentRight="true"
+          android:gravity="center_vertical"
+          android:layout_marginRight="@dimen/margin_default_large"
+          android:src="@drawable/arrow"
+          local:MvxBind="Visibility InvertedVisibility(ShowOnReceiveStockScreen)"
+          />
+    </RelativeLayout>
+    <TextView
+      style="@style/DefaultTextView"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/margin_default"
+      local:MvxBind="Text SelectedReason.Reason; Visible ShowOnReceiveStockScreen"/>
+  </Linearlayout>
+  
+  <MvxListView
+        android:id="@+id/selected_units_list"
+        android:layout_below="@id/selected_units_title"
+        android:layout_above="@id/reason"
+        android:layout_width="match_parent"
+        android:divider="@null"
+        android:layout_height="wrap_content"
+        local:MvxBind="ItemsSource SelectedUnits"
+        local:MvxItemTemplate="@layout/allocated_units_list_item" />
+</RelativeLayout>

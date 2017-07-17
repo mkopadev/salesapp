@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_default"
+    android:layout_marginLeft="@dimen/margin_default_large"
+    android:layout_marginRight="@dimen/margin_default_large">
+  <TextView 
+      android:id="@+id/spinner_title"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      style="@style/DefaultTextView"
+      android:layout_marginBottom="@dimen/margin_default_small"
+      local:MvxBind="Text Description"/>
+  <TextView
+      android:id="@+id/spinner_text"
+      android:layout_width="match_parent"
+      android:layout_height="43dp"
+      style="@style/DefaultTextView"
+      android:drawableRight="@drawable/dropdown_arrow"
+      android:background="@drawable/edit_text_default"
+      android:paddingLeft="@dimen/margin_default"
+      android:paddingRight="@dimen/margin_default"
+      android:gravity="center_vertical"
+      local:MvxBind="Text SelectedOption.OptionName"/>
+</LinearLayout>

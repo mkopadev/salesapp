@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        local:MvxBind="Text Date"
+        style="@style/DefaultTextView"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp" />
+    <TextView
+        android:id="@+id/sales"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        local:MvxBind="Text Sales; Visible Sales"
+        style="@style/DefaultTextView"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp" />
+    <TextView
+        android:id="@+id/commission"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        local:MvxBind="Text Commissions"
+        style="@style/DefaultTextView"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp" />
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp"
+    android:background="#ffffff">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sales App would like to know your location, do you want to enable your location settings?"
+        android:id="@+id/txtMessage"
+        android:textSize="15dp"
+        android:textStyle="normal"
+        android:paddingBottom="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="#000" />
+    <Button
+        android:id="@+id/btnNo"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:text="No"
+        android:layout_alignBaseline="@+id/btnYes"
+        android:layout_alignBottom="@+id/btnYes"
+        android:layout_alignLeft="@+id/txtMessage"
+        android:layout_alignStart="@+id/txtMessage"
+        android:background="#FFFFFF" />
+    <Button
+        android:id="@+id/btnYes"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:text="Yes"
+        android:layout_below="@+id/txtMessage"
+        android:layout_alignRight="@+id/txtMessage"
+        android:layout_alignEnd="@+id/txtMessage"
+        android:background="#FFFFFF" />
+</RelativeLayout>

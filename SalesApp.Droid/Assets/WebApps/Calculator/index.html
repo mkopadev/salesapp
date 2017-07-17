@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui, width=device-width" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="yes" />
+   
+    <!-- Scripts -->
+	<link rel="stylesheet" href="../Libs/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<script type="text/javascript" src="../Libs/jquery.min.js" defer></script>
+	<script type="text/javascript" src="../Libs/bootstrap.min.js" defer></script>
+	
+    <script type="text/javascript" src="../Libs/angular.min.js" defer></script>
+    <script type="text/javascript" src="../Libs/angular-ui-router.min.js" defer></script>
+	<!--<script type="text/javascript" src="../Libs/ui-bootstrap-tpls.min.js" defer></script>
+	<script type="text/javascript" src="../Libs/angular-sanitize.min.js" defer></script>-->
+
+    <script type="text/javascript" src="app.js" defer></script>
+
+    <!-- Routes -->
+    <script type="text/javascript" src="Services/sessionInterceptor.js" defer></script>
+    <script type="text/javascript" src="routes.js" defer></script>
+
+	<script type="text/javascript" src="Controllers/controllers.js" defer></script>
+	<script type="text/javascript" src="Controllers/costperyear.js" defer></script>
+	<script type="text/javascript" src="Controllers/IncomeController.js" defer></script>
+	<script type="text/javascript" src="Controllers/SavingsController.js" defer></script>
+	<script type="text/javascript" src="Controllers/YearlySavingController.js" defer></script>
+	<script type="text/javascript" src="Controllers/CatalogueController.js" defer></script>
+
+	<!-- Services-->
+	<script type="text/javascript" src="Services/products.js" defer></script>
+	<script type="text/javascript" src="Services/CostCalculatorService.js" defer></script>
+
+    <!-- Google Analytics -->
+    <script>
+        window.ga = window.ga || function() { (ga.q = ga.q || []).push(arguments) };
+        ga.l = + new Date;
+        ga('create', 'UA-76361838-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src='../Libs/analytics.js'></script>
+    <!--<script async src="https://www.google-analytics.com/analytics.js"></script>-->
+    <!-- End Google Analytics -->
+</head>
+<body ng-app="app">
+	<div ui-view></div>
+</body>
+</html>

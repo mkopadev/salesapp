@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listselector"
+    android:id="@+id/prospect_row_layout">
+    <RelativeLayout
+        android:id="@+id/prospect_row"
+        android:layout_width="fill_parent"
+        android:layout_height="66.2dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true">
+        <TextView
+            android:id="@+id/prospect_row_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@+id/imgArrow"
+            android:textColor="@color/gray3"
+            android:paddingTop="15dp" />
+        <TextView
+            android:id="@+id/prospect_row_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="xyz"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@+id/imgStatus"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp" />
+        <ImageView
+            android:id="@+id/imgStatus"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="visible"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="9.3dp" />
+        <TextView
+            android:id="@+id/prospect_row_phoneno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray3"
+            android:text="123456"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="15dp"
+            android:paddingBottom="10dp"
+            android:layout_toRightOf="@id/imgStatus" />
+        <ImageView
+            android:id="@+id/imgArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="22.0dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/arrow_right"
+            android:layout_centerVertical="true"
+            android:paddingLeft="20dp" />
+        <ImageView
+            android:id="@+id/imgView4"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/imgArrow"
+            android:paddingBottom="5dp"
+            android:src="@drawable/prospect_list_2" />
+    </RelativeLayout>
+</RelativeLayout>

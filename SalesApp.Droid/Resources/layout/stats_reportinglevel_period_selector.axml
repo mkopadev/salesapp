@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recordSelectionContainer"
+    android:orientation="horizontal"
+    android:background="@color/grey_light"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:layout_marginTop="@dimen/margin_default_small"
+    android:layout_marginBottom="1dp"
+    android:padding="@dimen/margin_default_small">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/btnListSelectorPrevious"
+        android:gravity="right|center"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        local:MvxBind="Enabled HasPrevious; Visibility VisibleInvisible(HasPrevious)">
+        <ImageView
+            android:id="@+id/imgListSelectorPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/arrowLeft"
+            android:layout_marginRight="@dimen/margin_default" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/lblSelectorName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        style="@style/DefaultTextView"
+        local:MvxBind="Text SelectedPeriod" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/btnListSelectorNext"
+        android:layout_width="0dp"
+        android:gravity="left|center"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        local:MvxBind="Enabled HasNext; Visibility VisibleInvisible(HasNext)">
+        <ImageView
+            android:id="@+id/imgListSelectorNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/arrowRight"
+            android:layout_marginLeft="@dimen/margin_default" />
+    </LinearLayout>
+</LinearLayout>

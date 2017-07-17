@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <!-- Navigation -->
+  <string name="app_name">Sales Application</string>
+  <string name="home">Home</string>
+  <string name="prospect_list">Prospect list</string>
+  <string name="customer_list">Customer list</string>
+  <string name="customer_status">Customer status</string>
+
+  <!-- General -->
+  <string name="support_phone">[Support Phone]</string>
+  <string name="network_connection_required">An Internet connection is required.</string>
+  <string name="something_wrong_try_again">Something went wrong, please try again.</string>
+  <string name="something_wrong_server_try_again">Something went wrong with the request on the server, please try again or contact the support.</string>
+  <string name="ok">Ok</string>
+  <string name="retry">Retry</string>
+  <string name="action_unsuccessful_retry">{0} unsuccessful, please try again.</string>
+  <string name="try_again">Try Again</string>
+  <string name="succeeded">Succeeded</string>
+  <string name="go_back">Go back</string>
+  <string name="enter_mobile_no">Enter your Mobile Number:</string>
+  <string name="mobile_no">Mobile Number</string>
+  <string name="working">Working...</string>
+  <string name="loading">Loading...</string>
+  <string name="not_found">Not found</string>
+  <string name="please_wait">Please wait...</string>
+  <string name="no">No</string>
+  <string name="yes">Yes</string>
+  <string name="next">Next</string>
+  <string name="cancel">Cancel</string>
+  <string name="id">Id</string>
+  <string name="no_search_results">No matching results could be found, please check if the spelling is correct.</string>
+
+  <!-- Swap components -->
+  <string name="component_swap">Component Swap</string>
+  <string name="customer_identification">Customer Identification</string>
+  <string name="customer_identification_message">Please select if you want to identify the customer by entering the phone number, ID or serial number</string>
+  <string name="id_number">ID</string>
+  <string name="device">Device</string>
+  <string name="phone_number_message">Please enter the customer\'s telephone number</string>
+  <string name="id_message">Please enter the customer ID</string>
+  <string name="serial_message">Please enter the device serial number</string>
+  <string name="find_customer">Find Customer</string>
+  <string name="customer_details">Customer Details</string>
+  <string name="select_product_swap">Please select the product</string>
+  <string name="warranty_expired">Warranty expired</string>
+  <string name="warranty_message">The warranty of product: has expired. You are not allowed to proceed with the component swap.</string>
+  <string name="select_another_product">Select another product</string>
+  <string name="select_component">Please select a component:</string>
+  <string name="in_stock">In Stock:</string>
+  <string name="returned">Returned:</string>
+  <string name="product_components">Product_components</string>
+  <string name="reason_4_swap">Reason for Swap</string>
+  <string name="swap_reason">Enter a reason for component swap</string>
+  <string name="tap_to_start">Tap to start writing</string>
+  <string name="swap_failed">Swap failed</string>
+  <string name="swap_successful">Swap successful</string>
+  <string name="sending_failed">Sending has failed</string>
+  <string name="sending_failed_message">It seems you are not connected to the internet, please check your connection and try again</string>
+  <string name="swap_another_product">Swap another component</string>
+  <string name="sending_success_message">Successful component swap</string>
+  <string name="swap_reason_title">Reason for component swap</string>
+  <string name="send">Send</string>
+  <string name="no_components">Components for the selected product are not available at the moment. Contact support for assistance.</string>
+  <string name="no_components_found">There are no components found for the selected product.</string>
+  <string name="no_components_swap">There are no components available for swap for the selected component.</string>
+  <string name="available_options">Available options:</string>
+  <string name="warranty_expired_on">Warranty expired on</string>
+  <string name="in_warranty_until">In warranty until</string>
+  <string name="unable_to_continue_net">You are unable to continue because there is no internet available.</string>
+  <string name="loading_compatible_components">Loading compatible product components...</string>
+  <string name="not_connected">You are not connected to the internet</string>
+  <string name="out_of_stock_component">This component is out of stock. Select another component.</string>
+  <string name="product_">Product:</string>
+  <string name="component_swapped_">Component Swapped:</string>
+  <string name="swapped_with_">Swapped with:</string>
+  <string name="swapping_component">Swapping component...</string>
+  <string name="loading_product_components">Loading product components...</string>
+  <string name="telephone_number_">a telephone number.</string>
+  <string name="Id_number_">an ID number.</string>
+  <string name="serial_number">a serial number.</string>
+  <string name="please_enter">Please enter</string>
+  <string name="loading_customer_details">Loading Customer details...</string>
+  <string name="customer_not_exist_reenter">Customer does not exist, please re-enter the</string>
+  <string name="serial_number">a serial number.</string>
+  <string name="blocked_customer_account">Customer account is blocked.</string>
+  <string name="cancelled_customer_account">Customer account is cancelled.</string>
+  <string name="connection_error">A connection error has occurred. Check your internet settings.</string>
+  <string name="provide_swap_reason">Please provide a reason for component swap.</string>
+  <string name="swap_component_">Swapping component...</string>
+  <string name="sending_failed_thrice">Sending has failed 3 times due to limited connectivity. Please call customer care for assistance. Tel:</string>
+  <string name="swap">swap</string>
+  <string name="warranty_expired_no_swap">The warranty of {0} has expired. You are not allowed to proceed with the component swap.</string>
+
+  <!--Customer photo-->
+  <string name="image_capture_cancelled">Image Capture was cancelled</string>
+  <string name="photo_saving_failed">Failed to save photo. Try again.</string>
+
+  <string name="turn_on_net_to_view_commissions">Please turn on your internet and pull to refresh in order to view commissions</string>
+
+  <string name="log_file_">Sales Application Log File</string>
+  <string name="share_log_file_">Share Log File</string>
+  <string name="updating_inbox">Updating Inbox...</string>
+  <string name="unable_to_refresh_">Unable to refresh :</string>
+  <string name="connection_not_available">Internet connection is not available</string>
+  <string name="loading_registration_status">Loading Registration Status...</string>
+  <string name="customer_record_not_found_">No customer record found. If this is an error kindly contact the Customer Care</string>
+
+  <!-- About App-->
+  <string name="menu_search">Search</string>
+  <string name="menu_settings">Settings</string>
+  <string name="build_version">
+    App version: {0} ({3}).\nCore version: {1}.\nBuild time: {2}.
+  </string>
+  <string name="menu_about">About</string>
+  <string name="menu_logs">Logs</string>
+  <string name="menu_privacy">Privacy Policy</string>
+
+  <!--- Login Layout-->
+  <string name="welcome">Welcome to SalesApp</string>
+
+  <string name="enter_pin">Enter PIN</string>
+  <string name="enter_pin_4_digits">Please enter 4 digits</string>
+  <string name="raise_ticket">Raise Ticket</string>
+  <string name="enter_pin_long">Please type your 4 digit PIN</string>
+  <string name="retype_pin">Retype PIN</string>
+  <string name="retype_pin_long">Please retype your 4 digit PIN</string>
+  <string name="log_in_button">LOG IN</string>
+  <string name="logging_in_button">Logging In...</string>
+  <string name="enter_mobile_number">Enter your Mobile Number:</string>
+  <string name="mobile_number">Mobile Number</string>
+  <string name="login_fail">Log In Failed</string>
+  <string name="wrong_pin">Wrong PIN, please re-enter your PIN</string>
+  <string name="something_wrong_try_again_login">Something went wrong when logging in Online, please try again.</string>
+  <string name="online_login_failed">Online login failed, logging you offline. Press Log In to continue.</string>
+
+  <string name="login_server_comm_err">Unable to communicate with the server.</string>
+  <!--- Login Offline-->
+  <string name="logging_in_offline">Logging in offline</string>
+  <string name="logging_in_online">Logging in online</string>
+  <string name="no_offline_profile">No valid local profile present, please go online to login.</string>
+  <string name="logging_in_too_long">Please connect to the internet. You are not allowed to log in offline since it has been {0} days since you logged in online.</string>
+  <string name="logging_in_offline_no">Please connect to the internet. You are not allowed to log in offline since it has been {0} days since you logged in online.</string>
+  <string name="logging_in_offline_expire">Please connect to the internet, you have entered the wrong pin {0} times. You need to log in online.</string>
+  <string name="update">Update</string>
+  <string name="not_now">Not now</string>
+  <string name="update_preferred">A new version of the Sales App is available. We recommend updating.</string>
+  <string name="update_required">A new version of the Sales App is available. You need to update.</string>
+
+  <!-- Reset Pin-->
+  <string name="forgot_pin">Forgot PIN?</string>
+  <string name="reset_pin_enter_phone">To reset your PIN you need to enter the phone number registered with.</string>
+  <string name="reset_pin">Reset PIN</string>
+  <string name="dont_reset_pin">Don\'t Reset</string>
+  <string name="reset_forgotten_pin">
+    <u>Forgotten PIN?</u>
+  </string>
+  <string name="resetting_pin">Resetting your PIN</string>
+  <string name="confirm_reset_pin">Do you want to reset your PIN?</string>
+  <string name="pin_reset_fail_title">Pin Reset Failed</string>
+  <string name="pin_reset_fail_msg">PIN reset failed, please try again. If the problem persists, call HQ on {0} for assistance.</string>
+  <string name="pin_reset_success_msg">PIN Reset is successful, you will receive a SMS with your new PIN shortly.</string>
+  <string name="pin_reset_no_internet">To reset your PIN you need an active internet connection.</string>
+  <string name="pin_validation_null">No phone number was entered, you must specify a phone number to reset pin.</string>
+  <string name="pin_validation_short">Phone number entered was too short. Please correct.</string>
+  <string name="pin_validation_long">Phone number entered was too long. Please correct.</string>
+  <string name="pin_validation_bad_chars">Phone number should only contain numeric characters.</string>
+  <string name="pin_validation_invalid_format">The entered phone number does not match expected format for your selected country.</string>
+  <string name="back_to_login">Back to login</string>
+  <string name="pin_reset_done">PIN Reset completed</string>
+
+  <string name="reset_pin_title">Reset PIN</string>
+
+  <string name="cancel_reset">Cancel Reset</string>
+  <string name="reset_pin_need_internet">To reset your PIN you need an active internet connection.</string>
+
+  <!--- Welcome Layout-->
+  <string name="hello">Hello!</string>
+  <string name="heading">Hello!</string>
+  <string name="new_prospect">New Prospect</string>
+  <string name="new_customer">New Customer</string>
+  <string name="view_notifications">Notifications</string>
+
+  <!-- Register Prospect or Customer -->
+  <string name="register_prospect">Register Prospect</string>
+  <string name="prospect_registration">Propspect Registration</string>
+  <string name="register_customer">Register Customer</string>
+  <string name="customer_registration">Customer Registration</string>
+  <string name="basic_info">Basic Info</string>
+  <string name="basic_information">Basic Information</string>
+  <string name="phone_number">Phone</string>
+  <string name="phone_number_verify">Re-enter Phone Number</string>
+  <string name="last_name">Last Name</string>
+  <string name="first_name">First Name</string>
+  <string name="prospect_save_succeeded_title">Prospect Saved</string>
+  <string name="prospect_save_failed_title">Prospect Not Saved</string>
+  <string name="prospect_save_succeeded_story">Prospect was registered successfully.</string>
+  <string name="prospect_save_failed_story">An error occured while trying to save the prospect. Prospect not saved.</string>
+  <string name="propect_saved_device_only_story">The prospect was only saved on your mobile device, please try to synchronize later to upload the prospect.</string>
+  <string name="add_prospect">Add Prospect</string>
+  <string name="add_customer">Add Customer</string>
+  <string name="customer_registration_complete_data">Customer Registration by data complete</string>
+  <string name="customer_registration_complete_fallback">Customer Registration by fall back complete</string>
+  <string name="customer_resend_registration_complete_fallback">Resending Customer Registration by fall back complete</string>
+
+  <string name="existing_prospect_return_home">Prospect exists, return to Home</string>
+  <string name="existing_prospect_go_cust_reg">Existing prospect. Go to customer registration</string>
+  <string name="existing_customer">Existing customer</string>
+  <string name="return_to_home">Return to Home</string>
+  <string name="existing_customer_go_back">Customer exists, go back.</string>
+  <string name="existing_prospect_register_customer">Register as Customer</string>
+
+  <string name="are_you_sure_this_is_correct">Are you sure this is correct?</string>
+  <string name="you_must_type_a_name">You must type a name</string>
+  <string name="wrong_phone_formatting">Invalid number</string>
+  <string name="name_is_longer">The name is longer than 256 characters</string>
+  <string name="serial_not_found">Serial # not found</string>
+
+  <string name="registration_confirmation_dialog_title">Is this the person you are registering:</string>
+  <string name="go_to_customer_registration">Go to Customer Registration</string>
+  <string name="continue_to_prospect_registration">Continue to Prospect Registration</string>
+  <string name="sending_information">Sending information to server.</string>
+  <string name="not_able_to_send">Not able to send information.</string>
+  <string name="retrying">Retrying...(retry no. {0}).</string>
+  <string name="sms_registration_failed_title">SMS Registration failed</string>
+  <string name="sms_registration_failed">The SMS for customer registration could not be send. Please try again. If the problem persists, call support for assistance on:</string>
+  <string name="sms_registration_failed_three_tries">We tried to send SMS for customer registration but it failed three times. Please call support for assistance on:</string>
+  <string name="cancel_registration">Cancel registration</string>
+  <string name="sms_registration_done_title">Registration send via SMS</string>
+  <string name="customer_registration_failed_title">Customer registration failed!</string>
+  <string name="customer_registration_failed_retry">The SMS for customer registration was not send. Please confirm you have network coverage and press the "Try again" button.</string>
+  <string name="sms_registration_done">Customer was successfully registered</string>
+  <string name="return_to_customer_details">Return to customer details</string>
+
+  <string name="existing_record_found">Existing record found!</string>
+  <string name="please_check_if_this_person">Please check if this is the person you are \nregistering:</string>
+  <string name="yes_go_to_customer_reg">
+    <b>Yes</b>\nGo to customer registration
+  </string>
+  <string name="no_go_back_to_prospect_reg">
+    <b>No</b>\nGo back to prospect registration
+  </string>
+  <string name="prospect_step_1_of_n">Step 1 of 4</string>
+  <string name="prospect_registered_title">Prospect Registered</string>
+  <string name="prospect_reg_prompt_reminder">You can set a follow up reminder</string>
+  <string name="prospect_reg_checking_number_title">Validating Prospect</string>
+  <string name="prospect_reg_checking_number_story">Validating prospect. Please wait.</string>
+  <string name="prospect_saving_title">Saving Prospect</string>
+  <string name="prospect_saving_story">Saving prospect. Please wait.</string>
+  <string name="prospect_phone_validation_null">Please enter prospect\'s number</string>
+  <string name="prospect_phone_validation_short">Phone number entered was too short.</string>
+  <string name="prospect_phone_validation_long">Phone number entered was too long.</string>
+  <string name="prospect_phone_validation_bad_chars">Phone number can only be numeric.</string>
+  <string name="prospect_phone_validation_invalid_format">The entered number\'s format is incorrect.</string>
+  <string name="prospect_reg_cancel_title">Cancel Prospect Registration</string>
+  <string name="prospect_reg_cancel_story">Are you sure you want to cancel registering prospect?</string>
+  <string name="prospect_reg_cust_exists_action">Existing Customer</string>
+  <string name="prospect_reg_cust_exists_title">Number Belongs To Customer</string>
+  <string name="prospect_reg_cust_exists_story">The phone number ~ you entered is already registered as customer ~</string>
+
+  <string name="duplicate_check_err_actionbar">Error Confirming Duplicate</string>
+  <string name="duplicate_check_err_title">Could Not Check Duplication</string>
+  <string name="duplicate_check_err_msg">Error occured when checking whether prospect already exists. Please verify with the service centre whether this prospect already exists.</string>
+
+  <string name="customer_save_err_actionbar">Customer Not Saved</string>
+  <string name="customer_save_err_title">Could Not Save Customer On Phone</string>
+  <string name="customer_save_err_message">The customer was not saved on the device.</string>
+  <string name="customer_duplicate_error_message">The customer was not saved on the device because another record already existing with the same phone number</string>
+  <string name="customer_save_err_button">Close</string>
+
+
+  <!-- Prospect Follow Up -->
+  <string name="prospect_followup_date_time">Date and time</string>
+  <string name="prospect_followup_skip">Skip</string>
+  <string name="prospect_followup_set">Set</string>
+  <string name="prospect_followup_set_date_prompt">Set Date</string>
+  <string name="prospect_followup_set_time_prompt">Set Time</string>
+  <string name="prospect_followup_set_reminder_prompt">Set Followup Reminder?</string>
+  <string name="prospect_followup_past_time_title">Time Already Past</string>
+  <string name="prospect_followup_past_date_title">Date Already Past</string>
+  <string name="prospect_followup_past_time_story">The time you\'ve selected for the reminder already passed. Please select a time in the future.</string>
+  <string name="prospect_followup_past_date_story">The date you\'ve selected for the reminder already passed. Please select a date in the future.</string>
+  <string name="prospect_followup_reminder_set">The follow up reminder has been set</string>
+  <string name="prospect_followup_reminder_set_title">Follow Up Reminder Set</string>
+  <string name="prospect_followup_register_another_question">Would you like to register another prospect?</string>
+  <string name="prospect_followup_return_to_homepage">Return to home page</string>
+  <string name="prospect_followup_return_to_prospect_list">Return to prospect list</string>
+  <string name="prospect_followup_return_to_customer_list">Return to customer list</string>
+  <string name="prospect_followup_register_prospect">Register Prospect</string>
+  <string name="no_serial_found">Serial number not found, press next in order to continue with the registration without entering the serial number.</string>
+  <string name="registering">Please wait registering...</string>
+
+  <!-- Prospect Follow Up -->
+  <string name="prospect_reminder_notification_title_multiple">Prospect Reminders</string>
+  <string name="prospect_reminder_notification_title_single">Prospect Reminder</string>
+  <string name="prospect_reminder_notification_message_multiple">{0} Prospects Awaiting Action</string>
+  <string name="prospect_reminder_notification_message_single">Follow Up With {0}</string>
+
+  <!-- Assess Prospect -->
+  <string name="score_your_prospect">Score your prospect</string>
+  <string name="need">Need</string>
+  <string name="authority">Authority</string>
+  <string name="money">Money</string>
+  <string name="score_generated">Score generated</string>
+
+  <string name="successful_registration">Successful Registration</string>
+  <string name="successful_registration_message">Customer was successfully registered.</string>
+  <string name="successful_registration_message_prospect">Prospect was successfully registered.</string>
+  <string name="go_to_homepage">Return Home</string>
+
+  <!-- Product -->
+  <string name="select_product">Select product</string>
+  <string name="you_must_select_a_product">You must select a product</string>
+  <string name="serial_number">Serial number</string>
+  <string name="incomplete_number">Incomplete number</string>
+  <string name="manual_enter">Manual enter</string>
+
+  <!-- Messages -->
+  <string name="messages">Messages</string>
+  <string name="message_count_zero">(0)</string>
+
+  <!-- Settings -->
+  <string name="select_country">Select Country</string>
+
+  <!-- Custom Info Dialog-->
+  <string name="no_button_text">At least one button is required for the custom info dialog</string>
+
+  <!-- Customer List-->
+  <string name="customer_list_title">Customers</string>
+  <string name="customer_list_title_active">Active</string>
+  <string name="customer_list_title_in_progress">Registration in progress</string>
+  <string name="customer_list_search_error">Something went wrong with finding customers online. Tap here to retry.</string>
+  <string name="customer_list_search_local">Search results from your device only. Connect to the internet and tap here if you want to search through all customers.</string>
+  <string name="customer_list_no_results_online">No results found. Please check if the phone number is correct.</string>
+  <string name="no_customers">No customers</string>
+  <string name="customers_refresh_prompt">Please pull to refresh in order to retrieve registered customers.</string>
+  <string name="customers_refresh_prompt_no_internet">Turn on your internet and pull to refresh in order to retrieve registered customers.</string>
+  <string name ="customer_rejected">Rejected</string>
+  <!-- Customer Detail -->
+  <string name="raise_issue">Raise Issue</string>
+  <string name="raise_issue_two">RAISE\nISSUE</string>
+  <string name="call_customer">CALL CUSTOMER</string>
+  <string name="registration_process_steps">Registration Process. Step {0} of {1}.</string>
+  <string name="product">Product:</string>
+  <string name="sms_not_sent">SMS not sent</string>
+  <string name="sms_sent">SMS sent</string>
+  <string name="loading_status">Loading registration status...</string>
+  <string name="no_registration_information">No registration information found</string>
+  <string name="resend_registration">Resend Registration</string>
+  <string name="try_again_resending">Try again</string>
+  <string name="cancel_resending">Cancel</string>
+  <string name="resending">Sending registration, please wait</string>
+
+  <!-- Customer Search -->
+  <string name="cust_search_device_only">
+    No matching results could be found on your device. Connect to the internet and tap here if you want to search through all the customers.
+  </string>
+  <string name="cust_search_searching">
+    Searching...
+  </string>
+  <string name="cust_search_error">
+    Something went wrong with finding customers online. Tap here to retry.
+  </string>
+
+  <!-- Prospect List -->
+  <string name="drawer_open">Open navigation drawer</string>
+  <string name="drawer_close">Close navigation drawer</string>
+  <string name="add_new_customer">Add New Customer</string>
+  <string name="add_new_prospect">Add New Prospect</string>
+  <string name="create_new_prospect">Create New Prospect</string>
+  <string name="prospects_list_title">Prospects</string>
+  <string name="prospects_list_title_drawer">Prospects</string>
+  <string name="prospects_list_title_tomorrow">Tomorrow</string>
+  <string name="prospects_list_title_today">Today</string>
+  <string name="prospects_list_title_overdue">Overdue</string>
+  <string name="prospects_list_title_later">Later</string>
+  <string name="prospects_list_title_none">None</string>
+  <string name="days">days</string>
+  <string name="day">day</string>
+  <string name="no_prospects">No prospects</string>
+  <string name="prospects_refresh_prompt">Please pull to refresh in order to retrieve registered prospects.</string>
+  <string name="prospects_refresh_prompt_no_internet">Please turn on your internet and pull to refresh in order to retrieve registered prospects.</string>
+
+  <!-- Prospect Details -->
+  <string name="create_reminder">Create Reminder</string>
+  <string name="edit_reminder">Edit Reminder</string>
+  <string name="reminder">Reminder</string>
+  <string name="convert_to_customer">Convert to Customer</string>
+  <string name="prospect_details">Prospect Details</string>
+  <string name="set_date">Set Date</string>
+  <string name="set_time">Set Time</string>
+  <string name="already_converted">This prospect has already been converted to a customer</string>
+
+  <!-- Device Registration -->
+  <string name="welcome">Welcome</string>
+  <string name="Please_select_a_country1">Select a country</string>
+  <string name="previous">Previous</string>
+  <string name="country_selected">You have selected the country as:</string>
+  <string name="registered_phone">Your registered phone number is:</string>
+  <string name="change_country">CHANGE COUNTRY</string>
+  <string name="change_phone">RE-ENTER PHONE NUMBER</string>
+  <string name="device_registration">Device Registration</string>
+  <string name="phone_validation_null">No phone number was entered, you must specify a phone number.</string>
+  <string name="phone_validation_invalid_format">Invalid phone number.</string>
+  <string name="select_country_error">Please select a country from the list</string>
+  <string name="country_kenya">Kenya</string>
+  <string name="country_uganda">Uganda</string>
+  <string name="country_ghana">Ghana</string>
+  <string name="country_tanzania">Tanzania</string>
+
+
+  <string-array name="countries_array">
+    <item>@string/Please_select_a_country1</item>
+    <item>@string/country_kenya</item>
+    <item>@string/country_uganda</item>
+    <item>@string/country_ghana</item>
+    <item>@string/country_tanzania</item>
+  </string-array>
+
+  <!-- Synchronization -->
+  <string name="failed_to_sync">Failed to synchronize. Please try again.</string>
+  <string name="unable_to_sync_internet">Unable to synchronize. No internet available.</string>
+  <!-- Role Based Views -->
+  <string name="role_based_error_actionbar">Error Updating Permissions</string>
+  <string name="role_based_error_title">Could Not Save Permissions</string>
+  <string name="role_based_error_message">Error occured when trying to save newly received permissions, certain actions and screens may be unavailable</string>
+
+  <!-- Network Errors -->
+  <string name="network_err_actionbar">Network Error Occured</string>
+  <string name="network_err_title">Error Communicating With Server</string>
+  <string name="network_err_msg">Could not send information to server, this is probably because of a poor Internet connection. Please try again when your connection is better.</string>
+  <string name="network_err_ok">Close</string>
+
+  <!-- LOGGING -->
+  <string name="log_app_version">APP VERSION</string>
+  <string name="log_date">LOG DATE</string>
+  <string name="log_user_number">USER NUMBER</string>
+
+  <!-- Stats -->
+  <string name="less_than_an_hour">Less than an hour</string>
+  <string name="stats_screen_title">Stats: {0} {1}</string>
+  <string name="stats">Stats</string>
+  <string name="last_updated">LAST UPDATED: {0} {1} {2}</string>
+  <string name="stats_ago">AGO</string>
+  <string name="hours">HOURS</string>
+  <string name="month">month</string>
+  <string name="week">week</string>
+  <string name="sales">Sales</string>
+  <string name="prospects">Prospects</string>
+  <string name="units">Units</string>
+  <string name="rankings">Rankings</string>
+  <string name="table_prospects">PROSPECTS</string>
+  <string name="table_sales">SALES</string>
+  <string name="stats_today">TODAY</string>
+  <string name="stats_this_week">THIS WEEK</string>
+  <string name="stats_this_month">THIS MONTH</string>
+  <string name="stats_never">NEVER</string>
+  <string name="stats_units_allocated_now">Units Allocated Now</string>
+  <string name="stats_units_today_brackets">(TODAY)</string>
+  <string name="stats_downloading_stats">Downloading Stats. Please Wait...</string>
+  <string name="stats_please_wait">Please Wait...</string>
+  <string name="stats_last_7_day_history">LAST 7 DAY HISTORY</string>
+  <string name="stats_rank">RANK</string>
+  <string name="stats_dsr">DSR</string>
+  <string name="stats_sales">SALES</string>
+  <string name="stats_prospects">PROSPECTS</string>
+  <string name="stats_month_upper">MONTH</string>
+  <string name="stats_quarter_upper">QUARTER</string>
+  <string name="stats_year_upper">YEAR</string>
+  <string name="stats_area_service_center">Service Centre</string>
+  <string name="stats_area_region">Region</string>
+  <string name="stats_area_all">All</string>
+  <string name="stats_area_country">Country</string>
+
+  <string name="column_day">DAY</string>
+  <string name="column_week">WEEK</string>
+  <string name="column_month">MONTH</string>
+  <string name="column_sales">SALES</string>
+  <string name="column_prospects">PROSPECTS</string>
+
+  <string name="per_day">Per Day</string>
+  <string name="per_week">Per Week</string>
+  <string name="per_month">Per Month</string>
+
+  <string-array name="stats_period_array">
+    <item>@string/per_day</item>
+    <item>@string/per_week</item>
+    <item>@string/per_month</item>
+  </string-array>
+
+  <string-array name="stats_region_array">
+    <item>@string/stats_area_service_center</item>
+    <item>@string/stats_area_region</item>
+    <item>@string/stats_area_all</item>
+  </string-array>
+
+  <string name="stats_refresh_prompt">
+    Please turn on your internet and pull to refresh in order to view latest stats.
+  </string>
+  <string name="stats_no_internet">Unable to synchronize, no internet connection.</string>
+  <string name="problem_access_stats">Problem getting stats from the server. Check your internet and try again.</string>
+
+  <!-- Unified Ui/Ux -->
+  <string name="unified_basic_information">Basic Information</string>
+  <string name="unified_phone_number">Phone Number</string>
+  <string name="unified_last_name">Last Name</string>
+  <string name="unified_first_name">First Name</string>
+  <string name="unified_register_customer_wizard_title">Register Customer</string>
+  <string name="unified_phone_validation_null">Please enter a phone number</string>
+  <string name="unified_phone_validation_short">Phone number entered was too short.</string>
+  <string name="unified_phone_validation_long">Phone number entered was too long.</string>
+  <string name="unified_phone_validation_bad_chars">Phone number can only be numeric.</string>
+  <string name="unified_phone_validation_invalid_format">The entered number\'s format is incorrect.</string>
+  <string name="unified_last_name_empty">Last name must be entered</string>
+  <string name="unified_first_name_empty">First name must be entered</string>
+  <string name="unified_last_name_too_long">Last name entered is too long</string>
+  <string name="unified_first_name_too_long">First name entered is too long</string>
+  <string name="unified_id_null">Id value must be provided</string>
+  <string name="unified_id_too_short">Id value is too short.</string>
+
+  <string name="unified_select_product_title">Select Product</string>
+  <string name="unified_name">Name:</string>
+  <string name="unified_phone">Phone:</string>
+  <string name="unified_id">Id:</string>
+  <string name="unified_product">Product:</string>
+  <string name="unified_score">Score:</string>
+
+  <string name="unified_register">Register</string>
+
+  <string name="unified_is_this_the_person">IS THIS THE PERSON YOU ARE REGISTERING?</string>
+  <string name="unified_edit_customer_title">Go back</string>
+  <string name="unified_edit_customer_story">This is not the person I am registering.</string>
+  <string name="unified_add_additional_product_title">Add an additional product</string>
+  <string name="unified_add_additional_product_story">Add a product for this customer.</string>
+  <string name="unified_serial">Serial Number</string>
+  <string name="unified_serial_missing">Serial number could not be found. Please press next to continue with the customer registration without entering the serial number</string>
+  <string name="unified_serials_get_title">Getting Serials</string>
+  <string name="unified_serials_get_story">Getting serial numbers of available products.</string>
+  <string name="unified_select_serial">Please select a serial number from the dropdown list to continue</string>
+  <string name="unified_sms_registration_failed">The SMS for customer registration failed after 3 attempts. Please call support for assistance on.</string>
+  <string name="unified_sms_registration_failed_n_tries">"The SMS for customer registration was not send. Please confirm you have network coverage and press the "Try again" button."</string>
+  <string name="unified_sms_register_prospect">Register Prospect</string>
+  <string name="unified_score_your_prospect">Score Your Prospect</string>
+  <string name="unified_please_press_buttons_to_score">Please press the buttons to score your prospect</string>
+  <string name="unified_money">Money</string>
+  <string name="unified_authority">Authority</string>
+  <string name="unified_need">Need</string>
+  <string name="unified_cold">Cold</string>
+  <string name="unified_warm">Warm</string>
+  <string name="unified_hot">Hot</string>
+  <string name="unified_score_generated">SCORE GENERATED</string>
+  <string name="unified_customer_information_title">Customer information</string>
+  <string name="unified_prospect_information_title">Prospect information</string>
+
+  <string name="registration_type">REGISTER AS A NORMAL OR ADDITIONAL PRODUCT</string>
+  <string name="normal_registration_title">Normal registration</string>
+  <string name="normal_registration_story">First time product.</string>
+  <string name="add_additional_product_title">Add an additional product</string>
+  <string name="add_additional_product_story">Add a product for this customer.</string>
+
+  <!-- Wizard -->
+  <string name="wizard_button_next">Next</string>
+  <string name="wizard_button_prev">Previous</string>
+  <string name="wizard_validating_title">Validating.</string>
+  <string name="wizard_validating_story">Validating. Please Wait...</string>
+
+
+  <!-- TICKETING -->
+  <string name="account_number">Account number</string>
+  <string name="customer">Customer</string>
+  <string name="me">Me</string>
+  <string name="phone_number_full">Phone number</string>
+  <string name="description">Description</string>
+  <string name="description_error">Please enter an issue description</string>
+  <string name="send_report">Send Report</string>
+  <string name="previous_ucase">PREVIOUS</string>
+  <string name="raise_another_issue">Raise another Issue</string>
+  <string name="who_affected">Who is affected ?</string>
+  <string name="which_customer">Who is the Customer ?</string>
+  <string name="send_problem_report">Send the Problem Report</string>
+  <string name="describe_problem">Describe the Problem</string>
+  <string name="report_problem">Report a problem</string>
+  <string name="scroll_more">Scroll down to view more</string>
+  <string name="enter_singlefield">Please enter only one of the fields below</string>
+  <string name="issue_successful_raise">Issue was raised successfully.</string>
+  <string name="issue_fail_internet">The sending of the report has failed. Please check your internet connection and try to send again.</string>
+  <string name="issue_fail_submit">The sending of the report has failed due to an error. Please try to send again.</string>
+  <string name="value_required">Please enter a value</string>
+  <string name="missing_processflow_definition">An error has occured while loading settings for raising an issue, please contact support.</string>
+  <!-- Reporting -->
+  <string name="reporting_screen_title">Reporting Stats</string>
+  <string name="reporting">Reporting</string>
+  <string name="stats_name">Name</string>
+  <string name="stats_name_header">NAME</string>
+  <string name="stats_dsrs">DSR\'s</string>
+
+  <!-- Location -->
+  <string name="switch_location_on">Sales App would like to know your location, do you want to enable your location settings?</string>
+  <!-- Customer registration photo -->
+  <string name="customer_photo_status_saved">Customer photograph has been saved</string>
+  <string name="customer_photo_status_failed">Unable to save customer photograph</string>
+  <string name="document_photo_status_saved">Document photograph has been saved</string>
+  <string name="document_photo_status_failed">Unable to save document photograph</string>
+  <string name="customer_photo_mandatory">CUSTOMER PHOTO (mandatory)</string>
+  <string name="customer_photo_optional">CUSTOMER PHOTO (optional)</string>
+  <string name="document_photo_mandatory">DOCUMENT PHOTO (mandatory)</string>
+  <string name="document_photo_optional">DOCUMENT PHOTO (optional)</string>
+  <string name="delete_photo_msg">Are you sure you want to delete the photograph?</string>
+  <string name="add_another_photo">ADD ANOTHER PHOTO</string>
+  <string name="customer_photo_title">Customer photo</string>
+  <string name="select_photo_type">Please select the type of photo</string>
+  <string name="cache">Cache</string>
+
+  <!-- Log Files -->
+  <string name="log_files_screen_title">Log Files</string>
+  <string name="log_files_delete">Delete</string>
+  <string name="log_files_delete_prompt">Are you sure you want to delete log file {0}?</string>
+  <string name="allow_extended_logging">Allow Extended Logging</string>
+  <string name="delete_file">Delete File</string>
+  <string name="send_file">Send File</string>
+  <string name="select_prompt">Please select the file you would like to send from the list below and press send.</string>
+
+  <string name="api_errors_timeout_story">Timeout: no response from the sever. Please try again, if problem persists please contact support.</string>
+  <string name="api_errors_parse_story">Parse error: message from the server could not be read. Please try again, if the problem persists please contact support.</string>
+  <string name="api_errors_connection_story">No connection: An internet connection is required, please make sure you are connected to the internet and try again.</string>
+  <string name="api_errors_no_data_story">No data received from the server. Please try again, if the problem persists please contact support.</string>
+  <string name="api_errors_500">Unexpected error occurred on the server. Please contact support if the problem persists. Http Error {0}</string>
+  <string name="api_errors_400">The API could not be found. Please contact support if the problem persists. Http Error {0}</string>
+  <string name="api_errors_200">The server was not able to complete this action. Please contact support if the problem persists. Error {0}</string>
+  <string name="api_errors_unknown_error_occured">An unknown error occured. Please try again, if the problem persists, please contact support.</string>
+  <string name="api_errors_unknown">Unknown</string>
+  <string name="api_errors_ok">Ok</string>
+  <string name="api_errors_retry">Retry</string>
+  <string name="alert_message">Sales Application</string>
+
+
+  <!--Additional product-->
+  <string name="customer_found">IS THIS THE PERSON YOUARE REGISTERING?</string>
+  <string name="account_status">Please note it is not possible to register an additional product, the customer is rejected because the account is blocked</string>
+  <string name="account_status_rejected">Existing record found: Rejected Customer</string>
+
+  <string name="action_not_completed">Unable to complete previously requested action. Please retry.</string>
+
+  <!-- Commissions -->
+  <string name ="commissions">Commissions</string>
+  <string name="earning">Earnings</string>
+  <string name="deductions">Deductions</string>
+  <string name="total_commission_daily">Total Daily Commission:</string>
+  <string name="total_commission_quality">Total Quality Commission:</string>
+  <string name="commissions_no_data">Currently you do not have any commissions to view</string>
+  <string name="commissions_suspended_title">Commissions Suspended</string>
+  <string name="commissions_suspended_message">You have been suspended.\nCall customer support if you want to be unsuspended.</string>
+  <string name="commissions_date">Date</string>
+  <string name="commissions_sale">Sale</string>
+  <string name="commissions_no_sales_made">No Sales Made</string>
+  <string name="commissions_month">Month</string>
+  <string name="commissions_quality_sale">Quality Sale</string>
+  <string name="commissions_no_quality_commissions">No Quality Commissions</string>
+  <string name="commissions_no_retainer_commissions">No Retainer Commissions</string>
+  <string name="commissions_no_adjustments">No Adjustments</string>
+  <string name="commissions_no_payments">No Payments Made</string>
+
+  <!-- Ticket List -->
+  <string name="ticket_list_screen_title">Ticket List</string>
+  <string name="ticket_detail_screen_title">Ticket Details</string>
+  <string name="ticket_list_open_tickets">Open Tickets</string>
+  <string name="ticket_list_closed_tickets">Closed Tickets</string>
+  <string name="ticket_list_date_raised">Date Raised:</string>
+  <string name="ticket_list_issue">Issue:</string>
+  <string name="ticket_list_name">Name:</string>
+  <string name="ticket_list_product">Product:</string>
+  <string name="ticket_list_refno">Ref No:</string>
+  <string name="ticket_list_status">Status:</string>
+  <string name="ticket_list_alert_no_internet">Please turn on your internet and pull to refresh in order to view your raised tickets.</string>
+  <string name="ticket_list_alert_no_tickets">Please pull to refresh in order to view your raised tickets. </string>
+  <string name="ticket_list_my_tickets">My Tickets</string>
+  <string name="ticket_list_customer_tickets">Customer Tickets</string>
+  <string name="ticket_list_return_to_ticket_list">Return to ticket list</string>
+  <string name="ticket_list_raise_issue">Raise Issue</string>
+
+  <!-- Gates Modules -->
+  <string name="modules_screen_title">Resources</string>
+  <string name="module_videos">Videos</string>
+  <string name="module_facts">Facts</string>
+  <string name="modules_select_prompt">Please select a resource</string>
+  <string name="modules_register_prompt">Tap here to register a prospect or a customer</string>
+  <string name="facts_select_prompt">Please select a fact</string>
+
+  <!--Google Analytics-->
+  <string name="tracking_id">UA-76361838-1</string>
+
+  <!-- Modules screen-->
+  <string name="module_screen">Modules</string>
+  <string name="module_action">Accessed Modules</string>
+  <string name="module_label">Modules</string>
+
+  <!-- Videos -->
+  <string name="video_label">Video</string>
+  <string name="video_action">Video Accessed</string>
+  <string name="done_watching">Finished watching</string>
+  <string name="started_watching">Started watching</string>
+
+  <!--Calculator-->
+  <string name="calculator_label">calculator</string>
+  <string name="calculator_action">calculator Accessed</string>
+  <string name="module_calculator">Calculator</string>
+
+  <!--Facts -->
+  <string name="facts_label">Facts</string>
+  <string name="facts_action">Facts Accessed</string>
+
+  <!-- LOCAL SETTINGS KEYS-->
+  <string name="is_first_login">is_first_login</string>
+  <string name="accept_location_tracking">accept_location_tracking</string>
+
+  <!-- Customer photo down sync -->
+  <string name="add_photo">Add Photo</string>
+  <string name="customer_photo">Customer Photo</string>
+  <string name="resend_photo">Resend Photo</string>
+  <string name="add_photo_btn_cancel">Cancel</string>
+  <string name="add_photo_btn_done">Done</string>
+  <string name ="add_document_photo">Add document photo</string>
+  <string name ="add_customer_photo">Add customer photo</string>
+  <string name ="confirm_delete">Are you sure you want to delete the photograph?</string>
+  <string name="keep_photo">Keep photo</string>
+  <string name="delete_photo">Delete photo</string>
+  <string name="cancel_and_delete">Are you sure you want to cancel and delete the saved photos?</string>
+  <string name="dont_cancel">Dont Cancel</string>
+
+  <!-- Stock Management -->
+  <string name="stock_allocation">Stock Allocation</string>
+  <string name="select_issue_or_receive_stock">Please select if you want to issue or receive stock</string>
+  <string name="issue_stock">Issue Stock</string>
+  <string name="receive_stock">Receive Stock</string>
+  <string name="stock_devices_allocated_now">Devices Allocated Now</string>
+  <string name="dsr_phone_number">Please enter the phone no of the DSR</string>
+  <string name="phone_number">Phone Number</string>
+  <string name="find_dsr">Find DSR</string>
+  <string name="back">Back</string>
+  <string name="stock_dsr_no_units">This DSR currently has no units</string>
+  <string name="stock_dsr_not_found">DSR could not be found, please re-enter telephone no</string>
+  <string name="no_units_in_stock">There are no units in stock   at the moment</string>
+  <string name="back">Back</string>
+  <string name="units_have_been_allocated">Units have been allocated</string>
+  <string name="in_stock">In Stock</string>
+  <string name="manage_stock">Manage Stock</string>
+  <string name="select_unit">Please select unit type</string>
+  <string name="selected_units">Selected units</string>
+  <string name="select_more_units">Select more units</string>
+  <string name="no_selected_units">No units have been selected</string>
+  <string name="select_units_to_allocate">Please select units to allocate</string>
+  <string name="select_reason">Please select the reason for return</string>
+  <string name="check_internet_connection">Please make sure you have network coverage and press the try again button.</string>
+  <string name="reason_for_return_title">Reason for return</string>
+  <string name="allocate">Allocate</string>
+  <string name="confirm_return">Confirm</string>
+  <string name="select_units_being_returned">Please select the checkbox of the units being returned.</string>
+  <string name="more_than_max_units_selected">No more than {0} units can be selected for this DSR</string>
+  <string name="units_could_no_be_allocated">Units could not be allocated</string>
+  <string name="turn_on_net_to_manage_stock">An internet connection is needed, please turn on your internet</string>
+  <string name="units_allocated_key">UNITS ALLOCATED:</string>
+  <string name="max_units_allowed">Maximum no of units allowed:</string>
+  <string name="no_units_in_stock">There are no units in stock at the moment</string>
+  <string name="reason_for_return">[{"\"Reason\"":"\"Reassignment\""},{"\"Reason\"":"\"Closure\""},{"\"Reason\"":"\"Faulty\""}]</string>
+
+  <!-- Customer photo blob storage -->
+  <string name="azure_ke_prod_token">https://azure-ke-production-blob-url</string>
+  <string name="azure_ug_prod_token">https://azure-ug-production-blob-url</string>
+  <string name="azure_tz_prod_token">https://azure-tz-production-blob-url</string>
+  <string name="azure_gh_prod_token">https://azure-gh-production-blob-url</string>
+  <string name="azure_uat_token">https://azure-uat-blob-url</string>
+  <string name="azure_staging_token">https://azure-staging-blob-url</string>
+
+  <!-- Chama Registration -->
+  <string name="is_customer_in_a_group">Is this customer part of a group?</string>
+  <string name="is_prospect_in_a_group">Is this prospect part of a group?</string>
+  <string name="tap_to_refresh_list">Tap here to refresh the lists</string>
+  <string name="updating_list_please_wait">Updating list, please wait</string>
+  <string name="no_search_results">No search results could be found</string>
+
+  <string name="com.crashlytics.android.build_id">2.4.1</string>
+
+  <!-- Privacy Policy -->
+  <string name="privacy_policy_url">http://your-privacy-policy-url/</string>
+
+</resources>

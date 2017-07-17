@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_default_large"
+        style="@style/DefaultTextView_Bold"
+        android:text="@string/select_issue_or_receive_stock" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_default_large"
+        android:layout_marginRight="@dimen/margin_default_large"
+        android:layout_marginLeft="@dimen/margin_default_large"
+        android:id="@+id/button_issue_stock"
+        android:text="@string/issue_stock"
+        style="@style/GreenButton" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_receive_stock"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="@dimen/margin_default_large"
+        android:layout_marginLeft="@dimen/margin_default_large"
+        android:text="@string/receive_stock"
+        style="@style/GreenButton" />
+</LinearLayout>

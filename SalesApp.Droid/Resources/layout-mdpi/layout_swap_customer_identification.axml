@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textView_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        style="@style/DefaultTextView"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="@dimen/margin_default"
+        android:layout_marginRight="@dimen/margin_default"
+        android:gravity="left"
+        android:padding="4dp"
+        android:text="@string/phone_number_message"
+        android:textColor="@color/grey_dark"
+        android:textSize="16sp"
+        android:textStyle="normal" />
+    <EditText
+        android:id="@+id/editText_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_title"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="8dp"
+        android:drawablePadding="4dp"
+        android:layout_marginLeft="@dimen/margin_default"
+        android:layout_marginRight="@dimen/margin_default"
+        style="@style/DefaultEditText"
+        android:hint="@string/phone_number"
+        android:inputType="text"
+        android:padding="4dp"
+        android:textColor="@color/grey_dark"
+        android:textSize="16sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:padding="4dp"
+        android:textColor="@color/white"
+        android:layout_below="@id/editText_input"
+        android:id="@+id/textViewError"
+        android:background="@color/device_registration_red"
+        android:visibility="invisible" />
+    <Button
+        android:id="@+id/button_find_customer"
+        style="@style/GreenButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/margin_default"
+        android:layout_marginRight="@dimen/margin_default"
+        android:layout_marginBottom="8dp"
+        android:text="@string/find_customer"
+        android:textColor="@color/white" />
+</RelativeLayout>

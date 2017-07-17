@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <include
+        android:id="@+id/android_toolbar"
+        layout="@layout/android_toolbar" />
+    <LinearLayout
+        android:id="@+id/top_grey_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/android_toolbar"
+        android:orientation="vertical">
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/thin_line"
+          android:background="@color/white" />
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="4dp"
+          android:background="@color/grey_transparent"
+          local:MvxBind="Visible ShowGreyDivider"/>
+    </LinearLayout>
+    <LinearLayout
+       android:id="@+id/buttons"
+       android:layout_alignParentBottom="true"
+       android:layout_marginLeft="@dimen/margin_default_large"
+       android:layout_marginRight="@dimen/margin_default_large"
+       android:layout_marginBottom="@dimen/margin_default"
+       android:layout_marginTop="@dimen/margin_default"
+       android:orientation="horizontal"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+      <Button
+          android:id="@+id/btnPrev"
+          style="@style/GreyButton"
+          android:text="@string/previous"
+          android:gravity="center"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="5dp"
+          local:MvxBind="Visible PreviousButtonVisible"
+          android:layout_weight="1" />
+      <Button
+          android:id="@+id/btnNext"
+          style="@style/GreenButton"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:gravity="center"
+          local:MvxBind="Enabled NextButtonEnabled; Text NextButtonText; Visible NextButtonVisible"
+          android:text="@string/wizard_button_next"/>
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_below="@id/top_grey_line"
+        android:layout_above="@id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="33dp"
+    android:gravity="bottom"
+    android:layout_marginBottom="@dimen/margin_default_tiny"
+    android:layout_marginLeft="@dimen/margin_default_small"
+    local:MvxBind="Text SectionHeader; Visible IsSectionHeader"
+    android:enabled="false"
+    style="@style/DefaultTextView" />
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/ticket_list_item_background"
+      android:paddingTop="12dp"
+      android:paddingBottom="12dp">
+    <MvxImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgTicket"
+        android:layout_marginLeft="@dimen/margin_default"
+        android:layout_marginRight="15dp"
+        android:layout_centerVertical="true"
+        local:MvxBind="DrawableId StatusIcon" />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:shrinkColumns="1"
+        android:layout_toRightOf="@+id/imgTicket">
+      <TableRow>
+        <TextView
+            android:text="@string/ticket_list_date_raised"
+            android:textColor="@color/grey"
+            android:layout_marginRight="@dimen/margin_default_large" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            style="@style/DefaultTextView"
+            local:MvxBind="Text DateTime(DateRaised)" />
+      </TableRow>
+      <TableRow
+          local:MvxBind="Visible CustomerName">
+        <TextView
+            android:text="@string/ticket_list_name"
+            android:textColor="@color/grey"
+            android:layout_marginRight="@dimen/margin_default_large"
+            android:layout_marginTop="1dp" />
+        <TextView
+            local:MvxBind="Text CustomerName"
+            style="@style/DefaultTextView"
+            android:layout_marginTop="1dp" />
+      </TableRow>
+      <TableRow
+          local:MvxBind="Visible IssueVisible">
+        <TextView
+            android:text="@string/ticket_list_issue"
+            android:textColor="@color/grey"
+            android:layout_marginRight="@dimen/margin_default_large"
+            android:layout_marginTop="1dp" />
+        <TextView
+            local:MvxBind="Text Issue"
+            style="@style/DefaultTextView"
+            android:layout_marginTop="1dp" />
+      </TableRow>
+    </TableLayout>
+  </RelativeLayout>
+</LinearLayout>

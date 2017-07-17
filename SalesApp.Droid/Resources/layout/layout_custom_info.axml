@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_custom_info_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:gravity="center"
+        android:layout_margin="@dimen/screen_margin">
+    <!-- android:defaultMinSizeSet="true"-->
+    <!-- This is for the info image -->
+    <!-- Title -->
+        <TextView
+            android:id="@+id/tvmessageinfotitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:text="Message"
+            android:textColor="#252525"
+            android:textSize="16dip"
+            android:textStyle="bold"
+            android:typeface="normal"
+            android:gravity="center" />
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp" />
+        <TextView
+            android:id="@+id/tvmessageinfotext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Message"
+            android:textColor="#343434"
+            android:textSize="15dip"
+            android:textStyle="normal"
+            android:typeface="normal"
+            android:gravity="center" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/screen_margin">
+        <Button
+            android:id="@+id/infoNegative"
+            style="@style/GreyButton"
+            android:visibility="gone"
+            android:text="No"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp" />
+        <Button
+            android:id="@+id/infoPositive"
+            android:visibility="gone"
+            style="@style/GreenButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Yes" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/screen_margin">
+        <Button
+            android:id="@+id/infoOneButton"
+            android:visibility="visible"
+            style="@style/GreenButton"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="One"
+            android:gravity="center" />
+    </LinearLayout>
+</RelativeLayout>

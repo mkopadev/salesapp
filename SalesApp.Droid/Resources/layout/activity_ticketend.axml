@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:background="@color/white"
+    android:layout_height="fill_parent">
+    <RelativeLayout
+        android:id="@+id/rLayoutDescription"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tViewQuestionTitle"
+            android:text="DESCRIBE THE PROBLEM (OPTIONAL)"
+            android:textColor="@color/device_registration_dark_gray"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:text="@string/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:textSize="18dp"
+            android:layout_below="@+id/tViewQuestionTitle"
+            android:id="@+id/textViewDescription"
+            android:layout_centerHorizontal="true" />
+        <EditText
+            style="@style/BasicRegistrationEditText"
+            android:layout_width="fill_parent"
+            android:text="@string/sms_registration_done"
+            android:layout_below="@+id/textViewDescription"
+            android:id="@+id/editTextDescription"
+            android:background="@drawable/border_gray_small"
+            android:layout_centerHorizontal="true"
+            android:minLines="15"
+            android:inputType="textMultiLine" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/linearLayoutNavButtons"
+            android:layout_alignParentBottom="true">
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonPrevious"
+                android:text="@string/previous"
+                style="@style/GreyButton"
+                android:layout_marginBottom="10dp"
+                android:onClick="onPreviousButtonClicked"
+                android:layout_gravity="center_horizontal" />
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonNext"
+                style="@style/GreenButton"
+                android:text="@string/next"
+                android:layout_marginBottom="10dp"
+                android:onClick="onNextButtonClicked"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rLayoutSummary"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tViewQuestionTitle"
+            android:text="SEND THE PROBLEM REPORT"
+            android:textColor="@color/device_registration_dark_gray"
+            android:textSize="20sp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:text="Account Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:layout_below="@id/tViewQuestionTitle"
+            android:id="@+id/tvAccountNumber"
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp" />
+        <TextView
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/device_registration_dark_gray"
+            android:layout_below="@id/tvAccountNumber"
+            android:id="@+id/tvAccountNumberValue"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="18dp" />
+        <TextView
+            android:text="Phone Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:layout_below="@id/tvAccountNumberValue"
+            android:id="@+id/tvPhoneNumber"
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp" />
+        <TextView
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/device_registration_dark_gray"
+            android:layout_below="@id/tvPhoneNumber"
+            android:id="@+id/tvPhoneNumberValue"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="18dp" />
+        <TextView
+            android:text="Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:layout_below="@id/tvPhoneNumberValue"
+            android:id="@+id/tvDescription"
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp" />
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDescription"
+            android:layout_above="@id/linearLayoutNavButtons"
+            android:layout_marginBottom="10dp"
+            android:scrollbars="vertical">
+            <TextView
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/device_registration_dark_gray"
+                android:id="@+id/tvDescriptionValue"
+                android:layout_marginLeft="10dp"
+                android:textSize="18dp" />
+        </ScrollView>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/linearLayoutNavButtons"
+            android:layout_alignParentBottom="true">
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="@string/previous"
+                style="@style/GreyButton"
+                android:layout_marginBottom="10dp"
+                android:onClick="onPreviousDescriptionButtonClicked"
+                android:layout_gravity="center_horizontal" />
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                style="@style/GreenButton"
+                android:text="@string/send_report"
+                android:layout_marginBottom="10dp"
+                android:onClick="onSubmitButtonClicked"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/popup"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="right|end"
+    android:visibility="gone">
+    <RelativeLayout
+        android:id="@+id/btnAddCustomerLayout"
+        android:background="@drawable/button_rounded_top"
+        android:layout_gravity="center_vertical"
+        android:padding="15dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.0dp"
+        android:layout_marginRight="16.0dp">
+        <TextView
+            android:id="@+id/tVAddCustomer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            style="@style/TextView.Light"
+            android:text="@string/add_new_customer" />
+        <ImageButton
+            android:id="@+id/btnAddCustomer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pop_up_add"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <View
+        android:id="@+id/separator"
+        android:layout_marginLeft="20.0dp"
+        android:layout_marginRight="16.0dp"
+        android:background="#ffffff"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip" />
+    <RelativeLayout
+        android:id="@+id/btnAddProspectLayout"
+        android:background="@drawable/button_rounded_bottom"
+        android:layout_below="@+id/widget46"
+        android:layout_gravity="center_vertical"
+        android:padding="15dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.0dp"
+        android:layout_marginRight="16.0dp">
+        <TextView
+            android:id="@+id/tVAddProspect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            style="@style/TextView.Light"
+            android:text="@string/create_new_prospect" />
+        <ImageButton
+            android:id="@+id/btnAddProspect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pop_up_add"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/imgView2"
+        android:background="@drawable/pop_up_pointer"
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp" />
+</LinearLayout>

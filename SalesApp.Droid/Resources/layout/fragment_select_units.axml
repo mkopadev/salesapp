@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:local="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+  <TextView
+         android:id="@+id/tv_product_name"
+         android:layout_alignParentTop="true"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         local:MvxBind="Text SelectedProduct.Name"
+         android:background="@color/grey_dark"
+         android:textColor="@color/white"
+         android:gravity="center"
+         android:padding="@dimen/margin_default"
+         style="@style/DefaultTextView_Bold" />
+  <TextView
+         android:id="@+id/tv_selection_error"
+         android:layout_below="@id/tv_product_name"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         local:MvxBind="Text ErrorMessage; Visible ErrorMessage"
+         android:background="@color/red"
+         android:textColor="@color/white"
+         android:padding="@dimen/margin_default"
+         style="@style/DefaultTextView" />
+  <TextView
+          android:layout_alignWithParentIfMissing="true"
+          android:id="@+id/tv_selected_units"
+          android:layout_below="@id/tv_selection_error"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="@dimen/margin_default"
+          android:layout_marginRight="@dimen/margin_default"
+          android:paddingRight="5dp"
+          android:layout_marginTop="@dimen/margin_default_large"
+          android:layout_marginBottom="@dimen/margin_default_large"
+          android:text="@string/select_units_to_allocate"
+          style="@style/DefaultTextView_MediumBold" />
+  <SalesApp.Droid.Components.UIComponents.List.MvxSelectableListView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="@dimen/margin_default"
+      android:layout_marginRight="@dimen/margin_default"
+      android:layout_below="@id/tv_selected_units"
+      android:divider="@color/white"
+      android:dividerHeight="5dp"
+      android:choiceMode="multipleChoice"
+      local:MvxBind="ItemsSource SelectedProductUnits; ItemClick OnItemSelected; SelectedItems SelectedUnits, Mode=OneWay"
+      local:MvxItemTemplate="@layout/stock_units_item" />
+</RelativeLayout>

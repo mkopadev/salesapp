@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_navigation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/android_toolbar"
+            layout="@layout/android_toolbar" />
+        <View
+            android:id="@+id/white_space"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/thinner_line"
+            android:layout_below="@id/android_toolbar" />
+        <TextView
+            android:id="@+id/top_registration_bar"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:background="@color/blue"
+            android:textColor="@color/white"
+            android:layout_marginBottom="@dimen/margin_default_tiny"
+            android:gravity="center"
+            local:MvxBind="Visible CanRegister"
+            android:text="@string/modules_register_prompt"
+            android:layout_below="@id/white_space" />
+        <FrameLayout
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/screen_margin"
+            android:layout_marginRight="@dimen/screen_margin"
+            android:layout_marginBottom="@dimen/margin_default"
+            android:layout_below="@id/top_registration_bar" />
+    </RelativeLayout>
+    <include
+        android:id="@+id/drawer"
+        android:layout_gravity="right"
+        layout="@layout/layout_hamburger" />
+</android.support.v4.widget.DrawerLayout>

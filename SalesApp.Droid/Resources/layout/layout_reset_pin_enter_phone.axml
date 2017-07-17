@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/basicInfoFragment"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <LinearLayout
+        android:id="@+id/form"
+        android:layout_below="@+id/header"
+        style="@style/WrapHeight"
+        android:layout_marginTop="0dp"
+        android:paddingBottom="10dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44.7dp">
+        <RelativeLayout
+            android:id="@+id/layoutStory"
+            android:layout_width="wrap_content"
+            style="@style/BasicRegistrationListItem">
+            <TextView
+                style="@style/BasicRegistrationTextView"
+                android:id="@+id/tvEnterPhone"
+                android:text="@string/enter_mobile_number" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layoutPhone"
+            style="@style/BasicRegistrationListItem">
+            <EditText
+                style="@style/BasicRegistrationEditText"
+                android:id="@+id/editTextPhone"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:hint="@string/mobile_number"
+                android:phoneNumber="true" />
+            <include
+                layout="@layout/component_divider" />
+        </RelativeLayout>
+        <TextView
+            style="@style/BasicRegistrationTextView"
+            android:id="@+id/tvStory"
+            android:inputType="textMultiLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:editable="false"
+            android:text="@string/reset_pin_enter_phone"
+            android:layout_marginTop="10dp" />
+        <RelativeLayout
+            android:id="@+id/layoutStoryBtn"
+            android:layout_width="wrap_content"
+            style="@style/BasicRegistrationListItem">
+            <Button
+                android:id="@+id/btnResetPin"
+                style="@style/GreenButton"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:layout_below="@id/editTextID"
+                android:text="@string/reset_pin" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

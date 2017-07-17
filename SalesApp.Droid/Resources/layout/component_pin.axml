@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pinControl"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true">
+    <RelativeLayout
+        android:id="@+id/layoutPin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <RelativeLayout
+            android:id="@+id/layoutPin1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+            <TextView
+                android:id="@+id/textViewPin1"
+                android:text=""
+                android:textSize="60sp"
+                android:layout_width="40dp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/imageViewPin1"
+                android:layout_below="@+id/textViewPin1"
+                android:background="@drawable/pin_line_orange"
+                android:layout_width="40dp"
+                android:layout_height="5dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layoutPin2"
+            android:layout_toRightOf="@+id/layoutPin1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+            <TextView
+                android:id="@+id/textViewPin2"
+                android:text=""
+                android:textSize="60sp"
+                android:layout_width="40dp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/imageViewPin2"
+                android:layout_below="@+id/textViewPin2"
+                android:background="@drawable/pin_line_orange"
+                android:layout_width="40dp"
+                android:layout_height="5dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layoutPin3"
+            android:layout_toRightOf="@+id/layoutPin2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+            <TextView
+                android:id="@+id/textViewPin3"
+                android:text=""
+                android:textSize="60sp"
+                android:layout_width="40dp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/imageViewPin3"
+                android:layout_below="@+id/textViewPin3"
+                android:background="@drawable/pin_line_orange"
+                android:layout_width="40dp"
+                android:layout_height="5dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layoutPin4"
+            android:layout_toRightOf="@+id/layoutPin3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+            <TextView
+                android:id="@+id/textViewPin4"
+                android:text=""
+                android:textSize="60sp"
+                android:layout_width="40dp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/imageViewPin4"
+                android:layout_below="@+id/textViewPin4"
+                android:background="@drawable/pin_line_orange"
+                android:layout_width="40dp"
+                android:layout_height="5dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <EditText
+        android:inputType="number"
+        android:digits="1234567890"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:textColor="@android:color/transparent"
+        android:background="@android:color/transparent"
+        android:maxLength="4"
+        android:cursorVisible="false"
+        android:layout_below="@+id/layoutPin"
+        android:id="@+id/hiddenPin" />
+</RelativeLayout>

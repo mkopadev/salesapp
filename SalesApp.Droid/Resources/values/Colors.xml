@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- Colors Style Guide -->
+
+  <item name="grey_light"  type="color">#D4D4D4</item>
+  <item name="grey" type="color">#8B8B8B</item>
+  <item name="grey_dark" type="color">#515151</item>
+  <item name="grey_darkest" type="color">#3A3A3A</item>
+  <item name="grey_transparent" type="color">#77D8D8D8</item>
+  <item name="red" type="color">#DA4336</item>
+  <item name="yellow" type="color">#FFCC01</item>
+  <item name="green_light" type="color">#7CC55E</item>
+  <item name="green" type="color">#61A744</item>
+  <item name="green_dark" type="color">#508D36</item>
+  <item name="blue" type="color">#3c97b5</item>
+
+  <!-- /Colors Style Guide -->
+
+  <!-- Reviewed approved colors -->
+  <item name="black" type="color">#000000</item>
+  <item name="white" type="color">#FFFFFF</item>
+  <item name="washed_white" type="color">#FAFAFA</item>
+
+  <item name="orange" type="color">#F05A24</item>
+
+  <!-- /Reviewed approved colors -->
+
+  <!-- Obsolete / To be deleted !!! -->
+  <item name="green2" type="color">#39661F</item>
+  <item name="green3" type="color">#61A744</item>
+  <item name="green3_light" type="color">#71A744</item>
+
+  <item name="gray1"  type="color">#D8D8D8</item>
+  <item name="gray2"  type="color">#999999</item>
+  <item name="gray3"  type="color">#808080</item>
+  <item name="gray4"  type="color">#333333</item>
+  <item name="gray5"  type="color">#1A1A1A</item>
+  <item name="gray6"  type="color">#F7F7F7</item>
+  <item name="gray7"  type="color">#f3f5f8</item>
+
+  <item name="dim"  type="color">#C0000000</item>
+  <item name="existing_prospect_red" type="color">#DA4336</item>
+  <item name="existing_prospect_dark_gray" type="color">#474747</item>
+  <item name="prospect_set_reminder_green" type="color">#75b15b</item>
+  <item name="device_registration_dark_gray" type="color">#717A8A</item>
+  <item name="device_registration_light_gray" type="color">#6B7685</item>
+  <item name="device_registration_background" type="color">#EBEBEB</item>
+  <item name="device_registration_yellow" type="color">#FFCC01</item>
+  <item name="device_registration_red" type="color">#DA4436</item>
+
+  <item name="gray_table"  type="color">#515151</item>
+
+
+  <item name="customer_details_sms_sent" type="color">#3c97b5</item>
+
+
+
+  <!-- TODO Missing color reference, verify the real color of selected -->
+  <item name="selected"  type="color">#D8D8D8</item>
+
+
+  <!-- named items -->
+  <item name="actionbar_background" type="color">#61A744</item>
+  <item name="negative_button" type="color">#464646</item>
+  <item name="positive_button" type="color">#61A744</item>
+  <item name="light_negative_button" type="color">#EFEFEF</item>
+  <item name="rounded_top_button" type="color">#3B7722</item>
+  <item name="rounded_bottom_button" type="color">@color/green3</item>
+  <item name="list_selected" type="color">@color/green_light</item>
+  <item name="list_focused" type="color">@color/green_light</item>
+
+  <!--customer registration photo-->
+  <item name="silvery" type="color">#F5F5F5</item>
+
+
+</resources>

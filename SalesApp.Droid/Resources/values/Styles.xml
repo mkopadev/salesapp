@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  
+  <style name="Theme.Splash" parent="@style/Theme.Main">
+    <item name="android:windowBackground">@drawable/splashscreen</item>
+    
+  </style>
+  <style name="Theme.Main" parent="@style/Theme.AppCompat">
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:spinnerDropDownItemStyle">@style/Theme.MainSpinnerItemStyle</item>
+    <!--<item name="android:background">@color/black</item>
+    <item name="android:windowBackground">@color/black</item>
+    <item name="android:colorBackground">@color/black</item>-->
+    <!--<item name="windowActionBar">false</item>
+    <item name="android:windowFullscreen">true</item>-->
+    <item name="android:screenOrientation">portrait</item>
+  </style>
+
+  <style name="Theme.MainSpinnerItemStyle" parent="@style/Widget.AppCompat.DropDownItem.Spinner">
+    <item name="android:textColor">@color/black</item>  
+  </style>
+  
+  <style name="BackgroundAlternative">
+    <item name="android:background">@color/washed_white</item>
+  </style>
+
+    <!-- GENERAL STYLES -->
+
+  <style name="DefaultTextView">
+    <item name="android:textColor">@color/grey_dark</item>
+    <item name="android:textSize">@dimen/text_size_normal</item>
+  </style>
+
+  <style name="DefaultTextView_Faint" parent="@style/DefaultTextView">
+    <item name="android:textColor">@color/gray3</item>
+  </style>
+
+  <style name="DefaultTextView_FaintItalic" parent="@style/DefaultTextView">
+    <item name="android:textColor">@color/gray3</item>
+    <item name="android:textStyle">italic</item>
+  </style>
+  
+  <style name="DefaultTextView_Bold" parent="@style/DefaultTextView">
+    <item name="android:textStyle">bold</item>
+  </style>
+  
+  <style name="DefaultTextView_Smaller" parent="@style/DefaultTextView">
+    <item name="android:textSize">@dimen/text_size_small</item>
+  </style>
+
+  <style name="DefaultTextView_SmallerFaint" parent="@style/DefaultTextView_Smaller">
+    <item name="android:textColor">@color/gray3</item>
+  </style>
+
+  <style name="DefaultTextView_BoldCaps" parent="@style/DefaultTextView_Bold">
+    <item name="android:textAllCaps">true</item>
+  </style>
+  
+  <style name="DefaultTextView_Medium" parent="@style/DefaultTextView">
+    <item name="android:textSize">@dimen/text_size_medium</item>
+  </style>
+
+  <style name="DefaultTextView_MediumBold" parent="@style/DefaultTextView_Medium">
+    <item name="android:textStyle">bold</item>
+  </style>
+  
+  <style name="DefaultTextView_Title" parent="@style/DefaultTextView">
+    <item name="android:textSize">@dimen/text_size_large</item>
+  </style>
+
+  <style name="DefaultTextView_TitleBold" parent="@style/DefaultTextView_Title">
+    <item name="android:textStyle">bold</item>
+  </style>
+
+  <style name="DefaultTextView_Caps" parent="@style/DefaultTextView">
+    <item name="android:textAllCaps">true</item>
+  </style>
+
+  <style name="DefaultTextView_CapsError" parent="@style/DefaultTextView_Bold">
+    <item name="android:textAllCaps">true</item>
+    <item name="android:textColor">#FF0000</item>
+  </style>
+
+  <style name="DefaultTextView_Loader" parent="@style/DefaultTextView_Title">
+    <item name="android:textColor">@color/green</item>
+  </style>
+
+  <style name="DefaultTextView_LoaderDetail" parent="@style/DefaultTextView">
+    <item name="android:textColor">@color/grey_dark</item>
+  </style>
+
+  <style name="DefaultTextView_Error">
+    <item name="android:textSize">@dimen/text_size_small</item>
+    <item name="android:textColor">#FF0000</item>
+  </style>
+
+  <style name="DefaultEditText">
+    <item name="android:textSize">@dimen/text_size_normal</item>
+    <item name="android:background">@drawable/edit_text_default</item>
+    <item name="android:paddingRight">5dp</item>
+    <item name="android:paddingLeft">5dp</item>
+    <item name="android:textColor">@color/black</item>
+    <item name="android:layout_height">36dp</item>
+    <item name="android:layout_width">match_parent</item>
+  </style>
+
+  <style name="LayoutAsRoundedButtonGreen">
+    <item name="android:background">@drawable/layout_as_rounded_button</item>
+    <item name="android:padding">7dp</item>
+    <item name="android:layout_height">50dp</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_marginRight">@dimen/screen_margin</item>
+    <item name="android:layout_marginLeft">@dimen/screen_margin</item>
+    <item name="android:elevation">1dp</item>
+  </style>
+
+  <style name="ButtonBase">
+    <item name="android:textColor">@color/button_states_text_color</item>
+    <item name="android:clickable">true</item>
+    <item name="android:textSize">@dimen/text_size_normal</item>
+  </style>
+
+  <style name="GreenButton" parent="@style/ButtonBase">
+    <item name="android:background">@drawable/button_green</item>
+  </style>
+  <style name="GreyButton" parent="@style/ButtonBase">
+    <item name="android:background">@drawable/button_grey</item>
+  </style>
+  
+  
+  <style name="ButtonGreyGradient" parent="@style/ButtonBase">
+    <item name="android:background">@drawable/button_grey_gradient</item>
+    <item name="android:textColor">@color/black</item>
+  </style>
+  
+  <style name="LightGreyButton">
+    <item name="android:textColor">@color/black</item>
+    <item name="android:background">@drawable/button_lightgrey</item>
+    <item name="android:paddingLeft">30dp</item>
+    <item name="android:paddingRight">30dp</item>
+    <item name="android:paddingBottom">2dp</item>
+    <item name="android:paddingEnd">2dp</item>
+    <item name="android:paddingStart">2dp</item>
+    <item name="android:paddingTop">2dp</item>
+    <item name="android:textSize">@dimen/text_size_normal</item>
+  </style>
+    <style name="MatchParent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="WrapHeight">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="WrapWidth">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="WrapContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextView" parent="WrapContent">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextView.Light">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+  <style name="DefaultSpinner" parent="@style/Widget.AppCompat.DropDownItem.Spinner">
+    <item name="android:dropDownWidth">match_parent</item>
+    <item name="android:paddingRight">0dp</item>
+    <item name="android:paddingLeft">0dp</item>
+    <item name="android:textSize">@dimen/text_size_normal</item>
+    <item name="android:background">@drawable/edit_text_default</item>
+    <item name="android:popupBackground">@drawable/edit_text_default</item>
+    <item name="android:paddingBottom">5dp</item>
+    <item name="android:paddingTop">5dp</item>
+    <item name="android:layout_height">45dp</item>
+    <item name="android:layout_width">match_parent</item>
+  </style>
+  
+  <style name="DefaultEditText">
+    <item name="android:textSize">@dimen/text_size_normal</item>
+    <item name="android:background">@drawable/edit_text_default</item>
+    <item name="android:paddingRight">5dp</item>
+    <item name="android:paddingLeft">5dp</item>
+    <item name="android:textColor">@color/black</item>
+    <item name="android:layout_height">36dp</item>
+    <item name="android:layout_width">match_parent</item>
+  </style>  
+    <!-- WELCOME SCREEN STYLES -->
+
+    <style name="ListItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_marginTop">1dp</item>
+    </style>
+
+    <style name="ListItemIcon">
+        <item name="android:id">@+id/icon</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/vertical_margin</item>
+    </style>
+
+    <style name="ListItemText" parent="TextView">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/vertical_margin</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_toRightOf">@id/icon</item>
+    </style>
+
+    <style name="ListItemNextButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">@dimen/vertical_margin</item>
+        <item name="android:src">@drawable/arrow_right</item>
+    </style>
+
+  <!-- RESET PIN -->
+  <style name="BasicTextView">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">100dp</item>
+    <item name="android:background">@color/white</item>
+    <item name="android:layout_marginBottom">1dp</item>
+    
+  </style>
+  <!-- /RESET PIN-->
+
+  <!-- REGISTER PROSPECT -->
+  <style name="ExistingProspectRedBar">
+    <item name="android:background">@color/existing_prospect_red</item>
+    <item name="android:textColor">@color/white</item>
+  </style>
+  <style name="SpinnerButtonStyle" parent="android:Widget.Holo.Spinner">
+    <item name="android:textColor">@color/existing_prospect_dark_gray</item>
+    <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+  </style>
+     <!-- BASIC REGISTRATION SCREEN STYLES -->
+    <style name="Indicator">
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+    </style>
+
+    <style name="Indicator.Current">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="Indicator.Next">
+        <item name="android:background">@color/gray2</item>
+    </style>
+
+    <style name="Indicator.Previous">
+        <item name="android:background">@color/green2</item>
+    </style>
+
+  <style name="BasicRegistrationListItem">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">54dp</item>
+    <item name="android:background">@color/white</item>
+    <item name="android:layout_marginBottom">1dp</item>
+  </style>
+
+    <style name="BasicRegistrationEditText" parent="WrapHeight">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/vertical_margin</item>
+        <item name="android:layout_marginRight">72dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/gray1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="BasicRegistrationTextView" parent="WrapHeight">
+      <item name="android:layout_centerVertical">true</item>
+      <item name="android:layout_marginLeft">@dimen/vertical_margin</item>
+      <item name="android:layout_marginRight">72dp</item>
+      <item name="android:textSize">16sp</item>
+      <item name="android:textColor">@color/black</item>
+      <item name="android:singleLine">true</item>
+      <item name="android:background">@null</item>
+    </style>
+
+  <style name="BasicRegistrationTextViewError">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">40dp</item>
+    <item name="android:background">@null</item>
+    <item name="android:textColor">@color/black</item>
+    <item name="android:singleLine">false</item>
+    <item name="android:layout_marginBottom">1dp</item>
+    <item name="android:layout_centerHorizontal">true</item>
+  </style>
+
+    <style name="BasicRegistrationNavButton" parent="MatchParent">
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+  
+    
+
+    
+        
+    <!--<style name="FieldVerificationText" parent="TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/vertical_margin</item>
+        <item name="android:layout_marginRight">72dp</item>
+        <item name="android:singleLine">true</item>
+    </style>-->
+
+        <!-- BASIC REGISTRATION CONFIRMATION DIALOG SCREEN STYLES -->
+
+    <style name="RegistrationConfirmationListItem" parent="ListItem">
+        <item name="android:clickable">true</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+    </style>
+
+    <style name="RegistrationConfirmationListItemText" parent="TextView.Light">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/vertical_margin</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_toRightOf">@id/icon</item>
+    </style>
+
+    <!-- REGISTRATION SCORE SCREEN STYLES -->
+
+    <style name="RegistrationScoreToggleButton">
+        <item name="android:layout_width">72dp</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="android:textOn">@null</item>
+        <item name="android:textOff">@null</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/score_toggle_button</item>
+    </style>
+
+    <style name="RegistrationScoreListItem">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="RegistrationScoreToggleLabel" parent="TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_gravity">center_horizontal|bottom</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="FieldVerificationText" parent="TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/vertical_margin</item>
+        <item name="android:layout_marginRight">72dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    
+    <!-- CUSTOM DIALOG STYLES -->
+    <style name="FullHeightDialog" parent="android:style/Theme.Dialog">
+      <item name="android:windowNoTitle">true</item>
+    </style>
+
+  <style name="period_button_text" >
+    <item name="android:layout_width" >wrap_content</item>
+    <item name="android:layout_height" >wrap_content</item>
+    <item name="android:textColor" >#60a643</item>
+    <item name="android:gravity" >center</item>
+    <item name="android:layout_margin" >5dp</item>
+    <item name="android:minHeight">37dp</item>
+    <item name="android:textSize" >11sp</item>
+    <item name="android:textStyle" >bold</item>
+  </style>
+
+  <style name="period_button_text_selected" >
+    <item name="android:layout_width" >wrap_content</item>
+    <item name="android:layout_height" >wrap_content</item>
+    <item name="android:textColor" >#ffffff</item>
+    <item name="android:gravity" >center</item>
+    <item name="android:layout_margin" >5dp</item>
+    <item name="android:minHeight">37dp</item>
+    <item name="android:textSize" >11sp</item>
+    <item name="android:textStyle" >bold</item>
+  </style>
+
+  <style name="unified_wizard_step_title">
+    <item name="android:layout_width" >wrap_content</item>
+    <item name="android:layout_height" >wrap_content</item>
+    <item name="android:textColor" >#2f2f2f</item>
+    <item name="android:gravity" >center</item>
+    <item name="android:layout_margin" >5dp</item>
+    <item name="android:minHeight">37dp</item>
+    <item name="android:textSize" >11sp</item>
+    <item name="android:textStyle" >bold</item>
+  </style> 
+
+  <!-- Switch Color Selector-->
+  <style name="switch_text_appearance" parent="@android:style/TextAppearance.Holo.Small">
+    <item name="android:textColor">@color/grey_dark</item>
+    <item name="android:textSize">12sp</item>
+  </style>
+  
+  <style name="default_switch_button">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:thumbTextPadding">10dp</item>
+    <item name="android:switchMinWidth">0dp</item>
+    <item name="android:switchTextAppearance">@style/switch_text_appearance</item>
+    <item name="android:thumb">@drawable/switch_thumb_selector</item>
+    <item name="android:track">@drawable/switch_track_selector</item>
+    <item name="android:textOn">ON</item>
+    <item name="android:textOff">OFF</item>
+  </style>
+
+  <style name="DefaultTextView_Resend">
+    <item name="android:textSize">@dimen/text_size_normal</item>
+    <item name="android:background">@color/green</item>
+    <item name="android:textColor">@color/white</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_marginTop" >10dp</item>
+    <item name="android:layout_marginBottom" >10dp</item>
+    <item name="android:layout_marginRight" >10dp</item>
+    <item name="android:padding" >5dp</item>
+  </style>
+</resources>

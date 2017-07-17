@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/phone_layout">
+    <include
+        android:id="@+id/android_toolbar"
+        layout="@layout/android_toolbar" />
+    <SalesApp.Droid.Components.UIComponents.ClickControlledTabLayout
+        android:id="@+id/sliding_tabs"
+        style="@style/MKTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabGravity="fill"
+        app:tabMode="fixed" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/thin_line"
+        android:layout_above="@+id/layout_stats_main"
+        android:background="@color/green" />
+    <SalesApp.Droid.Components.UIComponents.SwipeControlledViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

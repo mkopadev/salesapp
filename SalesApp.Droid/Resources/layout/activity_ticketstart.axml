@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="@dimen/screen_margin">
+    <TextView
+        style="@style/DefaultTextView_Caps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tViewQuestionTitle"
+        android:text="@string/who_affected"
+        android:textColor="@color/grey_dark"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp" />
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tViewQuestionTitle"
+        android:id="@+id/buttonCustomer"
+        android:text="@string/customer"
+        style="@style/GreenButton"
+        android:layout_marginBottom="@dimen/screen_margin"
+        android:onClick="onCustomerButtonClicked"
+        android:layout_width="match_parent" />
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonCustomer"
+        android:id="@+id/buttonDSR"
+        style="@style/GreenButton"
+        android:text="@string/me"
+        android:onClick="onDSRButtonClicked"
+        android:layout_width="match_parent" />
+</RelativeLayout>

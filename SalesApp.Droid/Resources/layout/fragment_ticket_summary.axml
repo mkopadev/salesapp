@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="@dimen/screen_margin">
+    <TextView
+        style="@style/DefaultTextView_Caps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tViewQuestionTitle"
+        android:text="@string/send_problem_report"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp" />
+    <TextView
+        style="@style/DefaultTextView_Smaller"
+        android:text="@string/account_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:layout_below="@id/tViewQuestionTitle"
+        android:id="@+id/tvAccountNumber"
+        android:visibility="gone" />
+    <TextView
+        style="@style/DefaultTextView"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_dark"
+        android:layout_below="@id/tvAccountNumber"
+        android:id="@+id/tvAccountNumberValue"
+        android:layout_marginBottom="18dp" />
+    <TextView
+        style="@style/DefaultTextView_Smaller"
+        android:text="@string/phone_number_full"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:layout_below="@id/tvAccountNumberValue"
+        android:id="@+id/tvPhoneNumber"
+        android:layout_alignWithParentIfMissing="true" />
+    <TextView
+        style="@style/DefaultTextView"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_dark"
+        android:layout_below="@id/tvPhoneNumber"
+        android:id="@+id/tvPhoneNumberValue"
+        android:layout_marginBottom="18dp" />
+    <TextView
+        style="@style/DefaultTextView_Smaller"
+        android:text="@string/serial_number"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:textColor="@color/green"
+        android:layout_below="@id/tvPhoneNumberValue"
+        android:id="@+id/tvSerialNumber" />
+    <TextView
+        style="@style/DefaultTextView"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_dark"
+        android:layout_below="@id/tvSerialNumber"
+        android:id="@+id/tvSerialNumberValue"
+        android:layout_marginBottom="10dp" />
+    <View
+        android:id="@+id/lineSeparator"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvSerialNumberValue"
+        android:layout_marginBottom="18dp"
+        android:layout_alignWithParentIfMissing="true"
+        android:background="@color/grey_light" />
+    <TextView
+        style="@style/DefaultTextView_Smaller"
+        android:text="@string/description"
+        android:visibility="gone"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:layout_below="@id/lineSeparator"
+        android:id="@+id/tvDescription" />
+    <ScrollView
+        android:id="@+id/sViewDescription"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDescription"
+        android:layout_above="@id/tvError"
+        android:layout_marginBottom="10dp"
+        android:scrollbars="vertical">
+        <TextView
+            style="@style/DefaultTextView"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey_dark"
+            android:id="@+id/tvDescriptionValue" />
+    </ScrollView>
+    <TextView
+        android:id="@+id/tvError"
+        android:visibility="invisible"
+        android:layout_above="@id/linearLayoutNavButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="26dp"
+        android:textSize="@dimen/text_size_normal"
+        android:background="@drawable/list_box_error"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/white"
+        style="@style/DefaultTextView_Smaller" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutNavButtons"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonPrevious"
+            style="@style/GreyButton"
+            android:text="@string/previous"
+            android:onClick="onPreviousButtonClicked" />
+        <TextView
+            android:layout_width="@dimen/screen_margin"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonSubmit"
+            style="@style/GreenButton"
+            android:text="@string/send_report"
+            android:onClick="onSubmitButtonClicked" />
+    </LinearLayout>
+</RelativeLayout>

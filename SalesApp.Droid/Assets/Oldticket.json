@@ -1,0 +1,1 @@
+﻿{"entity":"Customer","entityIdentifier":{"accountNumber":"356787778","phoneNumber":"0704926601","serialNumber":"4577788"},"date":"05/10/2015 15:36:20","wizard":{"id":"1","steps":[10,11,14],"outcomeId":14,"description":"test fragment state loss on commit"}}

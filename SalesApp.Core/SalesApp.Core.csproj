@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{6E5CBBC0-9C5B-40E6-9BB7-3E6FB00274D4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SalesApp.Core</RootNamespace>
+    <AssemblyName>SalesApp.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodeAnalysisRuleSet>..\SalesApp.Droid\SalesApp.Droid.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodeAnalysisRuleSet>..\SalesApp.Droid\SalesApp.Droid.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Staging|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Staging\</OutputPath>
+    <DefineConstants>STAGING</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\SalesApp.Droid\SalesApp.Droid.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'UAT|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\UAT\</OutputPath>
+    <DefineConstants>UAT</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>..\SalesApp.Droid\SalesApp.Droid.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Api\Chama\ChamaApi.cs" />
+    <Compile Include="Api\Commissions\CommissionApi.cs" />
+    <Compile Include="Api\Commissions\CommissionApiResponse.cs" />
+    <Compile Include="Api\DownSync\DownSyncServerResponse.cs" />
+    <Compile Include="AkavacheSqliteLinkerOverride.cs" />
+    <Compile Include="Api\ManageStock\ManageStockPostApiResponse.cs" />
+    <Compile Include="Api\ManageStock\DsrStockServerResponseObject.cs" />
+    <Compile Include="Api\ManageStock\StockMangementApi.cs" />
+    <Compile Include="Api\ManageStock\StockMangementResponse.cs" />
+    <Compile Include="Api\Modules\Calculator\CalculatorProductApi.cs" />
+    <Compile Include="Api\Product\AdditionalProductApi.cs" />
+    <Compile Include="Api\SwapComponent\CustomerDetailsResponse.cs" />
+    <Compile Include="Api\SwapComponent\CustomerIdentifier.cs" />
+    <Compile Include="Api\SwapComponent\ProductComponent.cs" />
+    <Compile Include="Api\SwapComponent\ProductComponentsResponse.cs" />
+    <Compile Include="Api\SwapComponent\SwapComponentRequest.cs" />
+    <Compile Include="Api\SwapComponent\SwapComponentResponse.cs" />
+    <Compile Include="Api\SwapComponent\SwapProduct.cs" />
+    <Compile Include="Api\SwapComponent\SwapComponentApi.cs" />
+    <Compile Include="Api\DownSync\DownSynchApi.cs" />
+    <Compile Include="Api\Tickets\TicketApi.cs" />
+    <Compile Include="Api\Tickets\TicketsResponse.cs" />
+    <Compile Include="Api\Tickets\TicketSubmissionResponse.cs" />
+    <Compile Include="Api\ApiTimeoutEnum.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="BL\Cache\CacheType.cs" />
+    <Compile Include="BL\Cache\MemoryCache.cs" />
+    <Compile Include="BL\Cache\ICache.cs" />
+    <Compile Include="BL\Cache\MemoryCache1.cs" />
+    <Compile Include="BL\Controllers\Auth\LoginController.cs" />
+    <Compile Include="BL\Controllers\Calculator\CalculatorController.cs" />
+    <Compile Include="BL\Controllers\Chama\ChamaController.cs" />
+    <Compile Include="BL\Controllers\ManagStock\ScmStockController.cs" />
+    <Compile Include="BL\Controllers\People\CustomerPhotoController.cs" />
+    <Compile Include="BL\Controllers\People\CustomerProductController.cs" />
+    <Compile Include="BL\Controllers\DownSync\DownSyncController.cs" />
+    <Compile Include="BL\Controllers\People\ProspectProductController.cs" />
+    <Compile Include="BL\Controllers\TicketList\CustomerTicketController.cs" />
+    <Compile Include="BL\Controllers\TicketList\DsrTicketController.cs" />
+    <Compile Include="BL\Models\Calculator\Calculator.cs" />
+    <Compile Include="BL\Models\Chama\Chamas.cs" />
+    <Compile Include="BL\Models\Chama\Group.cs" />
+    <Compile Include="BL\Models\Chama\GroupInfo.cs" />
+    <Compile Include="BL\Models\Chama\GroupKeyValue.cs" />
+    <Compile Include="BL\Models\Chama\Option.cs" />
+    <Compile Include="BL\Models\Commissions\Adjustments\Adjustment.cs" />
+    <Compile Include="BL\Models\Commissions\Adjustments\AdjustmentServerResponse.cs" />
+    <Compile Include="BL\Models\Commissions\CommissionType.cs" />
+    <Compile Include="BL\Models\Commissions\Daily\DailyCommissionItem.cs" />
+    <Compile Include="BL\Models\Commissions\Daily\DailyCommissionResponse.cs" />
+    <Compile Include="BL\Models\Commissions\Payments\Payment.cs" />
+    <Compile Include="BL\Models\Commissions\Payments\PaymentsServerResponse.cs" />
+    <Compile Include="BL\Models\Commissions\Quality\QualityCommissionItem.cs" />
+    <Compile Include="BL\Models\Commissions\Quality\QualityCommissionResponse.cs" />
+    <Compile Include="BL\Models\Commissions\Retainer\RetainerCommissionItem.cs" />
+    <Compile Include="BL\Models\Commissions\Retainer\RetainerCommissionResponse.cs" />
+    <Compile Include="BL\Models\Commissions\Summary\CommissionDataObject.cs" />
+    <Compile Include="BL\Models\Commissions\Summary\CommissionItem.cs" />
+    <Compile Include="BL\Models\Commissions\Summary\CommissionSummaryResponse.cs" />
+    <Compile Include="BL\Models\Commissions\Summary\DeductionsDataObject.cs" />
+    <Compile Include="BL\Models\Commissions\Summary\EarningsDataObject.cs" />
+    <Compile Include="BL\Models\Commissions\Summary\SummaryDataObject.cs" />
+    <Compile Include="BL\Models\Commissions\Tax\CommissionTaxServerResponse.cs" />
+    <Compile Include="BL\Models\ManageStock\DsrProductAllocationItem.cs" />
+    <Compile Include="BL\Models\ManageStock\DeviceAllocationItem.cs" />
+    <Compile Include="BL\Models\ManageStock\KeyValue.cs" />
+    <Compile Include="BL\Models\ManageStock\ReasonForReturning.cs" />
+    <Compile Include="BL\Models\ManageStock\ReturnedProduct.cs" />
+    <Compile Include="Enums\Chama\GroupStatus.cs" />
+    <Compile Include="Enums\ManageStock\ManageStockAction.cs" />
+    <Compile Include="BL\Models\ManageStock\ScmStock.cs" />
+    <Compile Include="BL\Models\ManageStock\SelectedProduct.cs" />
+    <Compile Include="BL\Models\ManageStock\RequestStatus.cs" />
+    <Compile Include="BL\Models\Modules\Facts\Fact.cs" />
+    <Compile Include="BL\Models\Modules\Module.cs" />
+    <Compile Include="BL\Models\Modules\Videos\Video.cs" />
+    <Compile Include="BL\Models\Modules\Videos\VideoComponent.cs" />
+    <Compile Include="BL\Models\Modules\Videos\VideoCategory.cs" />
+    <Compile Include="BL\Models\People\CustomerPhoto.cs" />
+    <Compile Include="BL\Models\People\Lead.cs" />
+    <Compile Include="BL\Models\IListSectionItem.cs" />
+    <Compile Include="BL\Models\People\CustomerProduct.cs" />
+    <Compile Include="BL\Models\People\PersonStatus.cs" />
+    <Compile Include="BL\Models\People\ProspectProduct.cs" />
+    <Compile Include="BL\Models\OtaSettings\OtaSetting.cs" />
+    <Compile Include="BL\Models\Stats\Reporting\SelectionCache.cs" />
+    <Compile Include="BL\Models\TableMetadata.cs" />
+    <Compile Include="BL\Models\TicketList\AbstractTicketBase.cs" />
+    <Compile Include="BL\Models\TicketList\CustomerTicket.cs" />
+    <Compile Include="BL\Models\TicketList\DsrTicket.cs" />
+    <Compile Include="Converters\DateTimeValueConverter.cs" />
+    <Compile Include="Converters\LogFileValueConverter.cs" />
+    <Compile Include="DbScript.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbScript.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\Modules\Videos\NodeType.cs" />
+    <Compile Include="Enums\People\PhotoSaveStatus.cs" />
+    <Compile Include="Enums\People\PhotoUploadStatus.cs" />
+    <Compile Include="Enums\People\PhotoType.cs" />
+    <Compile Include="Enums\TicketList\TicketStatus.cs" />
+    <Compile Include="Enums\TicketList\TicketType.cs" />
+    <Compile Include="BL\Models\Syncing\DownSyncTracker.cs" />
+    <Compile Include="BL\Models\Tickets\Answer.cs" />
+    <Compile Include="BL\Models\Tickets\EntityIdentifier.cs" />
+    <Compile Include="BL\Models\Tickets\ProcessFlow.cs" />
+    <Compile Include="BL\Models\Tickets\Step.cs" />
+    <Compile Include="BL\Models\Tickets\StepAnswer.cs" />
+    <Compile Include="BL\Models\Tickets\StepConverter.cs" />
+    <Compile Include="BL\Models\Tickets\StepConverter2.cs" />
+    <Compile Include="BL\Models\Tickets\Ticket.cs" />
+    <Compile Include="BL\Models\Tickets\TicketQuestion.cs" />
+    <Compile Include="BL\Models\Tickets\Wizard.cs" />
+    <Compile Include="Events\Stats\Reporting\ReportingStatsDataFetchedEvent.cs" />
+    <Compile Include="Events\Stats\StatsListFetchedEvent.cs" />
+    <Compile Include="Events\Stats\Units\ProductsFetchedEvent.cs" />
+    <Compile Include="Json\Converters\SerializedPropertyConveter.cs" />
+    <Compile Include="Services\Commissions\CommissionService.cs" />
+    <Compile Include="Events\CustomerPhoto\CustomerPhotoUpdatedEvent.cs" />
+    <Compile Include="Events\CustomerPhoto\UploadStatusEventArgs.cs" />
+    <Compile Include="Services\Database\DataAccess.cs" />
+    <Compile Include="Services\Database\DatabaseDefinition.cs" />
+    <Compile Include="Services\Database\DatabaseInstance.cs" />
+    <Compile Include="Services\Database\DbConnection.cs" />
+    <Compile Include="Services\Database\IDatabaseDefinition.cs" />
+    <Compile Include="Services\Database\IDbConnection.cs" />
+    <Compile Include="Services\Database\ITransaction.cs" />
+    <Compile Include="Services\Database\Locking\DatabaseSemaphore.cs" />
+    <Compile Include="Services\Database\Locking\SemaphoreProvider.cs" />
+    <Compile Include="Services\Database\Logging\LogEvent.cs" />
+    <Compile Include="Services\Database\Logging\Logger.cs" />
+    <Compile Include="Services\Database\Models\DatabaseVersion.cs" />
+    <Compile Include="Services\Database\Models\ModelBase.cs" />
+    <Compile Include="Services\Database\Querying\CriteriaBuilder.cs" />
+    <Compile Include="Services\Database\Querying\Criterion.cs" />
+    <Compile Include="Services\Database\Querying\QueryGenerator.cs" />
+    <Compile Include="Services\Database\Semphore.cs" />
+    <Compile Include="Services\GAnalytics\IGoogleAnalyticService.cs" />
+    <Compile Include="Services\ManageStock\DsrStockAllocationService.cs" />
+    <Compile Include="Services\Person\Customer\CustomerPhotoService.cs" />
+    <Compile Include="Services\Person\Customer\Photo\IPhotoService.cs" />
+    <Compile Include="Services\Platform\IXamarinPlatform.cs" />
+    <Compile Include="Services\SharedPrefs\ISharedPrefService.cs" />
+    <Compile Include="Services\Stats\Ranking\RankingsRowService.cs" />
+    <Compile Include="Services\Stats\Ranking\RemoteDsrRankingListService.cs" />
+    <Compile Include="Services\Stats\RemoteServiceBase.cs" />
+    <Compile Include="Services\Stats\Row.cs" />
+    <Compile Include="Enums\Api\ErrorFilterFlags.cs" />
+    <Compile Include="Enums\ServiceReturnStatus.cs" />
+    <Compile Include="Enums\Tickets\StepInputTypeEnum.cs" />
+    <Compile Include="Events\CustomerRegistration\CustomerRegistrationAttemptedEventArgs.cs" />
+    <Compile Include="Events\CustomerRegistration\CustomerRegistrationCompletedEventArgs.cs" />
+    <Compile Include="Events\CustomerRegistration\CustomerRegistrationEventArgsBase.cs" />
+    <Compile Include="Events\DownSync\SyncCompleteEventArgs.cs" />
+    <Compile Include="Events\DownSync\SyncEventArgsBase.cs" />
+    <Compile Include="Events\DownSync\SyncStatusEventArgs.cs" />
+    <Compile Include="Exceptions\API\HttpResponse204Exception.cs" />
+    <Compile Include="Exceptions\API\HttpResponse400Exception.cs" />
+    <Compile Include="Exceptions\API\HttpResponse500Exception.cs" />
+    <Compile Include="Events\DownSync\SyncErrorEventArgs.cs" />
+    <Compile Include="Events\DownSync\SyncStartedEventArgs.cs" />
+    <Compile Include="Exceptions\OTA\OTATableMissingException.cs" />
+    <Compile Include="Api\Stats\AggregatedReportStatsApi.cs" />
+    <Compile Include="BL\Controllers\Stats\SalesSummaryController.cs" />
+    <Compile Include="BL\Models\Stats\Reporting\ReportingLevelEntity.cs" />
+    <Compile Include="BL\Models\Stats\Reporting\ReportStat.cs" />
+    <Compile Include="BL\Models\Stats\Reporting\SalesSummary.cs" />
+    <Compile Include="Extensions\ArrayExtensions.cs" />
+    <Compile Include="Extensions\AsyncHelper.cs" />
+    <Compile Include="Extensions\ObservableCollectionExtensions.cs" />
+    <Compile Include="Api\ApiBase.cs" />
+    <Compile Include="Api\ApiFallbackBase.cs" />
+    <Compile Include="Api\Attributes\NotPostedAttribute.cs" />
+    <Compile Include="Api\Json\TolerantEnumConverter.cs" />
+    <Compile Include="Api\OtaSettings\OtaSettingsApi.cs" />
+    <Compile Include="Api\People\Customers\CustomerSearchApi.cs" />
+    <Compile Include="Api\Person\CustomerStatusApi.cs" />
+    <Compile Include="Api\Product\ProductApi.cs" />
+    <Compile Include="Api\Security\LoginApis.cs" />
+    <Compile Include="Api\Security\PinReset.cs" />
+    <Compile Include="Api\CustomerDto.cs" />
+    <Compile Include="Api\CustomerRegistrationStatusDto.cs" />
+    <Compile Include="Api\FallbackResponse.cs" />
+    <Compile Include="Api\ISalesAppApi.cs" />
+    <Compile Include="Api\LoginDto.cs" />
+    <Compile Include="Api\MessageDto.cs" />
+    <Compile Include="Api\People\PeopleApis.cs" />
+    <Compile Include="Api\PersonDto.cs" />
+    <Compile Include="Api\Person\CustomerApi.cs" />
+    <Compile Include="Api\Person\CustomerApiFallback.cs" />
+    <Compile Include="Api\Person\CustomerRegistrationResponse.cs" />
+    <Compile Include="Api\PostResponse.cs" />
+    <Compile Include="Api\ProductDto.cs" />
+    <Compile Include="Api\ProspectDto.cs" />
+    <Compile Include="Api\ServerResponse.cs" />
+    <Compile Include="Api\ServerResponseDto.cs" />
+    <Compile Include="Api\ServerResponseObjects\ServerResponseObjectsBase.cs" />
+    <Compile Include="Api\Stats\DsrRankingListApi.cs" />
+    <Compile Include="Api\Stats\DsrRankingSummarizedApi.cs" />
+    <Compile Include="Api\Stats\SalesStatsApi.cs" />
+    <Compile Include="Api\Stats\UnitsStatsApi.cs" />
+    <Compile Include="Api\StatusDto.cs" />
+    <Compile Include="Api\UserDto.cs" />
+    <Compile Include="Auth\ISalesAppSession.cs" />
+    <Compile Include="BL\Contracts\BusinessEntityBase.cs" />
+    <Compile Include="BL\Controllers\OtaSettings\OtaSettingsController.cs" />
+    <Compile Include="BL\Controllers\People\CustomerRegistrationStepsStatusController.cs" />
+    <Compile Include="BL\Controllers\ProductsController.cs" />
+    <Compile Include="BL\Controllers\Security\IHashing.cs" />
+    <Compile Include="BL\Controllers\Security\LoginController.cs" />
+    <Compile Include="BL\Controllers\Security\PermissionsController.cs" />
+    <Compile Include="BL\Controllers\Stats\DsrRankingListController.cs" />
+    <Compile Include="BL\Controllers\Stats\DsrSummarizedRankingController.cs" />
+    <Compile Include="BL\Controllers\Stats\StatHeaderController.cs" />
+    <Compile Include="BL\Controllers\Stats\StatsController.cs" />
+    <Compile Include="BL\Controllers\Stats\UnitsController.cs" />
+    <Compile Include="BL\Models\OtaSettings\OtaServerResponse.cs" />
+    <Compile Include="BL\Models\OtaSettings\SettingsGroup.cs" />
+    <Compile Include="BL\Models\Notifications\SalesAppNotification.cs" />
+    <Compile Include="BL\Models\People\CustomerSearchResult.cs" />
+    <Compile Include="BL\Models\People\ProspectSearchResult.cs" />
+    <Compile Include="BL\Models\Stats\Units\DsrUnitsList.cs" />
+    <Compile Include="BL\Models\Stats\Units\DsrUnitsInfo.cs" />
+    <Compile Include="Enums\Database\Operators.cs" />
+    <Compile Include="Enums\Device\AppCompatibility.cs" />
+    <Compile Include="Enums\Notification\NotificationStatus.cs" />
+    <Compile Include="Enums\Notification\NotificationTypes.cs" />
+    <Compile Include="Extensions\Data\DataExtensions.cs" />
+    <Compile Include="Extensions\Data\ICastable.cs" />
+    <Compile Include="Framework\ICulture.cs" />
+    <Compile Include="Framework\PreserveAttribute.cs" />
+    <Compile Include="Framework\SortedObservableCollection.cs" />
+    <Compile Include="Logging\ILogSettings.cs" />
+    <Compile Include="Logging\LogFile.cs" />
+    <Compile Include="Services\Database\QueryRunner.cs" />
+    <Compile Include="Services\DownSync\LocalDownSyncService.cs" />
+    <Compile Include="Services\DependancyInjection\ArgumentReceiverBase.cs" />
+    <Compile Include="Services\Locations\ILocationServiceListener.cs" />
+    <Compile Include="Services\Notifications\INotificationService.cs" />
+    <Compile Include="Services\OtaSettings\RemoteOtaService.cs" />
+    <Compile Include="Services\OtaSettings\LocalOtaService.cs" />
+    <Compile Include="Services\Notifications\NotificationsCoreService.cs" />
+    <Compile Include="Services\Person\Customer\CustomerSearchService.cs" />
+    <Compile Include="Services\Person\Prospect\ProspectSearchService.cs" />
+    <Compile Include="Services\RemoteServices\ErrorHandling\ApiErrorHandler.cs" />
+    <Compile Include="Services\RemoteServices\ErrorHandling\ErrorDescriber.cs" />
+    <Compile Include="Services\RemoteServices\ErrorHandling\UiNotificationTypes\BackgroundNotifier.cs" />
+    <Compile Include="Services\RemoteServices\ErrorHandling\UiNotificationTypes\Dialog.cs" />
+    <Compile Include="Services\RemoteServices\ErrorHandling\UiNotificationTypes\Flash.cs" />
+    <Compile Include="Services\RemoteServices\ErrorHandling\UiNotificationTypes\FullOverlay.cs" />
+    <Compile Include="Services\RemoteServices\ErrorHandling\UiNotificationTypes\UiNotifierBase.cs" />
+    <Compile Include="Services\RemoteServices\ErrorHandling\UiNotificationTypes\Sticky.cs" />
+    <Compile Include="Services\Search\ISearchResult.cs" />
+    <Compile Include="Services\Search\ISearchService.cs" />
+    <Compile Include="Services\Product\LocalProductService.cs" />
+    <Compile Include="Services\Product\RemoteProductService.cs" />
+    <Compile Include="Services\RemoteServices\ExceptionHandledEventArgs.cs" />
+    <Compile Include="Services\RemoteServices\RemoteServiceBase.cs" />
+    <Compile Include="Services\Search\SearchServiceHelper.cs" />
+    <Compile Include="Services\Stats\Aggregated\ReportingLevelStatsService.cs" />
+    <Compile Include="Services\Settings\SettingAttribute.cs" />
+    <Compile Include="Services\Settings\Settings.cs" />
+    <Compile Include="Services\Stats\Ranking\LocalRankingService.cs" />
+    <Compile Include="BL\Models\People\CustomerRegistrationStatus.cs" />
+    <Compile Include="BL\Models\People\CustomerRegistrationStep.cs" />
+    <Compile Include="BL\Models\People\CustomerStatus.cs" />
+    <Compile Include="BL\Models\People\RegistrationStatusOverview.cs" />
+    <Compile Include="BL\Models\Security\LoginResponse.cs" />
+    <Compile Include="BL\Models\Security\Permission.cs" />
+    <Compile Include="BL\Models\Stats\Ranking\DsrRankInfo.cs" />
+    <Compile Include="BL\Models\Stats\Ranking\DsrRankingList.cs" />
+    <Compile Include="BL\Models\Stats\Ranking\RankingSummarized.cs" />
+    <Compile Include="BL\Models\Stats\Sales\AggregatedStat.cs" />
+    <Compile Include="BL\Models\Stats\Sales\Stat.cs" />
+    <Compile Include="BL\Models\Stats\Sales\StatHeader.cs" />
+    <Compile Include="Enums\Api\LoginResponseCode.cs" />
+    <Compile Include="Enums\Security\Permissions.cs" />
+    <Compile Include="Enums\Stats\Period.cs" />
+    <Compile Include="Enums\Stats\SalesAreaHierarchy.cs" />
+    <Compile Include="Exceptions\API\UnauthorizedHttpException.cs" />
+    <Compile Include="Services\ConfigService.cs" />
+    <Compile Include="BL\Controllers\MessagesController.cs" />
+    <Compile Include="BL\Controllers\People\PeopleController.cs" />
+    <Compile Include="BL\Controllers\People\ProspectFollowUpsController.cs" />
+    <Compile Include="BL\Controllers\Synchronization\SyncRegistry.cs" />
+    <Compile Include="BL\Controllers\Synchronization\SyncingController.cs" />
+    <Compile Include="BL\Models\Syncing\ModelChannel.cs" />
+    <Compile Include="BL\Models\Syncing\SyncChannel.cs" />
+    <Compile Include="BL\Models\Syncing\SyncRecord.cs" />
+    <Compile Include="BL\Models\Syncing\SynchronizableModelBase.cs" />
+    <Compile Include="BL\Models\DsrProfile.cs" />
+    <Compile Include="BL\Models\People\Customer.cs" />
+    <Compile Include="BL\Managers\ISalesAppManager.cs" />
+    <Compile Include="BL\Message.cs" />
+    <Compile Include="BL\Models\People\Person.cs" />
+    <Compile Include="BL\Models\People\ProspectFollowup.cs" />
+    <Compile Include="BL\Product.cs" />
+    <Compile Include="BL\Models\People\Prospect.cs" />
+    <Compile Include="BL\Controllers\People\ProspectsController.cs" />
+    <Compile Include="BL\Status.cs" />
+    <Compile Include="Enums\Api\ResponseStatus.cs" />
+    <Compile Include="Enums\Database\ConjunctionsEnum.cs" />
+    <Compile Include="Enums\People\PersonNameValidationResultsEnum.cs" />
+    <Compile Include="Enums\People\PersonTypeEnum.cs" />
+    <Compile Include="Enums\People\ProspectFollowUpValidationResultsEnum.cs" />
+    <Compile Include="Enums\People\ProspectTermEnum.cs" />
+    <Compile Include="Enums\Syncing\RecordStatus.cs" />
+    <Compile Include="Exceptions\API\NotConnectedToInternetException.cs" />
+    <Compile Include="Exceptions\Database\DuplicateValuesException.cs" />
+    <Compile Include="Exceptions\Database\NotSavedException.cs" />
+    <Compile Include="Exceptions\Syncing\ApiControllerNotFoundException.cs" />
+    <Compile Include="Exceptions\Syncing\NotQueuedException.cs" />
+    <Compile Include="Exceptions\Syncing\SyncingException.cs" />
+    <Compile Include="Exceptions\Syncing\UnsavedModelException.cs" />
+    <Compile Include="Exceptions\Syncing\UnsyncableModelException.cs" />
+    <Compile Include="Exceptions\Validation\People\PersonNameInvalidException.cs" />
+    <Compile Include="Exceptions\Validation\People\ProspectFollowUpInvalidException.cs" />
+    <Compile Include="Extensions\AsyncTaskExtensions.cs" />
+    <Compile Include="Enums\MultiCountry\CountryCodesEnum.cs" />
+    <Compile Include="Exceptions\Validation\People\PhoneNumberInvalidException.cs" />
+    <Compile Include="Enums\MultiCountry\LanguagesEnum.cs" />
+    <Compile Include="Enums\Validation\PhoneValidationResultEnum.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\DebuggingExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Services\Database\SaveResponse.cs" />
+    <Compile Include="Services\Database\SequentialGuid.cs" />
+    <Compile Include="Services\Device\IInformation.cs" />
+    <Compile Include="Services\Device\Information.cs" />
+    <Compile Include="Services\DependancyInjection\Injectable.cs" />
+    <Compile Include="Services\IConfigService.cs" />
+    <Compile Include="Services\Person\RegistrationStatusService.cs" />
+    <Compile Include="Services\Security\LoginService.cs" />
+    <Compile Include="Services\Person\Json\Serializer.cs" />
+    <Compile Include="Services\Stats\Ranking\LocalDsrRankingSummarizedService.cs" />
+    <Compile Include="Services\Stats\Ranking\RemoteDsrRankingSummarizedService.cs" />
+    <Compile Include="Services\Stats\Sales\RemoteSalesStatsService.cs" />
+    <Compile Include="Services\Stats\Sales\LocalSalesStatsService.cs" />
+    <Compile Include="Services\Stats\Block.cs" />
+    <Compile Include="Services\Stats\Units\LocalUnitsService.cs" />
+    <Compile Include="Services\Stats\Units\RemoteUnitsService.cs" />
+    <Compile Include="Services\TimeService.cs" />
+    <Compile Include="SalesAppStart.cs" />
+    <Compile Include="Validation\PeopleDetailsValidater.cs" />
+    <Compile Include="DAL\BroadcastMessageRepository.cs" />
+    <Compile Include="DL\DbSaveResult.cs" />
+    <Compile Include="Enums\Api\DataChannel.cs" />
+    <Compile Include="IBootstrapper.cs" />
+    <Compile Include="Logging\ILog.cs" />
+    <Compile Include="Logging\LogManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DependancyInjection\Resolver.cs" />
+    <Compile Include="Services\Connectivity\IConnectivityService.cs" />
+    <Compile Include="Services\Connectivity\ISmsService.cs" />
+    <Compile Include="Services\Connectivity\ISmsServiceEventListener.cs" />
+    <Compile Include="Services\Connectivity\SmsServiceCore.cs" />
+    <Compile Include="Services\Person\CustomerService.cs" />
+    <Compile Include="Enums\Database\DataTypeEnum.cs" />
+    <Compile Include="Services\Interfaces\IDataService.cs" />
+    <Compile Include="Services\Interfaces\IStorageService.cs" />
+    <Compile Include="Services\Database\SQLiteDataService.cs" />
+    <Compile Include="BL\Controllers\People\CustomersController.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\Chama\GroupSelectionViewModel.cs" />
+    <Compile Include="ViewModels\Commissions\BaseDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Commissions\CommissionsViewModel.cs" />
+    <Compile Include="ViewModels\Commissions\Daily\DailyCommissionViewModel.cs" />
+    <Compile Include="ViewModels\Commissions\InfoViewModel.cs" />
+    <Compile Include="ViewModels\Commissions\Retainer\RetainerCommissionViewModel.cs" />
+    <Compile Include="ViewModels\Commissions\Summary\SummaryViewModel.cs" />
+    <Compile Include="ViewModels\Commissions\Adjustments\AdjustmentsViewModel.cs" />
+    <Compile Include="ViewModels\Commissions\Payments\PaymentsViewModel.cs" />
+    <Compile Include="ViewModels\Commissions\Tax\CommissionTaxViewModel.cs" />
+    <Compile Include="ViewModels\Dialog\IDialogService.cs" />
+    <Compile Include="ViewModels\Home\HomeViewModel.cs" />
+    <Compile Include="ViewModels\IDeviceResource.cs" />
+    <Compile Include="ViewModels\Logging\LogSettingsViewModel.cs" />
+    <Compile Include="ViewModels\ManageStock\ManageStockViewModel.cs" />
+    <Compile Include="ViewModels\Modules\Facts\FactDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Modules\Facts\FactsListViewModel.cs" />
+    <Compile Include="ViewModels\Modules\Facts\IAssets.cs" />
+    <Compile Include="ViewModels\Modules\ModuleSelectionViewModel.cs" />
+    <Compile Include="ViewModels\Modules\ModulesViewModel.cs" />
+    <Compile Include="ViewModels\Modules\Videos\IFolderEnumerator.cs" />
+    <Compile Include="ViewModels\Modules\Videos\VideoComponentsViewModel.cs" />
+    <Compile Include="ViewModels\Person\Customer\CustomerDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Person\Customer\CustomerDetailViewModel.cs" />
+    <Compile Include="ViewModels\Person\Customer\CustomerListViewModel.cs" />
+    <Compile Include="ViewModels\Person\Customer\CustomerPhotoSyncViewModel.cs" />
+    <Compile Include="ViewModels\Person\Customer\CustomerPhotoViewModel.cs" />
+    <Compile Include="ViewModels\Person\PersonListViewModel.cs" />
+    <Compile Include="ViewModels\Person\Prospect\ProspectListViewModel.cs" />
+    <Compile Include="ViewModels\Security\DeviceRegistrationStep1ViewModel.cs" />
+    <Compile Include="ViewModels\Security\LoginActivityViewModel.cs" />
+    <Compile Include="ViewModels\Stats\Rankings\RankingStatsListFragmentViewModel.cs" />
+    <Compile Include="ViewModels\Stats\Reporting\ReportingLevelStatsFragmentViewModel.cs" />
+    <Compile Include="ViewModels\Stats\Reporting\ReportingLevelStatsViewModel.cs" />
+    <Compile Include="ViewModels\Stats\Sales\SalesStatsFragmentViewModel.cs" />
+    <Compile Include="ViewModels\Stats\StatsFragmentBaseViewModel.cs" />
+    <Compile Include="ViewModels\Stats\StatsViewModel.cs" />
+    <Compile Include="ViewModels\Stats\Units\UnitsStatsFragmentViewModel.cs" />
+    <Compile Include="ViewModels\TicketList\TicketDetailViewModel.cs" />
+    <Compile Include="ViewModels\TicketList\TicketListViewModel.cs" />
+    <Compile Include="ViewModels\WelcomeViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BL\About.txt" />
+    <Content Include="DAL\About.txt" />
+    <Content Include="DL\About.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Akavache, Version=4.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\akavache.core.4.1.2\lib\Portable-Net45+Win8+WP8+Wpa81\Akavache.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Akavache.Sqlite3, Version=4.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\akavache.sqlite3.4.1.2\lib\Portable-Net45+Win8+WP8+Wpa81\Akavache.Sqlite3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Binding, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Binding.4.2.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Binding.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Core, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Core.4.2.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Localization, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Binding.4.2.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Localization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvvmCross.Platform, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.Platform.4.2.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.4\lib\portable-net45+wp8+win8+wpa\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.6.4\lib\portable-net45+wp8+win8+wpa\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=7.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAzure.Storage.7.0.1-preview\lib\portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1\Microsoft.WindowsAzure.Storage.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Splat, Version=1.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Splat.1.3.3\lib\Portable-net45+win+wpa81+wp80\Splat.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLite.Net, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLite.Net-PCL.3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLite.Net.Async, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLite.Net.Async-PCL.3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.Async.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SQLiteNetExtensions">
+      <HintPath>..\packages\SQLiteNetExtensions.1.3.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\SQLiteNetExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLiteNetExtensionsAsync">
+      <HintPath>..\packages\SQLiteNetExtensions.Async.1.3.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\SQLiteNetExtensionsAsync.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCL.raw, Version=0.8.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCL.raw.0.8.6\lib\portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCL.raw.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Core.2.2.5\lib\portable-net45+winrt45+wp8+wpa81\System.Reactive.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Interfaces.2.2.5\lib\portable-net45+winrt45+wp8+wpa81\System.Reactive.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Linq.2.2.5\lib\portable-net45+winrt45+wp8+wpa81\System.Reactive.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-PlatformServices.2.2.5\lib\portable-net45+winrt45+wp8+wpa81\System.Reactive.PlatformServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETPortable\v4.5\Profile\Profile111\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.6.4\lib\portable-net45+wp8+win8+wpa\System.Spatial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Insights, Version=1.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Insights.1.11.3\lib\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="SalesApp.Core.ruleset" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0-beta009\analyzers\dotnet\cs\Newtonsoft.Json.dll" />
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.0-beta009\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DbScript.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DbScript.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+    <Error Condition="!Exists('..\packages\Xamarin.Insights.1.11.3\build\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Insights.1.11.3\build\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.targets'))" />
+  </Target>
+  <Import Project="..\packages\Xamarin.Insights.1.11.3\build\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.11.3\build\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.targets')" />
+</Project>

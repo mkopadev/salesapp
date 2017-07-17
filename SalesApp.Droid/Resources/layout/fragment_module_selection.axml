@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_default_large"
+        android:layout_marginTop="@dimen/margin_default_large"
+        android:text="@string/modules_select_prompt"
+        style="@style/DefaultTextView_Bold"/>
+    <MvxListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:dividerHeight="@dimen/margin_default_small"
+        local:MvxBind="ItemsSource Modules; ItemClick ItemClickCommand"
+        local:MvxItemTemplate="@layout/modules_list_item" />
+</LinearLayout>

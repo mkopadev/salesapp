@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<linker>
+
+  <assembly fullname="Newtonsoft.Json">
+    <type fullname="Newtonsoft.Json.Converters.StringEnumConverter">
+      <method name=".ctor" />
+    </type>
+  </assembly>
+  
+  <assembly fullname="MvvmCross.Binding.Droid">
+    <type fullname="MvvmCross.Binding.Droid.Target.MvxCompoundButtonCheckedTargetBinding">
+      <method name=".ctor" />
+    </type>
+  </assembly>
+  
+  <assembly fullname="MvvmCross.Plugins.File" >
+     <namespace fullname="MvvmCross.Plugins.File"></namespace>
+  </assembly>
+  <assembly fullname="MvvmCross.Plugins.File.Droid" >
+    <namespace fullname="MvvmCross.Plugins.File.Droid"></namespace>
+  </assembly>
+  <assembly fullname="MvvmCross.Plugins.DownloadCache" >
+    <namespace fullname="MvvmCross.Plugins.DownloadCache"></namespace>
+  </assembly>
+  <assembly fullname="MvvmCross.Plugins.DownloadCache.Droid">
+    <namespace fullname="MvvmCross.Plugins.DownloadCache.Droid"></namespace>
+  </assembly>
+  
+  <assembly fullname="SalesApp.Droid"/>
+  <assembly fullname="SalesApp.Core"/>
+  
+</linker>

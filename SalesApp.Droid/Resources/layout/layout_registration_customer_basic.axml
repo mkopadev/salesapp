@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/basicInfoFragment"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <include
+        android:id="@+id/wizardSteps"
+        layout="@layout/layout_customer_reg_steps"
+        android:layout_width="fill_parent"
+        android:layout_height="51dp"
+        android:layout_marginTop="@dimen/screen_margin" />
+    <TextView
+        android:id="@+id/basicInfoLabel"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/wizardSteps"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/screen_margin"
+        android:text="@string/basic_information" />
+    android:background="@color/green">
+    <LinearLayout
+        android:id="@+id/header"
+        style="@style/WrapHeight"
+        android:orientation="vertical"
+        android:background="@color/gray4">
+        <LinearLayout
+            style="@style/WrapContent"
+            android:layout_marginTop="28dp"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:orientation="horizontal">
+            <ImageView
+                style="@style/Indicator.Current" />
+            <ImageView
+                style="@style/Indicator.Next" />
+            <ImageView
+                style="@style/Indicator.Next" />
+            <ImageView
+                style="@style/Indicator.Next" />
+        </LinearLayout>
+        <TextView
+            style="@style/TextView"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:text="@string/basic_info" />
+    </LinearLayout>
+>>>>>>> release/1.7
+    <LinearLayout
+        android:id="@+id/formHolder"
+        style="@style/WrapHeight"
+        android:layout_below="@+id/basicInfoLabel"
+        android:layout_marginTop="0dp"
+        android:paddingBottom="10dp"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <RelativeLayout
+            android:id="@+id/layoutPhone"
+            style="@style/BasicRegistrationListItem">
+            <TextView
+                android:id="@+id/textPhoneError"
+                android:text="@string/wrong_phone_formatting" />
+            <EditText
+                android:id="@+id/editTextPhone"
+                android:layout_below="@+id/textPhoneError"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:background="@drawable/border_rounded_small"
+                android:hint="@string/phone_number" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layoutPhoneVerify"
+            style="@style/BasicRegistrationListItem"
+            android:visibility="gone">
+            <EditText
+                style="@style/BasicRegistrationEditText"
+                android:id="@+id/editTextPhoneVerify"
+                android:maxLength="10"
+                android:inputType="phone"
+                android:hint="@string/phone_number_verify" />
+            <TextView
+                style="@style/FieldVerificationText"
+                android:id="@+id/textPhoneVerifyError"
+                android:layout_below="@+id/editTextPhoneVerify"
+                android:text="@string/wrong_phone_formatting" />
+            <ImageView
+                style="@style/ListItemNextButton"
+                android:id="@+id/iconPhoneVerify"
+                android:src="@drawable/phone_icon" />
+            <include
+                layout="@layout/component_divider" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layoutLastName"
+            android:clickable="true"
+            style="@style/BasicRegistrationListItem">
+            <EditText
+                style="@style/BasicRegistrationEditText"
+                android:id="@+id/editTextLastName"
+                android:maxLength="256"
+                android:inputType="textPersonName"
+                android:hint="@string/last_name" />
+            <TextView
+                style="@style/FieldVerificationText"
+                android:id="@+id/textLastNameError"
+                android:layout_below="@+id/editTextLastName"
+                android:text="@string/you_must_type_a_name" />
+            <ImageView
+                style="@style/ListItemNextButton"
+                android:id="@+id/iconLastName"
+                android:src="@drawable/edit_icon" />
+            <include
+                layout="@layout/component_divider" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layoutFirstName"
+            android:clickable="true"
+            style="@style/BasicRegistrationListItem">
+            <EditText
+                style="@style/BasicRegistrationEditText"
+                android:id="@+id/editTextFirstName"
+                android:maxLength="256"
+                android:inputType="textPersonName"
+                android:hint="@string/first_name" />
+            <TextView
+                style="@style/FieldVerificationText"
+                android:id="@+id/textFirstNameError"
+                android:layout_below="@+id/editTextFirstName"
+                android:text="@string/you_must_type_a_name" />
+            <ImageView
+                style="@style/ListItemNextButton"
+                android:id="@+id/iconFirstName"
+                android:src="@drawable/edit_icon" />
+            <include
+                layout="@layout/component_divider" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layoutID"
+            android:clickable="true"
+            style="@style/BasicRegistrationListItem">
+            <EditText
+                style="@style/BasicRegistrationEditText"
+                android:id="@+id/editTextID"
+                android:maxLength="256"
+                android:digits="abcdefghijklmnopqrstuvwxyz1234567890"
+                android:inputType="number"
+                android:hint="@string/id" />
+            <TextView
+                style="@style/FieldVerificationText"
+                android:id="@+id/textIDError"
+                android:layout_below="@+id/editTextID"
+                android:text="@string/are_you_sure_this_is_correct" />
+            <ImageView
+                style="@style/ListItemNextButton"
+                android:id="@+id/iconID"
+                android:src="@drawable/edit_icon" />
+            <include
+                layout="@layout/component_divider" />
+        </RelativeLayout>
+    </LinearLayout>
+    <include
+        layout="@layout/layout_nav_buttons" />
+</RelativeLayout>

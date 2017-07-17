@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/settingsRoot"
+    android:padding="10dp">
+    <TextView
+        android:text="About"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewHeading"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageLogo"
+        android:layout_centerVertical="false" />
+    <TextView
+        android:text="@string/build_version"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buildInformation"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="20dp" />
+    <TextView
+        android:text="@string/build_version"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buildTime"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="false" />
+    <Button
+        android:text="Ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnOk" />
+</LinearLayout>

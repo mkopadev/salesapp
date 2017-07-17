@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textView_customer_identification_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/DefaultTextView"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="@dimen/margin_default"
+        android:layout_marginRight="@dimen/margin_default"
+        android:text="@string/customer_identification"
+        android:textColor="@color/grey_dark"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/textView_customer_identification_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/DefaultTextView"
+        android:layout_below="@+id/textView_customer_identification_title"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="@dimen/margin_default"
+        android:layout_marginRight="@dimen/margin_default"
+        android:text="@string/customer_identification_message"
+        android:textColor="@color/grey_dark"
+        android:textSize="14sp" />
+    <SalesApp.Droid.Components.UIComponents.ClickControlledTabLayout
+        android:id="@+id/sliding_tabs"
+        style="@style/MKTabLayoutSwap"
+        android:layout_marginLeft="@dimen/margin_default"
+        android:layout_marginRight="@dimen/margin_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_customer_identification_message"
+        app:tabGravity="fill"
+        app:tabMode="fixed" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/thin_line"
+        android:layout_above="@+id/pager"
+        android:background="@color/green" />
+    <SalesApp.Droid.Components.UIComponents.SwipeControlledViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/sliding_tabs"
+        android:layout_height="match_parent" />
+</RelativeLayout>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <RelativeLayout
+      android:layout_alignParentTop="true"
+      android:layout_width="match_parent"
+      android:layout_height="42dp"
+      android:background="@drawable/list_box_error"
+      android:id="@+id/lSmsInfoStatus">
+      <TextView
+          android:id="@+id/txtSmsSendInfo"
+            android:text="[CustomerName]"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:padding="4dp"/>
+       <TextView
+            android:id="@+id/btnResendRegistration"
+            android:text="@string/resend_registration"
+            android:background="@drawable/button_green"
+            android:textColor="@color/white"
+            android:layout_margin="5dp"
+            android:padding="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_normal"
+             android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/customer_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/lSmsInfoStatus"
+        android:layout_marginLeft="@dimen/screen_margin"
+        android:layout_marginTop="@dimen/screen_margin"
+        android:layout_marginBottom="@dimen/margin_default_large"
+        android:gravity="center_vertical">
+        <SalesApp.Droid.Components.UIComponents.Image.CircularImageView
+            android:id="@+id/imgCustomerPhoto"
+              android:layout_width="103dp"
+              android:layout_height="103dp"
+              android:layout_marginRight="21dp"
+              local:MvxBind="Visible MostRecentPhoto"
+              local:border="true"
+              local:border_color="@color/white"
+              local:border_width="5dp"
+              local:shadow="true"
+              local:shadow_color="@color/grey_light"
+              local:shadow_width="6.0" />
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+              <TextView
+                  android:id="@+id/txtCustomerName"
+                  android:text="[CustomerName]"
+                   style="@style/DefaultTextView_Bold"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp" />
+              <TextView
+                  android:id="@+id/txtCustomerPhone"
+                  android:text="[0712345678]"
+                  style="@style/DefaultTextView_Faint"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="10dp" />
+            <LinearLayout
+                android:id="@+id/linlayoutProductBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+              <ImageView
+                  android:id="@+id/imgArrowIcon"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:src="@drawable/arrow_product"
+                  android:layout_marginRight="5dp" />
+              <TextView
+                  android:text="@string/product"
+                  style="@style/DefaultTextView_Bold"
+                  android:layout_marginRight="5dp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/txtLblProduct" />
+            </LinearLayout>
+            <LinearLayout
+              android:id="@+id/linlayoutProductBox"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:orientation="vertical"
+              android:gravity="center_vertical">
+              <TextView
+                 android:text="[ProductName]"
+                 style="@style/DefaultTextView_SmallerFaint"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="1dp"
+                 android:layout_marginBottom="1dp"
+                 android:id="@+id/txtCustomerProduct" />
+            </LinearLayout>
+           </LinearLayout>
+         </LinearLayout>
+    <Button
+        android:id="@+id/btnRaiseIssue"
+        android:layout_below="@id/customer_details"
+        android:layout_alignParentLeft="true"
+        android:text="@string/raise_issue_two"
+        style="@style/GreyButton"
+        android:textColor="@color/white"
+        android:layout_width="135dp"
+        android:layout_height="40dp"
+        android:gravity="left"
+        android:layout_marginBottom="@dimen/margin_default"
+        android:layout_marginLeft="@dimen/margin_default_large"
+        android:drawableLeft="@drawable/icon_raising_issue"
+        android:drawablePadding="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" />
+    <Button
+        android:id="@+id/btnCallCustomer"
+        android:layout_below="@id/customer_details"
+        android:layout_alignParentRight="true"
+        android:text="@string/call_customer"
+        style="@style/GreenButton"
+        android:textColor="@color/white"
+        android:layout_width="135dp"
+        android:layout_height="40dp"
+        android:gravity="left"
+        android:layout_marginBottom="@dimen/margin_default"
+        android:layout_marginRight="@dimen/margin_default_large"
+        android:drawableLeft="@drawable/icon_phone"
+        android:drawablePadding="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" />
+    <LinearLayout
+        android:id="@+id/linSteps"
+        android:visibility="visible"
+        android:layout_below="@id/btnCallCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txtRegistrationProcessSteps"
+            android:background="@drawable/gradient_divider"
+            android:text="@string/registration_process_steps"
+            android:gravity="left|bottom"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingLeft="@dimen/screen_margin"
+            android:layout_marginBottom="12dp" />
+        <ProgressBar
+            android:id="@+id/loadingAnimation"
+            android:visibility="visible"
+            style="?android:attr/progressBarStyleLargeInverse"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical" />
+    <!-- Step Done -->
+        <LinearLayout
+            android:id="@+id/linStepDoneNo"
+            android:visibility="gone"
+            android:layout_below="@id/txtRegistrationProcessSteps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/screen_margin"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/txtStepDoneNo"
+                android:layout_below="@id/txtRegistrationProcessSteps"
+                android:textColor="@color/white"
+                android:background="@drawable/circle_grey"
+                android:text="1"
+                android:gravity="center"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginRight="33dp" />
+            <TextView
+                android:id="@+id/txtStepDone"
+                android:layout_toRightOf="@id/txtStepDoneNo"
+                android:textColor="@color/grey_light"
+                android:text="[Registered]"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp" />
+        </LinearLayout>
+        <View
+            android:id="@+id/lineStepDoneNo"
+            android:visibility="gone"
+            android:layout_below="@id/linStepDoneNo"
+            android:layout_width="1dp"
+            android:layout_height="14dp"
+            android:background="@color/grey_light"
+            android:layout_marginLeft="28dp" />
+    <!-- /Step Done -->
+    <!-- Step Current -->
+        <LinearLayout
+            android:id="@+id/linStepCurrentNo"
+            android:layout_below="@id/lineStepDoneNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/screen_margin"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/txtStepCurrentNo"
+                android:layout_below="@id/lineStepDoneNo"
+                android:textColor="@color/white"
+                android:background="@drawable/circle_green"
+                android:text="2"
+                android:gravity="center"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginRight="33dp" />
+            <TextView
+                android:id="@+id/txtStepCurrent"
+                android:layout_toRightOf="@id/txtStepCurrentNo"
+                android:text="[Deposit Paid]"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View
+            android:id="@+id/lineStepCurrent"
+            android:layout_below="@id/linStepCurrentNo"
+            android:layout_width="1dp"
+            android:layout_height="14dp"
+            android:background="@color/grey_light"
+            android:layout_marginLeft="28dp" />
+    <!-- /Step Current -->
+    <!-- Step Future -->
+        <LinearLayout
+            android:id="@+id/linStepFutureNo"
+            android:layout_below="@id/lineStepCurrent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/screen_margin"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/txtStepFutureNo"
+                android:layout_below="@id/lineStepCurrent"
+                android:textColor="@color/grey_light"
+                android:background="@drawable/circle_white"
+                android:text="3"
+                android:gravity="center"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginRight="33dp" />
+            <TextView
+                android:id="@+id/txtStepFuture"
+                android:layout_toRightOf="@id/txtStepFutureNo"
+                android:textColor="@color/grey_light"
+                android:text="[Screening]"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+<!-- /Step Future -->
+<!-- Extra Information -->
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/txtExtraInformation"
+        android:layout_alignParentBottom="true"
+        android:text="[The customer needs to pay 1000 Shillings deposit.]"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="#3c97b5"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp" />
+<!-- /Extra Information -->
+</RelativeLayout>

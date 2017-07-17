@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!-- The blocks -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center">
+    <!-- Block 1 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="88dp"
+                android:layout_height="81dp"
+                android:background="@drawable/border_rounded_small">
+                <RelativeLayout
+                    android:id="@+id/block_score_layout"
+                    android:layout_margin="@dimen/thin_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="#ebebeb">
+                    <TextView
+                        android:id="@+id/block_score_top"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        local:MvxBind="Text Summary[0].TopValue"
+                        android:textSize="@dimen/text_size_large"
+                        android:color="@color/gray4"
+                        android:gravity="bottom|right"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp" />
+                    <TextView
+                        android:id="@+id/block_score_bottom"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        local:MvxBind="Text Summary[0].BottomValue"
+                        android:textSize="@dimen/text_size_small"
+                        android:color="@color/gray4"
+                        android:gravity="top|left"
+                        android:layout_width="40dp"
+                        android:layout_height="25dp" />
+                    <View
+                        android:id="@+id/block_divider"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginRight="25dp"
+                        android:background="@drawable/diagonal_line" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/block_caption"
+                    local:MvxBind="Text Summary[0].Caption"
+                    android:textSize="@dimen/text_size_small"
+                    android:color="@color/gray4"
+                    android:layout_margin="@dimen/thin_line"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+            </LinearLayout>
+        </LinearLayout>
+    <!-- Block 2 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="88dp"
+                android:layout_height="81dp"
+                android:background="@drawable/border_rounded_small">
+                <RelativeLayout
+                    android:id="@+id/block_score_layout"
+                    android:layout_margin="@dimen/thin_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="#ebebeb">
+                  <TextView
+                      android:id="@+id/block_score_top"
+                      android:layout_alignParentTop="true"
+                      android:layout_alignParentLeft="true"
+                      local:MvxBind="Text Summary[1].TopValue"
+                      android:textSize="@dimen/text_size_large"
+                      android:color="@color/gray4"
+                      android:gravity="bottom|right"
+                      android:layout_width="40dp"
+                      android:layout_height="30dp" />
+                  <TextView
+                      android:id="@+id/block_score_bottom"
+                      android:layout_alignParentBottom="true"
+                      android:layout_alignParentRight="true"
+                      local:MvxBind="Text Summary[1].BottomValue"
+                      android:textSize="@dimen/text_size_small"
+                      android:color="@color/gray4"
+                      android:gravity="top|left"
+                      android:layout_width="40dp"
+                      android:layout_height="25dp" />
+                  <View
+                      android:id="@+id/block_divider"
+                      android:layout_width="18dp"
+                      android:layout_height="18dp"
+                      android:layout_alignParentBottom="true"
+                      android:layout_centerHorizontal="true"
+                      android:layout_marginBottom="12dp"
+                      android:layout_marginRight="25dp"
+                      android:background="@drawable/diagonal_line" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/block_caption"
+                    local:MvxBind="Text Summary[1].Caption"
+                    android:textSize="@dimen/text_size_small"
+                    android:color="@color/gray4"
+                    android:layout_margin="@dimen/thin_line"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+              </LinearLayout>
+        </LinearLayout>
+    <!-- Block 3 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="88dp"
+                android:layout_height="81dp"
+                android:background="@drawable/border_rounded_small">
+                <RelativeLayout
+                    android:id="@+id/block_score_layout"
+                    android:layout_margin="@dimen/thin_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="#ebebeb">
+                  <TextView
+                      android:id="@+id/block_score_top"
+                      android:layout_alignParentTop="true"
+                      android:layout_alignParentLeft="true"
+                      local:MvxBind="Text Summary[2].TopValue"
+                      android:textSize="@dimen/text_size_large"
+                      android:color="@color/gray4"
+                      android:gravity="bottom|right"
+                      android:layout_width="40dp"
+                      android:layout_height="30dp" />
+                  <TextView
+                      android:id="@+id/block_score_bottom"
+                      android:layout_alignParentBottom="true"
+                      android:layout_alignParentRight="true"
+                      local:MvxBind="Text Summary[2].BottomValue"
+                      android:textSize="@dimen/text_size_small"
+                      android:color="@color/gray4"
+                      android:gravity="top|left"
+                      android:layout_width="40dp"
+                      android:layout_height="25dp" />
+                  <View
+                      android:id="@+id/block_divider"
+                      android:layout_width="18dp"
+                      android:layout_height="18dp"
+                      android:layout_alignParentBottom="true"
+                      android:layout_centerHorizontal="true"
+                      android:layout_marginBottom="12dp"
+                      android:layout_marginRight="25dp"
+                      android:background="@drawable/diagonal_line" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/block_caption"
+                    local:MvxBind="Text Summary[2].Caption"
+                    android:textSize="@dimen/text_size_small"
+                    android:color="@color/gray4"
+                    android:layout_margin="@dimen/thin_line"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+              </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/last_updated"
+        local:MvxBind="Text LastUpdated(Summary[0].LastUpdateTime)"
+        android:textStyle="italic"
+        android:textSize="@dimen/text_size_small"
+        android:color="@color/gray4"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp" />
+</LinearLayout>

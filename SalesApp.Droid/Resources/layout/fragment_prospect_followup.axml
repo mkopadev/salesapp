@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:id="@+id/prospectReminder">
+    <ImageView
+        android:src="@drawable/registered2"
+        android:layout_marginBottom="37dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:id="@+id/imageView1" />
+    <TextView
+        android:layout_below="@id/imageView1"
+        android:background="@color/grey_light"
+        android:id="@+id/tvExistingStory"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_large"
+        android:text="@string/reminder" />
+    <Button
+        android:id="@+id/btnDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvExistingStory"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="21dp"
+        style="@style/SpinnerButtonStyle"
+        android:text="@string/prospect_followup_set_date_prompt" />
+    <Button
+        android:id="@+id/btnTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnDate"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="21dp"
+        style="@style/SpinnerButtonStyle"
+        android:text="@string/prospect_followup_set_time_prompt" />
+</RelativeLayout>

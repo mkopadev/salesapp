@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginLeft="@dimen/screen_margin"
+    android:layout_marginRight="@dimen/screen_margin"
+    android:layout_marginTop="@dimen/margin_default"
+    android:layout_marginBottom="@dimen/margin_default"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/margin_default_large"
+        android:id="@+id/prospectDetailsInfoDate">
+        <TextView
+            android:id="@+id/txtDate"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:text="@string/prospect_followup_set_date_prompt" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/view2"
+            android:layout_below="@+id/txtDate"
+            android:background="@color/gray2" />
+        <Button
+            android:id="@+id/btnDate"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view2"
+            style="@style/SpinnerButtonStyle"
+            android:text="@string/prospect_followup_set_date_prompt" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/prospectDetailsInfoDate"
+        android:id="@+id/prospectDetailsInfoTime">
+        <TextView
+            android:id="@+id/txtTime"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/prospect_followup_set_time_prompt" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/view1"
+            android:layout_below="@+id/txtTime"
+            android:background="@color/gray2" />
+        <Button
+            android:id="@+id/btnTime"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/SpinnerButtonStyle"
+            android:text="@string/prospect_followup_set_time_prompt" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/buttonLayout1">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="140dp"
+            android:layout_centerVertical="true"
+            style="@style/GreyButton"
+            android:text="@string/cancel"
+            android:id="@+id/cancelReminderButton"
+            android:layout_marginRight="15dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="140dp"
+            android:layout_toRightOf="@+id/cancelReminderButton"
+            android:layout_centerVertical="true"
+            style="@style/GreenButton"
+            android:text="@string/create_reminder"
+            android:id="@+id/createReminderButton" />
+    </RelativeLayout>
+</RelativeLayout>

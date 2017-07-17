@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <include
+        android:id="@+id/android_toolbar"
+        layout="@layout/android_toolbar" />
+    <Switch
+        android:id="@+id/enable_extensive_logging"
+        style="@style/default_switch_button"
+        android:layout_below="@id/android_toolbar"
+        android:text="@string/allow_extended_logging"
+        local:showText="true"
+        android:showText="true"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/margin_default_large"
+        android:layout_marginTop="@dimen/margin_default"
+        local:MvxBind="Checked AllowExtendedLogging; CheckedChange SwitchChanged" />
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/btnDeleteFile"
+            style="@style/GreyButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/delete_file"
+            local:MvxBind="Enabled ButtonsEnabled; Click DeleteCommand" />
+        <Button
+            android:id="@+id/btnSendFile"
+            style="@style/GreenButton"
+            android:text="@string/send_file"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            local:MvxBind="Enabled ButtonsEnabled; Click ShareCommand" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_default_large"
+        android:layout_marginRight="@dimen/margin_default_large"
+        android:layout_above="@id/buttons">
+        <ImageView
+            android:id="@+id/divider_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_default_small"
+            android:src="@drawable/shadow_mid_screen" />
+        <ImageView 
+            android:id="@+id/divider_arrow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider_shadow"
+            android:layout_centerInParent="true"
+            android:src="@drawable/arrow_down_scroll" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/enable_extensive_logging"
+        android:layout_above="@id/divider"
+        android:layout_marginLeft="@dimen/margin_default_large"
+        android:layout_marginRight="@dimen/margin_default_large"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/DefaultTextView_Title"
+            android:layout_marginBottom="@dimen/margin_default_large"
+            android:text="@string/log_files_screen_title" />
+        <TextView
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/DefaultTextView"
+            android:layout_below="@id/title"
+            android:layout_marginBottom="@dimen/margin_default_large"
+            android:text="@string/select_prompt" />
+        <MvxListView
+            android:id="@+id/fileList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dividerHeight="0dp"
+            android:divider="@null"
+            android:layout_below="@id/body"
+            android:choiceMode="singleChoice"
+            local:MvxBind="ItemsSource Files;ItemClick ItemSelectedCommand"
+            local:MvxItemTemplate="@layout/log_file_list_item" />
+    </RelativeLayout>
+</RelativeLayout>

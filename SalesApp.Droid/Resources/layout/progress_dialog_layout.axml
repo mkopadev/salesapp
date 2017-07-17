@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF">
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_marginTop="5dp"
+        android:indeterminate="true"
+        android:progressDrawable="@drawable/circular_progress_bar" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Need to create a xml file in drawable folder.it contains shape and rotate information about the progress bar"
+        android:id="@+id/txtAlertMessage"
+        android:textStyle="normal"
+        android:textSize="15dp"
+        android:layout_below="@+id/progressBar"
+        />
+</LinearLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+        <TextView
+            android:id="@+id/textView_customer_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="4dp"
+            style="@style/DefaultTextView"
+            android:padding="4dp"
+            android:textColor="@color/grey_dark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textView_idnumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_customer_name"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            style="@style/DefaultTextView"
+            android:drawableLeft="@drawable/ic_id"
+            android:drawablePadding="8dp"
+            android:padding="4dp"
+            android:textColor="@color/grey_dark"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/textView_customer_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_idnumber"
+            android:layout_marginLeft="8dp"
+            style="@style/DefaultTextView"
+            android:layout_marginTop="4dp"
+            android:drawableLeft="@drawable/ic_phone"
+            android:drawablePadding="8dp"
+            android:padding="4dp"
+            android:textColor="@color/grey_dark"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/button_warranty_expired"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/red"
+        android:gravity="center"
+        style="@style/DefaultTextView_Caps"
+        android:padding="8dp"
+        android:text="@string/warranty_expired"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+    <RelativeLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_warranty_expired"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp">
+        <TextView
+            android:id="@+id/textView_warranty_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            style="@style/DefaultTextView"
+            android:padding="8dp"
+            android:text="@string/warranty_message"
+            android:textColor="@color/red" />
+        <Button
+            android:id="@+id/button_swap_another"
+            style="@style/GreyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/button_home"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:text="@string/select_another_product"
+            android:textColor="@color/white" />
+        <Button
+            android:id="@+id/button_home"
+            style="@style/GreenButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:text="@string/home"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+</RelativeLayout>

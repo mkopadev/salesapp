@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <include
+        layout="@layout/commissions_month_info" />
+    <LinearLayout
+        android:id="@+id/list_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/margin_default_small">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Date"
+                android:textColor="@color/green3"
+                android:layout_marginLeft="20dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="REF No"
+                android:textColor="@color/green3" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Payment"
+                android:textColor="@color/green3"
+                android:layout_marginRight="20dp"/>
+        </LinearLayout>
+        <View
+            android:layout_height="@dimen/thick_line"
+            android:layout_width="match_parent"
+            android:background="@color/green3" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/list_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/list_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            local:MvxBind="Visible HasSales">
+            <View
+                android:layout_height="@dimen/thick_line"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/margin_default"
+                android:background="@color/green3" />
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/DefaultTextView_Bold"
+                    android:layout_marginRight="@dimen/margin_default_large"
+                    android:text="Total amount paid:" />
+                <TextView
+                    android:id="@+id/total_adjustments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/DefaultTextView_Bold"
+                    local:MvxBind="Text Total" />
+            </LinearLayout>
+        </LinearLayout>
+        <MvxListView
+            android:id="@+id/adjustments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/list_footer"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="@dimen/margin_default_tiny"
+            local:MvxBind="ItemsSource Payments; Visible HasSales"
+            local:MvxItemTemplate="@layout/commission_payments_list_item"
+            android:dividerHeight="0.5dp" />
+        <include
+            layout="@layout/commissions_no_sales" />
+        <include
+            layout="@layout/commissions_loading" />
+    </RelativeLayout>
+</LinearLayout>

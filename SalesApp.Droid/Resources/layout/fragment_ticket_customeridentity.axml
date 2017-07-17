@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="@dimen/screen_margin">
+    <TextView
+        style="@style/DefaultTextView_Caps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tViewQuestionTitle"
+        android:text="@string/which_customer"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp" />
+    <TextView
+        style="@style/DefaultTextView"
+        android:text="@string/enter_singlefield"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tViewQuestionTitle"
+        android:id="@+id/tViewSingleField"
+        android:layout_marginBottom="20dp" />
+    <TextView
+        style="@style/DefaultTextView"
+        android:text="@string/account_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tViewSingleField"
+        android:id="@+id/tvAccountNumber"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="8dp" />
+    <EditText
+        style="@style/DefaultEditText"
+        android:layout_below="@+id/tvAccountNumber"
+        android:id="@+id/editTextAccountNumber"
+        android:singleLine="true"
+        android:layout_marginBottom="20dp"
+        android:maxLength="30" />
+    <TextView
+        style="@style/DefaultTextView"
+        android:text="@string/phone_number_full"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextAccountNumber"
+        android:id="@+id/tvPhoneNumber"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="8dp" />
+    <EditText
+        style="@style/DefaultEditText"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/tvPhoneNumber"
+        android:id="@+id/editTextPhone"
+        android:inputType="phone"
+        android:maxLength="10" />
+    <TextView
+        style="@style/DefaultTextView"
+        android:text="@string/serial_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPhone"
+        android:id="@+id/tvSerialNumber"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="8dp" />
+    <EditText
+        style="@style/DefaultEditText"
+        android:layout_below="@+id/tvSerialNumber"
+        android:id="@+id/editTextSerialNumber"
+        android:singleLine="true"
+        android:maxLength="30" />
+    <TextView
+        android:id="@+id/tvError"
+        android:visibility="invisible"
+        android:layout_above="@id/linearLayoutNavButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="26dp"
+        android:textSize="@dimen/text_size_normal"
+        android:background="@drawable/list_box_error"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/white"
+        style="@style/DefaultTextView_Smaller" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutNavButtons"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonPrevious"
+            android:text="@string/previous"
+            style="@style/GreyButton"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:layout_width="@dimen/screen_margin"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonNext"
+            style="@style/GreenButton"
+            android:text="@string/next" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navButtons"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_alignParentBottom="true"
+    android:background="@color/gray4">
+    <include
+        layout="@layout/component_divider"
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true" />
+    <View
+        android:id="@+id/view"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/gray1"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp" />
+    <Button
+        style="@style/BasicRegistrationNavButton"
+        android:id="@+id/btnCancel"
+        android:layout_toLeftOf="@+id/view"
+        android:text="@string/cancel" />
+    <Button
+        style="@style/BasicRegistrationNavButton"
+        android:id="@+id/btnNext"
+        android:enabled="false"
+        android:layout_toRightOf="@+id/view"
+        android:text="@string/next" />
+</RelativeLayout>

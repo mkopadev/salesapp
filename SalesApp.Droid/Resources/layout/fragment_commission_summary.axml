@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SalesApp.Droid.Components.UIComponents.Swipe.SwipeLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
+        android:background="@color/grey_light"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:id="@+id/imageView"
+            android:clickable="true"
+            local:MvxBind="Click PreviousMonthCommand; Enabled CanLoad; Visibility VisibleInvisible(PreviousVisible)"
+            android:padding="5dp"
+            android:background="@drawable/circle_grey"
+            android:src="@drawable/commissions_arrow_left" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            local:MvxBind="Text PreviousMonth; Visibility VisibleInvisible(PreviousVisible)"
+            android:layout_centerVertical="true"
+            style="@style/DefaultTextView_Smaller"
+            android:id="@+id/tvCommissionPrevMonth"
+            android:layout_toRightOf="@+id/imageView"
+            android:paddingLeft="5dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            local:MvxBind="Text CurrentMonth"
+            style="@style/DefaultTextView_TitleBold"
+            android:id="@+id/tvCommissionMonth"
+            android:layout_centerInParent="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            local:MvxBind="Text NextMonth; Visibility VisibleInvisible(NextVisible)"
+            style="@style/DefaultTextView_Smaller"
+            android:id="@+id/tcCommissionNextMonth"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imageView2"
+            android:paddingRight="5dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/commissions_arrow_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:padding="5dp"
+            android:background="@drawable/circle_grey"
+            local:MvxBind="Click NextMonthCommand; Enabled CanLoad; Visibility VisibleInvisible(NextVisible)"
+            android:id="@+id/imageView2" />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/earning"
+            android:textColor="@color/green"
+            android:layout_marginLeft="20dp"
+            android:textSize="@dimen/text_size_normal" />
+        <View
+            android:layout_height="@dimen/thick_line"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/margin_default"
+            android:background="@color/green3" />
+        <MvxListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            local:MvxBind="ItemsSource Earnings;ItemClick ItemClickCommand"
+            local:MvxItemTemplate="@layout/commission_summary_row"
+            android:dividerHeight="0.5dp"/>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:stretchColumns="0">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_default_tiny">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    style="@style/DefaultTextView_Bold"
+                    android:layout_column="0" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    local:MvxBind="Text TotalEarnings"
+                    style="@style/DefaultTextView_Bold"
+                    android:layout_column="1"
+                    android:layout_marginRight="20dp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imgShowDetails"
+                    android:layout_column="2"
+                    android:src="@drawable/arrowRight"
+                    android:layout_marginRight="20dp"
+                    android:visibility="invisible" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/deductions"
+            android:textColor="@color/green"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="@dimen/margin_default_small"
+            android:textSize="@dimen/text_size_normal" />
+        <View
+            android:layout_height="@dimen/thick_line"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/margin_default_tiny"
+            android:background="@color/green3" />
+        <MvxListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            local:MvxBind="ItemsSource Deductions; ItemClick ItemClickCommand"
+            local:MvxItemTemplate="@layout/commission_summary_row"
+            android:dividerHeight="0.5dp" />
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:stretchColumns="0">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_default_tiny">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Deductions"
+                    style="@style/DefaultTextView_Bold"
+                    android:layout_column="0" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    local:MvxBind="Text TotalDeductions"
+                    style="@style/DefaultTextView_Bold"
+                    android:layout_column="1"
+                    android:layout_marginRight="20dp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imgShowDetails"
+                    android:layout_column="2"
+                    android:src="@drawable/arrowRight"
+                    android:layout_marginRight="20dp"
+                    android:visibility="invisible" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@color/gray7">
+        <MvxListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            local:MvxBind="ItemsSource Summary; ItemClick ItemClickCommand"
+            local:MvxItemTemplate="@layout/commission_summary_row"
+            android:dividerHeight="0.5dp" />
+    </LinearLayout>
+    <View
+        android:layout_height="@dimen/thick_line"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/margin_default_tiny"
+        android:background="@color/green3" />
+    <TableLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:stretchColumns="0">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Balance"
+                style="@style/DefaultTextView_Bold"
+                android:layout_column="0" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                local:MvxBind="Text Balance"
+                style="@style/DefaultTextView_Bold"
+                android:layout_column="1"
+                android:layout_marginRight="20dp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgShowDetails"
+                android:layout_column="2"
+                android:src="@drawable/arrowRight"
+                android:layout_marginRight="20dp"
+                android:visibility="invisible" />
+        </TableRow>
+    </TableLayout>
+</SalesApp.Droid.Components.UIComponents.Swipe.SwipeLinearLayout>

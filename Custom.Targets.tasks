@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<PropertyGroup>
+    <TPath>$(MSBuildExtensionsPath)\ExtensionPack\MSBuild.ExtensionPack.tasks</TPath>   
+	<AnalysisPath>$(MSBuildProjectDirectory)\..</AnalysisPath>
+	<DllOutputFolder>$(MSBuildProjectDirectory)\bin\Debug</DllOutputFolder>
+	<FxCopCmd>C:\Program Files (x86)\Microsoft Visual Studio 12.0\Team Tools\Static Analysis Tools\FxCop\FxCopCmd.exe</FxCopCmd>
+  </PropertyGroup>
+  <Import Project="$(TPath)"/>
+  
+ <Target Name="ExecuteStyleCop">
+        <!-- Create a collection of files to scan -->
+        <CreateItem Include="$(MSBuildProjectDirectory)\..\**\*.cs">
+            <Output TaskParameter="Include" ItemName="StyleCopFiles"/>
+        </CreateItem>
+        <!-- Run the StyleCop MSBuild task -->
+        <MSBuild.ExtensionPack.CodeQuality.StyleCop TaskAction="Scan" SourceFiles="@(StyleCopFiles)" ShowOutput="true"
+            ForceFullAnalysis="true" CacheResults="false"
+            logFile="$(AnalysisPath)\StyleCopLog.txt"
+            SettingsFile="$(AnalysisPath)\Settings.StyleCop">
+            <Output TaskParameter="Succeeded" PropertyName="AllPassed"/>
+            <Output TaskParameter="ViolationCount" PropertyName="Violations"/>
+            <Output TaskParameter="FailedFiles" ItemName="Failures"/>
+        </MSBuild.ExtensionPack.CodeQuality.StyleCop>
+        <Message Text="Succeeded: $(AllPassed), Violations: $(Violations)"/>
+        <Message Text="%(Failures.Identity) - Failed on Line %(Failures.LineNumber). %(Failures.CheckId): %(Failures.Message)"/>
+</Target>
+ 
+ <Target Name="ExecuteFxCop">
+    <ItemGroup>
+        <FxCopBinPathDebug Include="$(DllOutputFolder)\MK.Solar.dll" />
+        <FxCopRuleAssemblies Include="*.dll" />
+    </ItemGroup>
+    <!-- Call the task using a collection of files and all default rules -->
+        <MSBuild.ExtensionPack.CodeQuality.FxCop
+            FxCopPath="$(FxCopCmd)"
+            TaskAction="Analyse"
+            Files="@(FxCopBinPathDebug)"
+            Rules="@(FxCopRuleAssemblies)"
+            DependencyDirectories="$(DllOutputFolder)\"
+            Verbose="True"
+            SearchGac="True"
+            ShowSummary="True"
+            OutputFile="$(AnalysisPath)\FxCopReport.xml"
+			ContinueOnError="WarnAndContinue">
+        </MSBuild.ExtensionPack.CodeQuality.FxCop>
+
+</Target>
+
+</Project>

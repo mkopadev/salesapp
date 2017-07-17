@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/add_prospect"
+        style="@style/GreenButton"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="@dimen/margin_default"
+        android:text="ADD PROSPECT" />
+    <Button
+        android:id="@+id/add_customer"
+        style="@style/GreenButton"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="52dp"
+        android:text="ADD CUSTOMER" />
+    <Button
+        android:id="@+id/cancel_button"
+        style="@style/GreyButton"
+        android:text="@string/cancel"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content" />
+</LinearLayout>

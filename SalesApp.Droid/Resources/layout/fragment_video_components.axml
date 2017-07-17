@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/video_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_default_large"
+        android:layout_marginTop="@dimen/margin_default_large"
+        local:MvxBind="Text Title; Visibility InvertedVisibility(Playing)"
+        style="@style/DefaultTextView_Bold" />
+    <MvxListView
+        android:id="@+id/video_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:layout_below="@id/video_title"
+        android:dividerHeight="@dimen/margin_default_small"
+        local:MvxBind="ItemsSource VideoComponents; ItemClick ItemClickCommand; Visibility InvertedVisibility(Playing)"
+        local:MvxItemTemplate="@layout/video_category_list_item" />
+    <VideoView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        local:MvxBind="Visible Playing" />
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <MvxListView
+        android:id="@+id/dsr_details"
+        android:background="@color/grey_transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:layout_margin="@dimen/margin_default_large"
+        android:padding="@dimen/margin_default_small"
+        local:MvxBind="ItemsSource DsrDetails"
+        local:MvxItemTemplate="@layout/stock_dsr_details_table_item" />
+    <linearlayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:id="@+id/current_allocation"
+      android:layout_below="@id/dsr_details"
+      android:layout_marginBottom="@dimen/margin_default_large">
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:background="@color/grey_transparent"
+          local:MvxBind="Visibility InvertedVisibility(ShowOnReceiveStockScreen)">
+        <TextView
+            style="@style/DefaultTextView_BoldCaps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/stock_devices_allocated_now"
+            android:layout_marginLeft="20dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            local:MvxBind="Text DsrStock.UnitsAllocated"
+            style="@style/DefaultTextView_Bold"
+            android:textSize="@dimen/text_size_larger"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:layout_marginRight="20dp" />
+      </RelativeLayout>
+      <!--Receive stock-->
+      <View
+          android:id="@+id/lineSeparator"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/grey_light"
+          android:layout_marginBottom="@dimen/margin_default"
+          local:MvxBind="Visible ShowOnReceiveStockScreen" />
+      <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/dsr_details"
+           style="@style/DefaultTextView_Bold"
+           android:layout_centerHorizontal="true"
+           android:gravity="left"
+           local:MvxBind="Visible SelectUnitsBeingReturned; Text SelectUnitsBeingReturned"
+           android:layout_marginRight="@dimen/margin_default_large" 
+           android:layout_marginLeft="@dimen/margin_default_large" />
+      <!--End of receive stock-->
+    </linearlayout>
+    <SalesApp.Droid.Components.UIComponents.List.MvxSelectableListView
+        android:layout_below="@id/current_allocation"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:id="@+id/issue_stock_list"
+          android:divider="@null"
+          android:choiceMode="multipleChoice"
+          android:dividerHeight="@dimen/margin_default_small"
+          local:MvxBind="ItemsSource DsrStockUnits; Visible DsrHasUnits; ItemClick OnItemSelected;SelectedItems SelectedUnits, Mode=OneWay"
+          local:MvxItemTemplate="@layout/allocated_units_list_item" />
+    <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/current_allocation"
+          android:textStyle="italic"
+          android:text="@string/stock_dsr_no_units"
+          local:MvxBind="Visibility InvertedVisibility(DsrHasUnits)"
+          android:layout_marginTop="@dimen/margin_default_large"
+          style="@style/DefaultTextView"
+          android:layout_centerHorizontal="true" />
+</RelativeLayout>

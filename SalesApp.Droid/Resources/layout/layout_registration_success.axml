@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/registrationSuccess"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    android:theme="@style/AppTheme">
+    <LinearLayout
+        android:id="@+id/header"
+        style="@style/WrapHeight"
+        android:orientation="vertical"
+        android:background="@color/gray4"
+        android:layout_marginBottom="10dp">
+        <ImageButton
+            android:layout_height="4dp"
+            android:layout_width="140dp"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/step_final" />
+        <TextView
+            style="@style/TextView.Light"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="@dimen/horizontal_margin"
+            android:layout_marginBottom="20dp"
+            android:textSize="24sp"
+            android:text="@string/successful_registration" />
+        <ImageView
+            android:id="@+id/imageRegistered"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginBottom="28dp"
+            android:src="@drawable/registered" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/btnHome"
+        style="@style/ListItem">
+        <ImageView
+            style="@style/ListItemIcon"
+            android:src="@drawable/home_orange" />
+        <TextView
+            style="@style/ListItemText"
+            android:text="@string/go_to_homepage" />
+        <ImageView
+            style="@style/ListItemNextButton" />
+        <include
+            layout="@layout/component_selector" />
+    </RelativeLayout>
+    <include
+        layout="@layout/component_drop_shadow" />
+</LinearLayout>

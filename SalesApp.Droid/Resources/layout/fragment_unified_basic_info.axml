@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/screen_margin"
+    android:layout_marginRight="@dimen/screen_margin">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <!--PHONE NUMBER-->
+        <TextView
+            style="@style/DefaultTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="left"
+            android:text="@string/unified_phone_number" />
+        <EditText
+            android:id="@+id/edtPhone"
+            android:layout_marginBottom="6dp"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:text="[Phone Number]"
+            style="@style/DefaultEditText" />
+        <TextView
+            style="@style/DefaultTextView_Error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:gravity="left"
+            android:id="@+id/tvPhoneError"
+            android:visibility="gone"
+            android:text="" />
+    <!--/PHONE NUMBER-->
+    </LinearLayout>
+<!--LAST NAME-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_default_small"
+        android:orientation="vertical">
+        <TextView
+            style="@style/DefaultTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="7dp"
+            android:gravity="left"
+            android:text="@string/unified_last_name" />
+        <EditText
+            android:id="@+id/edtLastName"
+            android:layout_marginBottom="6dp"
+            android:inputType="textCapSentences|textAutoCorrect"
+            style="@style/DefaultEditText" />
+        <TextView
+            style="@style/DefaultTextView_Error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:gravity="left"
+            android:id="@+id/tvLastNameError"
+            android:visibility="gone"
+            android:text="" />
+    <!--/LAST NAME-->
+    </LinearLayout>
+<!--FIRST NAME-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_default_small"
+        android:orientation="vertical">
+        <TextView
+            style="@style/DefaultTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="7dp"
+            android:gravity="left"
+            android:text="@string/unified_first_name" />
+        <EditText
+            android:id="@+id/edtFirstName"
+            android:layout_marginBottom="6dp"
+            android:inputType="textCapSentences|textAutoCorrect"
+            style="@style/DefaultEditText" />
+        <TextView
+            style="@style/DefaultTextView_Error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:gravity="left"
+            android:id="@+id/tvFirstNameError"
+            android:visibility="gone"
+            android:text="" />
+    <!--/FIRST NAME-->
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_default_small"
+        android:id="@+id/linId"
+        android:orientation="vertical">
+        <TextView
+            style="@style/DefaultTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="7dp"
+            android:gravity="left"
+            android:text="@string/unified_id" />
+        <EditText
+            android:id="@+id/edtId"
+            android:layout_marginBottom="6dp"
+            android:inputType="number"
+            style="@style/DefaultEditText" />
+        <TextView
+            style="@style/DefaultTextView_Error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:gravity="left"
+            android:id="@+id/tvIdError"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:visibility="gone"
+            android:text="" />
+    </LinearLayout>
+<!--/ID-->
+</LinearLayout>

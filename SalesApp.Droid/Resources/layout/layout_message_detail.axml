@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <RelativeLayout
+      android:id="@+id/header"
+      android:layout_width="match_parent"
+      android:layout_height="56dp"
+      android:orientation="vertical"
+      android:background="@color/gray4">
+    <TextView
+        style="@style/TextView.Light"
+        android:id="@+id/textName"
+        android:layout_marginLeft="@dimen/horizontal_margin"
+        android:layout_centerVertical="true"
+        android:textSize="20sp" />
+  </RelativeLayout>
+  <ScrollView
+      android:id="@+id/form"
+      android:layout_below="@+id/header"
+      style="@style/MatchParent"
+      android:background="@color/white"
+      android:orientation="vertical"
+      android:layout_weight="1">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+      <TextView
+          style="@style/TextView"
+          android:id="@+id/textMessageText"
+          android:layout_marginTop="10dp"
+          android:layout_marginBottom="10dp"
+          android:layout_width="match_parent"
+          android:background="@color/white"
+          android:fontFamily="sans-serif-light"
+          android:padding="@dimen/horizontal_margin"
+          android:textSize="20sp"
+          android:lineSpacingExtra="8dp" />
+    </FrameLayout>
+  </ScrollView>
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_height="wrap_content"
+      android:background="@color/black"
+      android:layout_width="match_parent">
+    <TextView
+        android:id="@+id/messageSender"
+        style="@style/TextView.Light"
+        android:layout_marginLeft="@dimen/horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/dateSent"
+        style="@style/TextView.Light"
+        android:layout_marginLeft="@dimen/horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp" />
+  </LinearLayout>
+</LinearLayout>

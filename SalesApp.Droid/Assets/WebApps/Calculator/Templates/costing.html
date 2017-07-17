@@ -1,0 +1,35 @@
+﻿<div class="cost">
+    <h4 class="normal">Cost Per Week</h4>
+    <form name="costingForm" novalidate>
+        <div class="form-group">
+            <span>Kerosene</span>
+            <input type="number" class="form-control" id="kerosene" name="kerosene" ng-model="cost.kerosene" 
+                   min="0" autocomplete="off" ng-pattern="onlyNumbers" required>
+        </div>
+        <div ng-show="form.$submitted || form.kerosene.$touched">
+            <div ng-show="costingForm.kerosene.$dirty ||costingForm.$invalid || costingForm.kerosene.$error.required ">Tell us the amount of money you use for kerosene.</div>
+        </div>
+        <div class="form-group">
+            <span>Batteries</span>
+            <input type="number" class="form-control" id="batteries" ng-model="cost.batteries" min="0"
+                   ng-pattern="onlyNumbers" autocomplete="off"/>
+        </div>
+        <div ng-show="form.$submitted || form.batteries.$touched">
+            <div ng-show="costingForm.batteries.$invalid">Invalid value.</div>
+        </div>
+        <div class="form-group">
+            <span>Charging Phone</span>
+            <input type="number" class="form-control" id="charging" ng-model="cost.chargingPhone" min="0"
+                   ng-pattern="onlyNumbers" autocomplete="off" />
+        </div>
+        <div ng-show="form.$submitted || form.charging.$touched">
+            <div ng-show="costingForm.charging.$invalid">Invalid value.</div>
+        </div>
+        <div class="form-group">
+            <div id="cost-button">
+                <button type="submit" class="btn btn-block" ng-class="((costingForm.$invalid) ? 'btn-secondary' : 'btn-success')" ng-disabled="costingForm.$invalid" ng-click="currentCostPerYear(cost)">Continue</button>
+            </div>
+        </div>
+    </form>
+</div>
+

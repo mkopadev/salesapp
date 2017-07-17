@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="AppTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+    <!--<item name="android:windowBackground">@color/white</item>
+      <item name="android:background">@color/white</item>
+      <item name="android:colorBackground">@color/white</item>
+      <item name="android:actionMenuTextColor">@color/white</item>-->
+    <item name="android:actionBarStyle">@style/MKActionBar</item>
+    <item name="actionBarStyle">@style/MKActionBar</item>
+    <item name="android:actionBarTabTextStyle">@style/MKActionBarTabText</item>
+    <item name="android:textViewStyle">@style/MKTextViewStyle</item>
+    <item name="android:buttonStyle">@style/MKButtonStyle</item>
+    <item name="android:fontFamily">sans-serif-light</item>
+    <item name="windowActionBar">true</item>
+    <item name="colorAccent">@color/green3</item>
+  </style>
+
+  <style name="MKTextViewStyle" parent="android:Widget.TextView">
+    <item name="android:fontFamily">sans-serif-light</item>
+  </style>
+
+  <style name="MKButtonStyle" parent="android:Widget.Holo.Button">
+    <item name="android:fontFamily">sans-serif-light</item>
+  </style>
+
+  <style name="AppTheme.NoActionBar" parent="@style/Theme.AppCompat.Light.NoActionBar">
+    <item name="android:textColorPrimary">@color/white</item>
+    <item name="drawerArrowStyle">@style/MKDrawerArrowToggle</item>
+    <item name="android:textColorSecondary">@color/white</item>
+   <item name="windowActionBar">false</item>
+    <item name="colorAccent">@color/green3</item>
+  </style>
+
+  <style name="AppTheme.DefaultToolbar" parent="AppTheme.NoActionBar">
+    <item name="actionBarSize">60dp</item>
+    <item name="android:actionBarSize">60dp</item>
+  </style>
+  
+  <style name="AppTheme.SmallToolbar" parent="AppTheme.NoActionBar">
+    <item name="actionBarSize">46dp</item>
+    <item name="android:actionBarSize">46dp</item>
+  </style>
+
+  <style name="MKToolbarOverflowMenuStyle" parent="ThemeOverlay.AppCompat.Light">
+  </style>
+  
+  <style name="MKDrawerArrowToggle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+    <item name="color">@color/white</item>
+  </style>
+
+  <style name="ProspectFollowupTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="android:windowBackground">@color/black</item>
+    <item name="android:actionBarStyle">@style/MKActionBar</item>
+    <item name="actionBarStyle">@style/MKActionBar</item>
+    <item name="android:actionBarTabTextStyle">@style/MKActionBarTabText</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:screenOrientation">portrait</item>
+  </style>
+
+
+  <style name="DialogTheme" parent="@android:Theme.DeviceDefault.Light.Dialog">
+    <item
+        name="android:windowBackground">@null</item>
+  </style>
+
+  <style name="AppTheme.Compat" parent="Theme.AppCompat">
+    <item name="android:windowBackground">@color/white</item>
+    <item name="android:actionBarStyle">@style/MKActionBar</item>
+    <item name="android:actionBarTabTextStyle">@style/MKActionBarTabText</item>
+    <item name="android:actionMenuTextColor">@color/white</item>
+    <item name="colorPrimary">@color/green3</item>
+  </style>
+
+  <style name="AppThemeTab.Compat" parent="AppTheme">
+    <item name="android:windowBackground">@color/white</item>
+    <item name="android:actionMenuTextColor">@color/white</item>
+    <item name="android:actionBarStyle">@style/MKActionBar</item>
+    <item name="actionBarTabStyle">@style/MKActionBar.Tab</item>
+    <item name="android:actionBarTabBarStyle">@style/MKActionBar.TabBar</item>
+    <item name="actionBarTabBarStyle">@style/MKActionBar.TabBar</item>
+    <item name="actionBarTabTextStyle">@style/MKActionBarTabText2</item>
+  </style>
+
+  <style name="MKActionBar.Tab" parent="@android:Widget.Holo.Light.ActionBar.TabView">
+    <item name="android:background">@drawable/tab_bar_background</item>
+    <item name="android:divider">@drawable/tab_divider</item>
+    <item name="android:showDividers">middle</item>
+    <item name="android:measureWithLargestChild">true</item>
+    <item name="android:paddingLeft">0dp</item>
+    <item name="android:paddingRight">0dp</item>
+    <item name="android:minWidth">0dp</item>
+  </style>
+
+  <style name="MKActionBar.TabBar" parent="@android:style/Widget.Holo.Light.ActionBar.TabView">
+    <item name="android:background">@color/white</item>
+    <item name="android:divider">@drawable/tab_divider</item>
+    <item name="android:showDividers">middle</item>
+    <item name="android:paddingLeft">0dp</item>
+    <item name="android:paddingRight">0dp</item>
+    <item name="android:minWidth">0dp</item>
+  </style>
+
+  <style name="MKActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+    <item name="android:background">@color/green3</item>
+    <item name="background">@color/green3</item>
+    <item name="android:titleTextStyle">@style/MKActionBarTitleText</item>
+    <item name="android:logo">@android:color/transparent</item>
+    <item name="actionBarSize">46dp</item>
+    <item name="android:actionBarSize">46dp</item>
+  </style>
+
+
+  <style name="MKTabLayout" parent="@style/Widget.Design.TabLayout">
+    <item name="tabIndicatorColor">@color/green3</item>
+    <item name="tabIndicatorHeight">2dp</item>
+    <item name="tabPaddingStart">12dp</item>
+    <item name="tabPaddingEnd">12dp</item>
+    <item name="tabBackground">@color/white</item>
+    <item name="tabTextAppearance">@style/MKTabTextAppearance</item>
+    <item name="tabSelectedTextColor">@color/green3</item>
+  </style>
+  <style name="MKTabLayoutSwap" parent="@style/MKTabLayout">
+    <item name="tabIndicatorHeight">3dp</item>
+  </style>
+  <style name="MKTabTextAppearance" parent="TextAppearance.Design.Tab">
+    <item name="android:textColor">#a4a4a4</item>
+  </style>
+
+  <!-- ActionBar title text -->
+  <style name="MKActionBarTitleText"
+         parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+    <item name="android:textColor">@color/white</item>
+    <item name="android:background">@color/green3</item>
+  </style>
+
+
+  <!-- ActionBar tabs text styles -->
+  <style name="MKActionBarTabText"
+         parent="@android:style/Widget.Holo.ActionBar.TabText">
+    <item name="android:textColor">@color/white</item>
+    <item name="android:background">@color/green3</item>
+  </style>
+
+  <style name="MKActionBarTabText2"
+             parent="@android:style/Widget.Holo.ActionBar.TabText">
+    <item name="android:textColor">@drawable/tab_selector_text</item>
+    <item name="android:textAllCaps">false</item>
+    <item name="android:background">@android:color/transparent</item>
+  </style>
+
+</resources>

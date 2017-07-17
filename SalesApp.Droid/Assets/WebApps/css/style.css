@@ -1,0 +1,220 @@
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+h4{
+    text-transform: capitalize;
+    font-style: normal;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+p {
+    font-style: normal;
+    font-weight: normal;
+}
+h4.centre{
+    text-align: center;
+}
+
+h4.normal{
+    text-align: left;
+}
+.product-deposit{
+    font-weight:bold;
+}
+.currency{
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+.cost{
+    margin-top: 5px;
+}
+
+.right {
+    float: right;
+    width: 300px;
+}
+.left {
+    float: left;
+    width: 300px;
+}
+.product{
+    width: 100%;
+    margin: 5px 0 5px 0;
+}
+
+.product-size{
+    width: 120px;
+    margin: 5px 0 5px 0;
+}
+
+.option-spacing {
+   padding-left: 10px;
+}
+
+.panel-spacing {
+    /*margin:15px;*/
+}
+
+.deposit{
+    width:200%;
+    margin: 5px 0 5px 0;
+}
+
+.income{
+    width:100%;
+    margin: 5px 0 5px 0;
+    padding: 5px 0 5px 0;
+}
+
+.button-small {
+    margin-top: 50px;
+}
+
+.button-large {
+    margin-top: 70px;
+}
+
+img{
+    width: 50px;
+    height: 30px;
+}
+
+.catalogue img{
+    width: 100px;
+    height: 100px;
+}
+
+.border-less table {
+    border-style: none;
+}
+
+.border-less td, .border-less th {
+    border: none!important;
+}
+
+.saving{
+    width: 100%;
+    margin: auto;
+}
+
+.saving-left{
+    float: left;
+}
+.saving-right{
+    float: right;
+}
+
+.saving-details{
+    width: 80%;
+}
+
+.icons{
+    margin-top: 20px;
+}
+
+.pointer{
+    margin-top: 30px;
+    width: 30px;
+    height: 20px;
+}
+.currency-icon{
+    margin-top: 10px;
+}
+
+#year1{
+    margin-top: 10px;
+}
+
+.yearly-saving{
+    width: 98%;
+    background-color: #F7F7F7;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin: 0 5px 5px 5px;
+    font-size: 16px;
+    font-weight: bold;
+    height: 70px;
+}
+
+p{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    width: 50px;
+}
+
+.catalogue{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.back-button{
+     width:45%;
+     float: left;
+ }
+
+.next-button{
+    width:45%;
+    float: right;
+}
+
+.figure {
+  float: right;
+  width: 30%;
+  border: thin silver solid;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+.figure p {
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+}
+
+.space{
+    margin-top: 10px;
+    margin-bottom :10px;
+}
+
+.top{
+        margin-top: 15px;
+}
+
+
+.panel-size{
+    height: 40px;
+}
+
+.panel-size-large{
+      height: 55px;
+  }
+.text{
+    min-height: 40px;
+    margin-top: 5px;
+}
+span{
+    padding: 10px 10px 10px 10px;
+}
+td span {
+       padding: 0;
+}
+.green {
+    color: green;
+}
+
+#cost-button {
+    margin-top: 120px;
+}
+#cost-peryear {
+    margin-top: 45px;
+}
+#cost-income {
+    margin-top: 100px;
+}

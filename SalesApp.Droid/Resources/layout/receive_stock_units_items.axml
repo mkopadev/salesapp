@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_default_large"
+        android:layout_marginRight="@dimen/margin_default_large"
+        android:layout_marginBottom="@dimen/margin_default_small"
+        style="@style/DefaultTextView_BoldCaps"
+        android:textColor="@color/green"
+        local:MvxBind="Visible HeaderText; Text HeaderText" />
+<!-- Body -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_default_large"
+        android:layout_marginRight="@dimen/margin_default_large"
+        android:gravity="center_vertical">
+        <CheckedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/DefaultTextView"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/default_check_box"
+            android:layout_marginRight="@dimen/margin_default_small"
+            local:MvxBind="Text SerialNumber" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            local:MvxBind="Text DateTime(DateAllocated)"
+            style="@style/DefaultTextView"
+            android:textColor="@color/green"
+            android:gravity="right" />
+    </LinearLayout>
+<!-- Footer -->
+    <View
+        android:id="@+id/lineSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/grey_light"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginBottom="@dimen/margin_default_small"
+        local:MvxBind="Visible IsFooterItem" />
+</LinearLayout>

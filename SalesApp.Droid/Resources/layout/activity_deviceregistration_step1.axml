@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/RelativeLayoutWizardSteps"
+        android:layout_marginTop="15dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/screen_margin"
+            android:layout_marginRight="@dimen/screen_margin"
+            android:layout_height="34dp"
+            android:gravity="center_vertical">
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:background="@color/device_registration_background" />
+            <RelativeLayout
+                android:id="@+id/step1_section"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:background="@drawable/circle_green"
+                android:gravity="center"
+                android:layout_alignParentTop="true">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/step2_section"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:gravity="center"
+                android:background="@drawable/circle_white"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="@color/grey_light" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/step3_section"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:gravity="center"
+                android:background="@drawable/circle_white"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true">
+                <TextView
+                    android:id="@+id/txt_auth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="@color/grey_light" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:id="@+id/textViewPleaseSelect"
+            android:layout_centerVertical="true"
+            android:textSize="20dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/welcome"
+            android:textColor="@color/black" />
+        <Spinner
+            android:spinnerMode="dropdown"
+            android:id="@+id/spinnerCountries"
+            android:textColor="@color/grey_light"
+            style="@style/DefaultSpinner" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:background="@color/red"
+            android:visibility="invisible"
+            android:id="@+id/textViewError"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" />
+    </LinearLayout>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/buttonNext"
+        android:layout_alignParentBottom="true"
+        android:text="@string/next"
+        style="@style/GreenButton"
+        android:onClick="OnNextButtonClicked"
+        local:MvxBind="Enabled CountrySelected" />
+</RelativeLayout>

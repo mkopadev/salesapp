@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/android_toolbar"
+        layout="@layout/android_toolbar" />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_default_large"
+        android:layout_marginBottom="@dimen/margin_default_large"
+        android:layout_marginLeft="@dimen/screen_margin"
+        android:layout_marginRight="@dimen/screen_margin"
+        android:shrinkColumns="1">
+        <TableRow
+            android:layout_marginBottom="7dp">
+            <TextView
+                android:id="@+id/date_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="29dp"
+                android:textColor="@color/green"
+                android:text="@string/ticket_list_date_raised" />
+            <TextView
+                android:id="@+id/date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:gravity="center_vertical"
+                local:MvxBind="Text DateTime(Ticket.DateRaised)" />
+        </TableRow>
+        <TableRow
+            android:layout_marginBottom="7dp">
+            <TextView
+                android:id="@+id/name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="29dp"
+                android:textColor="@color/green"
+                local:MvxBind="Text SecondLabel" />
+            <TextView
+                android:id="@+id/name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:gravity="center_vertical"
+                local:MvxBind="Text Ticket.CustomerName" />
+        </TableRow>
+        <TableRow
+            android:layout_marginBottom="7dp"
+            local:MvxBind="Visible ProductVisible">
+            <TextView
+                android:id="@+id/product_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="29dp"
+                android:textColor="@color/green"
+                android:text="@string/ticket_list_product" />
+            <TextView
+                android:id="@+id/product_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:gravity="center_vertical"
+                local:MvxBind="Text Ticket.Product" />
+        </TableRow>
+        <TableRow
+            android:layout_marginBottom="7dp">
+            <TextView
+                android:id="@+id/refno_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="29dp"
+                android:textColor="@color/green"
+                android:text="@string/ticket_list_refno" />
+            <TextView
+                android:id="@+id/refno_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:gravity="center_vertical"
+                local:MvxBind="Text Ticket.RefNo" />
+        </TableRow>
+        <TableRow
+            android:layout_marginBottom="7dp">
+            <TextView
+                android:id="@+id/status_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="29dp"
+                android:textColor="@color/green"
+                android:text="@string/ticket_list_status" />
+            <TextView
+                android:id="@+id/status_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:gravity="center_vertical"
+                local:MvxBind="Text Ticket.Status" />
+        </TableRow>
+    </TableLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/thinner_line"
+        android:background="@color/grey"
+        android:layout_marginBottom="@dimen/margin_default_large"
+        android:layout_marginLeft="@dimen/screen_margin"
+        android:layout_marginRight="@dimen/screen_margin"
+        local:MvxBind="Visible Ticket.Description" />
+    <LinearLayout
+        android:id="@+id/ticket_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/screen_margin"
+        android:layout_marginRight="@dimen/screen_margin"
+        local:MvxBind="Visible Ticket.Description">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Details"
+            android:textColor="@color/green3"
+            android:layout_marginBottom="@dimen/margin_default_large" />
+      <SalesApp.Droid.Components.UIComponents.Web.MvxSalesAppWebView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            local:MvxBind="Text Ticket.Description" />
+    </LinearLayout>
+</LinearLayout>

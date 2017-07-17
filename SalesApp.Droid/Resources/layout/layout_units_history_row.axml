@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:weightSum="1">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="0.9"
+            android:layout_width="0dp"
+            android:padding="5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="25dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/valueDay"
+                    android:text="XXXXX"
+                    android:textColor="@color/black"
+                    android:paddingLeft="10dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_small"
+                    android:text="@string/stats_units_today_brackets"
+                    android:id="@+id/today_text"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/gray1"
+                    android:visibility="invisible" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="xxxxx"
+                android:textColor="@color/green"
+                android:id="@+id/valueDate"
+                android:paddingLeft="10dp" />
+        </LinearLayout>
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_weight="0.1"
+            android:layout_marginBottom="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="New Acquired:"
+                android:id="@+id/lblAcquired"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentLeft="false"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_gravity="right"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Started With:"
+                android:id="@+id/lblStarted"
+                android:textColor="@color/black"
+                android:layout_gravity="right"
+                android:layout_below="@+id/lblAcquired"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="yy"
+                android:id="@+id/valueStarted"
+                android:textColor="@color/green"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_gravity="left"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Removed:"
+                android:textColor="@color/black"
+                android:id="@+id/lblRemoved"
+                android:layout_below="@+id/lblStarted"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_gravity="right"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="zz"
+                android:textColor="@color/green"
+                android:id="@+id/valueAcquired"
+                android:layout_below="@+id/lblAcquired"
+                android:layout_alignParentRight="true"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/valueRemoved"
+                android:textColor="@color/green"
+                android:layout_below="@+id/valueAcquired"
+                android:layout_marginLeft="5dp"
+                android:text="xx"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_gravity="left"
+                android:layout_marginRight="5dp" />
+        </GridLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/units_history_header"
+        android:background="@color/gray1" />
+</LinearLayout>
